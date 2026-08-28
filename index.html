@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 2 · Construcción de Marca 360° · Lexpin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --beige:    #f4ede0;
+      --navy:     #151f30;
+      --teal:     #058080;
+      --red:      #bb371e;
+      --blue:     #103778;
+      --yellow:   #ffbb27;
+      --orange:   #e86230;
+      --white:    #ffffff;
+      --gray:     #5a5a5a;
+      --light:    #f0e9dc;
+      --font-serif: 'Arvo', serif;
+      --font-sans:  'Space Grotesk', sans-serif;
+    }
+
+    body {
+      /* Gradient: sage-teal at top → warm cream at bottom */
+      background-color: #f2ece0;
+      background-image:
+        linear-gradient(rgba(90,110,100,0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(90,110,100,0.09) 1px, transparent 1px),
+        linear-gradient(180deg, #a8c5bc 0%, #c9d9d3 22%, #dde8e2 42%, #eaede6 60%, #f2ece0 80%, #f4ede0 100%);
+      background-size: 52px 52px, 52px 52px, 100% 100%;
+      background-attachment: fixed;
+      font-family: var(--font-sans);
+      color: var(--navy);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 32px 40px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 48px 48px 44px;
+      position: relative;
+      overflow: hidden;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* decorative circles */
+    .hero-main::before,
+    .hero-main::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+    }
+    .hero-main::before {
+      width: 320px; height: 320px;
+      background: var(--orange);
+      top: -60px; right: -40px;
+      opacity: 0.92;
+    }
+    .hero-main::after {
+      width: 260px; height: 260px;
+      background: var(--navy);
+      border: 70px solid rgba(255,122,72,0.35);
+      top: 40px; right: 60px;
+    }
+
+    .hero-pill {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.75);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      width: fit-content;
+      position: relative;
+      z-index: 2;
+    }
+
+    h2.hero-title, h1.hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      /* Interletrado óptico */
+      font-kerning: auto;
+      font-optical-sizing: auto;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+      max-width: 380px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-aside {
+      background: var(--yellow);
+      border-radius: 20px;
+      padding: 40px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-num {
+      font-family: var(--font-serif);
+      font-size: 7rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .hero-aside-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .hero-aside-desc {
+      font-size: 0.88rem;
+      color: var(--navy);
+      opacity: 0.75;
+      line-height: 1.55;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: box-shadow 0.18s ease, transform 0.18s ease;
+      width: fit-content;
+      box-shadow: 0 0 0 0 transparent;
+    }
+    .hero-cta:hover {
+      /* retro 3D: terracotta offset shadow bottom-right, button shifts slightly up-left */
+      box-shadow: 5px 5px 0px 0px var(--red);
+      transform: translate(-2px, -2px);
+    }
+    .hero-cta-arrow { font-size: 1.1rem; }
+
+    /* ── INDEX SECTION ──────────────────────────────────── */
+    .index-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    .index-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid rgba(0,0,0,0.12);
+      padding-bottom: 18px;
+      margin-bottom: 32px;
+    }
+
+    .index-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .index-meta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* ── WEEK CARD ───────────────────────────────────────── */
+    .week-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .week-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 22px;
+      color: var(--white);
+    }
+
+    .week-header.navy  { background: var(--navy); }
+    .week-header.teal  { background: var(--teal); }
+    .week-header.red   { background: var(--red); }
+    .week-header.blue  { background: var(--blue); }
+
+    .week-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .week-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* ── DAY ROW ─────────────────────────────────────────── */
+    .day-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 22px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      text-decoration: none;
+      color: var(--navy);
+      transition: background 0.15s, transform 0.15s;
+      cursor: pointer;
+    }
+    .day-row:last-child { border-bottom: none; }
+    .day-row:hover {
+      background: rgba(187, 55, 30, 0.05);
+    }
+    .day-row:hover .arrow { color: var(--red); transform: translateX(3px); }
+    .day-row:hover .day-num { border-color: var(--red); color: var(--red); }
+
+    .day-num {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0,0,0,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .day-info { flex: 1; }
+
+    .day-weekday {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 3px;
+    }
+
+    .day-title {
+      font-size: 0.97rem;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .arrow {
+      font-size: 1.1rem;
+      color: var(--red);
+      flex-shrink: 0;
+      transition: transform 0.15s;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    .footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--gray);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      padding-top: 20px;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .weeks-grid { grid-template-columns: 1fr; }
+      .hero-num { font-size: 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-main">
+      <div class="hero-pill">Módulo 2 &mdash; Construcción de Marca 360°: El Branding</div>
+      <h1 class="hero-title">Diseño Gráfico<br>Digital</h1>
+      <p class="hero-desc">Explora las 20 clases del módulo desde un único punto. Cada presentación incluye acceso directo al índice, al día anterior y al día siguiente.</p>
+      <!-- Lexpin logo bottom-right -->
+      <img
+        src="images/lexpin-logo.png"
+        alt="Lexpin"
+        style="
+          position: absolute;
+          bottom: 28px;
+          right: 18px;
+          width: 130px;
+          opacity: 0.55;
+          filter: brightness(0) invert(1);
+          z-index: 3;
+        "
+      >
+    </div>
+    <div class="hero-aside">
+      <div class="hero-num" style="font-size: 7rem; line-height: 1; letter-spacing: -2px;">02</div>
+      <div>
+        <div class="hero-aside-title">20 días para construir marca</div>
+        <p class="hero-aside-desc">Estrategia de marca, semiótica, storytelling, packaging, postimpresión y herramientas avanzadas de diseño.</p>
+        <a href="dia-01/index.html" class="hero-cta">
+          Comenzar el módulo <span class="hero-cta-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDEX -->
+  <section class="index-section">
+    <div class="index-header">
+      <h2>Índice de clases</h2>
+      <span class="index-meta">4 Semanas &middot; 20 Sesiones (Semanas 5 a 8)</span>
+    </div>
+
+    <div class="weeks-grid">
+
+      
+      <!-- SEMANA 5 -->
+      <div class="week-card">
+        <div class="week-header navy">
+          <h3>Semana 5</h3>
+          <span class="week-tag">Semiótica y Storytelling</span>
+        </div>
+        
+        <a class="day-row" href="dia-01/index.html">
+          <div class="day-num">01</div>
+          <div class="day-info">
+            <div class="day-weekday">Lunes</div>
+            <div class="day-title">Semiótica y Retórica Visual</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-02/index.html">
+          <div class="day-num">02</div>
+          <div class="day-info">
+            <div class="day-weekday">Martes</div>
+            <div class="day-title">Moodboard y Storytelling de Marca</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-03/index.html">
+          <div class="day-num">03</div>
+          <div class="day-info">
+            <div class="day-weekday">Miércoles</div>
+            <div class="day-title">Técnicas de Dibujo y Boceto</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-04/index.html">
+          <div class="day-num">04</div>
+          <div class="day-info">
+            <div class="day-weekday">Jueves</div>
+            <div class="day-title">El Manual de Marca vs. Guía de Estilo</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-05/index.html">
+          <div class="day-num">05</div>
+          <div class="day-info">
+            <div class="day-weekday">Viernes</div>
+            <div class="day-title">LAB 1 - Afiche Conceptual</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- SEMANA 6 -->
+      <div class="week-card">
+        <div class="week-header teal">
+          <h3>Semana 6</h3>
+          <span class="week-tag">Estrategia y Posicionamiento</span>
+        </div>
+        
+        <a class="day-row" href="dia-06/index.html">
+          <div class="day-num">06</div>
+          <div class="day-info">
+            <div class="day-weekday">Lunes</div>
+            <div class="day-title">Sistemas Visuales Abiertos</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-07/index.html">
+          <div class="day-num">07</div>
+          <div class="day-info">
+            <div class="day-weekday">Martes</div>
+            <div class="day-title">Patrones (Patterns) y Símbolos</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-08/index.html">
+          <div class="day-num">08</div>
+          <div class="day-info">
+            <div class="day-weekday">Miércoles</div>
+            <div class="day-title">IA</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-09/index.html">
+          <div class="day-num">09</div>
+          <div class="day-info">
+            <div class="day-weekday">Jueves</div>
+            <div class="day-title">Persuadiendo con Universos Visuales</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-10/index.html">
+          <div class="day-num">10</div>
+          <div class="day-info">
+            <div class="day-weekday">Viernes</div>
+            <div class="day-title">LAB 2 - Sistema de Pósters</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- SEMANA 7 -->
+      <div class="week-card">
+        <div class="week-header red">
+          <h3>Semana 7</h3>
+          <span class="week-tag">Identidad y Sistemas Visuales</span>
+        </div>
+        
+        <a class="day-row" href="dia-11/index.html">
+          <div class="day-num">11</div>
+          <div class="day-info">
+            <div class="day-weekday">Lunes</div>
+            <div class="day-title">Paleta de Colores de Marca</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-12/index.html">
+          <div class="day-num">12</div>
+          <div class="day-info">
+            <div class="day-weekday">Martes</div>
+            <div class="day-title">Versiones de Logo y Mockups</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-13/index.html">
+          <div class="day-num">13</div>
+          <div class="day-info">
+            <div class="day-weekday">Miércoles</div>
+            <div class="day-title">El Brand Board</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-14/index.html">
+          <div class="day-num">14</div>
+          <div class="day-info">
+            <div class="day-weekday">Jueves</div>
+            <div class="day-title">Brand Guidelines</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-15/index.html">
+          <div class="day-num">15</div>
+          <div class="day-info">
+            <div class="day-weekday">Viernes</div>
+            <div class="day-title">TP 1 - Lanzamiento Manual de Marca</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- SEMANA 8 -->
+      <div class="week-card">
+        <div class="week-header blue">
+          <h3>Semana 8</h3>
+          <span class="week-tag">Manuales, Packaging y Pitch</span>
+        </div>
+        
+        <a class="day-row" href="dia-16/index.html">
+          <div class="day-num">16</div>
+          <div class="day-info">
+            <div class="day-weekday">Lunes</div>
+            <div class="day-title">Entrega TP 1 y Storytelling del Pitch</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-17/index.html">
+          <div class="day-num">17</div>
+          <div class="day-info">
+            <div class="day-weekday">Martes</div>
+            <div class="day-title">Clase Packaging básico</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-18/index.html">
+          <div class="day-num">18</div>
+          <div class="day-info">
+            <div class="day-weekday">Miércoles</div>
+            <div class="day-title">Oratoria y Presentación Persuasiva</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-19/index.html">
+          <div class="day-num">19</div>
+          <div class="day-info">
+            <div class="day-weekday">Jueves</div>
+            <div class="day-title">Crit Final de Proyectos</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="day-row" href="dia-20/index.html">
+          <div class="day-num">20</div>
+          <div class="day-info">
+            <div class="day-weekday">Viernes</div>
+            <div class="day-title">TP 2 - Marca & Packaging 3D</div>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+    </div><!-- /weeks-grid -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Módulo 2 · Construcción de Marca 360° · Lexpin</span>
+    <span>Seleccioná cualquier clase para abrir su presentación.</span>
+  </footer>
+
+</body>
+</html>

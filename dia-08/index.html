@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 1 - Miércoles: IA: Ingeniería de Prompts para Mockups</title>
+  
+  <!-- Google Fonts: Arvo & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --terracotta: #bb371e;
+      --teal: #058080;
+      --dark-navy: #151f30;
+      --coral: #ff7a48;
+      --deep-blue: #103778;
+      --yellow: #ffbb27;
+      --white: #ffffff;
+      --light-gray: #e2e8f0;
+      --dark-card: #1c273a;
+      
+      --font-title: 'Arvo', serif;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark-navy);
+      color: var(--white);
+      font-family: var(--font-body);
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Bar */
+    header#top-bar {
+      height: 54px;
+      background: rgba(16, 23, 38, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 10;
+    }
+
+    .brand-title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge {
+      background: var(--terracotta);
+      color: var(--white);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .class-title-header {
+      font-size: 0.95rem;
+      color: var(--light-gray);
+      font-weight: 500;
+    }
+
+    .top-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+
+    .btn-notes {
+      background: rgba(5, 128, 128, 0.2);
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .btn-notes:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    /* Main Viewport */
+    main#viewport {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 50px;
+      overflow: hidden;
+    }
+
+    .slide-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      max-height: 680px;
+      background: var(--dark-card);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 50px 55px 50px;
+      overflow: hidden;
+    }
+
+    /* Slide Header & Footer Indicators */
+    .slide-indicator {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-num-badge {
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--yellow);
+      opacity: 0.9;
+    }
+
+    .slide-footer-bar {
+      position: absolute;
+      bottom: 25px;
+      left: 50px;
+      right: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 15px;
+    }
+
+    /* Slide Layouts */
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2.slide-title {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.03em; /* Optical slab-serif spacing adjustment */
+      font-kerning: normal;
+    }
+
+    .slide-body {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--light-gray);
+    }
+
+    .slide-body ul {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+
+    .slide-body ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+
+    .slide-body ul li::before {
+      content: '•';
+      color: var(--coral);
+      font-size: 1.5rem;
+      position: absolute;
+      left: 4px;
+      top: -4px;
+    }
+
+    .slide-body ol, .slide-content ol {
+      margin-top: 12px;
+      margin-left: 28px;
+      padding-left: 0;
+    }
+
+    .slide-body ol li, .slide-content ol li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+      padding-left: 8px;
+    }
+
+    /* Title Layout */
+    .layout-title {
+      text-align: center;
+      align-items: center;
+    }
+
+    .layout-title h2.slide-title {
+      font-size: 2.8rem;
+      color: var(--white);
+      margin-bottom: 15px;
+    }
+
+    .class-pill {
+      display: inline-block;
+      background: rgba(255, 122, 72, 0.15);
+      color: var(--coral);
+      border: 1px solid var(--coral);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .highlight-text {
+      color: var(--yellow);
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    /* Split Layout */
+    .layout-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      height: 100%;
+    }
+
+    .media-container {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    .media-container img {
+      max-width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .diagram-canvas {
+      width: 100%;
+      max-height: 260px;
+    }
+
+    .image-placeholder {
+      border: 2px dashed var(--teal);
+      background: rgba(5, 128, 128, 0.08);
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Grid Layout */
+    .layout-grid-container {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px 16px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--yellow);
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .card-num {
+      font-family: var(--font-title);
+      color: var(--terracotta);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-family: var(--font-title);
+      color: var(--yellow);
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--light-gray);
+      line-height: 1.45;
+    }
+
+    .card-desc ul {
+      list-style-type: none;
+      margin-top: 8px;
+      padding-left: 0;
+    }
+
+    .card-desc ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px !important;
+      line-height: 1.4;
+    }
+
+    .card-desc ul li::before {
+      content: '•';
+      color: var(--coral);
+      font-size: 1.25rem;
+      position: absolute;
+      left: 2px;
+      top: -2px;
+    }
+
+    /* Quote Layout */
+    .layout-quote {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quote-text {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      color: var(--yellow);
+      font-style: italic;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .quote-author {
+      font-size: 1.1rem;
+      color: var(--coral);
+      font-weight: 600;
+    }
+
+    /* Bottom Controls */
+    footer#bottom-controls {
+      height: 60px;
+      background: rgba(16, 23, 38, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--white);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .progress-bar-container {
+      flex: 1;
+      max-width: 400px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 0 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--yellow));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .slide-counter {
+      font-family: var(--font-title);
+      font-weight: 700;
+      color: var(--yellow);
+      font-size: 1rem;
+    }
+
+    /* Speaker Notes Drawer (Aisladas de la diapositiva) */
+    .notes-drawer {
+      position: fixed;
+      right: -420px;
+      top: 54px;
+      bottom: 60px;
+      width: 400px;
+      background: #111827;
+      border-left: 2px solid var(--teal);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      overflow-y: auto;
+    }
+
+    .notes-drawer.open {
+      right: 0;
+    }
+
+    .notes-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .notes-header h3 {
+      font-family: var(--font-title);
+      color: var(--teal);
+      font-size: 1.1rem;
+    }
+
+    .close-notes-btn {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-notes-btn:hover {
+      color: var(--white);
+    }
+
+    .notes-content {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--light-gray);
+    }
+
+    .notes-content h3 {
+      color: var(--yellow);
+      margin: 15px 0 8px 0;
+      font-size: 1rem;
+    }
+
+    .notes-content p {
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================================================
+       MODO PANTALLA COMPLETA: SOLO LA SLIDE (OCULTA BARRA SUPERIOR E INFERIOR)
+       ========================================================================== */
+    :fullscreen header#top-bar,
+    :fullscreen footer#bottom-controls,
+    :-webkit-full-screen header#top-bar,
+    :-webkit-full-screen footer#bottom-controls {
+      display: none !important;
+    }
+
+    :fullscreen main#viewport,
+    :-webkit-full-screen main#viewport {
+      padding: 0 !important;
+      height: 100vh !important;
+      width: 100vw !important;
+      max-width: none !important;
+      max-height: none !important;
+      background: var(--dark-navy) !important;
+    }
+
+    :fullscreen .slide-wrapper,
+    :-webkit-full-screen .slide-wrapper {
+      max-width: 100vw !important;
+      max-height: 100vh !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      border-radius: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 60px 80px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header id="top-bar">
+    <div class="brand-title">
+      MÓDULO 2 <span class="brand-badge">CLASE DÍA 8</span>
+    </div>
+    <div class="class-title-header">
+      Miércoles: IA: Ingeniería de Prompts para Mockups
+    </div>
+    <div class="top-controls">
+      <button class="btn btn-index" id="toggle-index-btn" title="Índice del curso (I)">
+        ≡ Índice
+      </button>
+      <button class="btn btn-notes" id="toggle-notes-btn" title="Ver Notas de Orador / Guía de Clase">
+        🎙️ Notas de Orador
+      </button>
+      <button class="btn" id="fullscreen-btn" title="Pantalla Completa">
+        ⛶ Pantalla Completa
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport">
+    <div class="slide-wrapper" id="slide-wrapper">
+      <!-- Active slide rendered dynamically -->
+    </div>
+  </main>
+
+  <!-- Bottom Controls -->
+  <footer id="bottom-controls">
+    <div class="nav-group">
+      <button class="nav-btn" id="prev-btn" title="Anterior (Flecha izquierda)">&lsaquo;</button>
+      <button class="nav-btn" id="next-btn" title="Siguiente (Flecha derecha)">&rsaquo;</button>
+    </div>
+
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="slide-counter" id="slide-counter">01 / 13</div>
+  </footer>
+
+  <!-- Speaker Notes Drawer (NUNCA dentro de la slide) -->
+  <aside class="notes-drawer" id="notes-drawer">
+    <div class="notes-header">
+      <h3>🎙️ Guía del Docente / Orador</h3>
+      <button class="close-notes-btn" id="close-notes-btn">&times;</button>
+    </div>
+    <div class="notes-content" id="notes-content">
+      <!-- Speaker notes rendered dynamically -->
+    </div>
+  </aside>
+
+  <!-- ═══ INDEX MODAL ═══ -->
+  <div id="index-modal" style="
+    display:none; position:fixed; inset:0; z-index:200;
+    background:rgba(10,15,25,0.92); backdrop-filter:blur(6px);
+    flex-direction:column; align-items:center; justify-content:center;
+    padding:32px 24px;
+  ">
+    <div style="
+      width:100%; max-width:980px;
+      background:#1c273a; border-radius:18px;
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 24px 60px rgba(0,0,0,0.6);
+      padding:36px 36px 28px;
+      position:relative;
+    ">
+      <!-- Header -->
+      <div style="margin-bottom:24px;">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:6px;">MÓDULO 2 · 20 CLASES</div>
+        <h2 style="font-family:var(--font-title);font-size:2rem;font-weight:700;color:var(--white);">Índice del curso</h2>
+      </div>
+      <!-- Close btn -->
+      <button id="close-index-btn" style="
+        position:absolute;top:20px;right:20px;
+        width:36px;height:36px;border-radius:50%;
+        background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+        color:var(--white);font-size:1.2rem;cursor:pointer;
+        display:flex;align-items:center;justify-content:center;
+      ">×</button>
+
+      <!-- Grid 4 cols -->
+      <div id="index-grid" style="
+        display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px;
+      "></div>
+
+      <!-- Bottom nav -->
+      <div style="
+        display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;
+        border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;
+      ">
+        <a id="idx-prev-btn" href="#" style="
+          display:flex;align-items:center;justify-content:center;gap:8px;
+          background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);
+          color:var(--white);text-decoration:none;padding:12px;border-radius:8px;
+          font-weight:600;font-size:0.9rem;transition:background 0.2s;
+        ">← Día anterior</a>
+        <a href="../index.html" style="
+          display:flex;align-items:center;justify-content:center;gap:8px;
+          background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);
+          color:var(--white);text-decoration:none;padding:12px;border-radius:8px;
+          font-weight:600;font-size:0.9rem;transition:background 0.2s;
+        ">△ Inicio</a>
+        <a id="idx-next-btn" href="#" style="
+          display:flex;align-items:center;justify-content:center;gap:8px;
+          background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);
+          color:var(--white);text-decoration:none;padding:12px;border-radius:8px;
+          font-weight:600;font-size:0.9rem;transition:background 0.2s;
+        ">Día siguiente →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slidesData = [
+  {
+    "layout": "title",
+    "title": "IA: Ingeniería de Prompts para Mockups",
+    "subtitle": "Semana 6 • Miércoles • Clase 28",
+    "content": "<p>Clase especial de Miércoles: Herramientas de IA, prompts técnicos y validación en escenarios reales.</p>",
+    "notes": "<h3>Apertura</h3><p>Hoy aprenderemos a usar la inteligencia artificial de forma profesional como un acelerador de propuestas visuales de marca.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "IA en Branding: El Acelerador",
+    "content": "<p>La inteligencia artificial como herramienta y no como sustituto:</p><ul><li>Es un excelente **acelerador de la exploración visual** en fases tempranas.</li><li>Permite visualizar el logo en soportes hiperrealistas en minutos para evaluar proporciones antes del vectorizado final.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>IA</h3><p>La IA asiste al diseñador; no reemplaza el criterio técnico ni de composición.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "El Prompt: ¿Cómo hablar con la IA?",
+    "content": "<p>La descripción de tu idea en palabras:</p><ul><li>La IA responde a directrices descriptivas estructuradas.</li><li><strong>Prompt Vago:</strong> Produce resultados aleatorios sin valor comercial.</li><li><strong>Prompt Técnico:</strong> Produce imágenes de alta calidad controlando la cámara, luz y materiales.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Nota</h3><p>Un diseñador profesional debe dominar la sintaxis del prompt.</p>"
+  },
+  {
+    "layout": "grid",
+    "title": "Cuadro Comparativo de Prompts",
+    "content": "<p>Estructura de la descripción para la generación de imágenes:</p>",
+    "cards": [
+      {
+        "num": "❌",
+        "title": "Prompt Vago",
+        "desc": "Solo describe el contenido. <em>Ej: 'Foto de un envase de crema'.</em> Resultados genéricos, planos y sin luz."
+      },
+      {
+        "num": "✅",
+        "title": "Prompt Técnico",
+        "desc": "Contenido + estilo + iluminación + cámara + materiales. <em>Ej: 'Studio shot of cosmetic cream jar, frosted amber glass, raw stone texture background, side softbox lighting, 85mm lens, depth of field'.</em>"
+      }
+    ],
+    "notes": "<h3>Prompts</h3><p>Enfatizar la importancia de especificar materiales (vidrio esmerilado, piedra) y luz.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Vocabulario de Diseño en Prompts",
+    "content": "<p>Términos indispensables a incluir:</p><ul><li><strong>Paletas:</strong> Colores acotados (ej: <em>warm sand, deep olive</em>).</li><li><strong>Tipo de Trazo:</strong> Estilos gráficos (ej: <em>flat illustration, linocut print</em>).</li><li><strong>Iluminación:</strong> Tipo de foco (ej: <em>dramatic shadow, diffused daylight</em>).</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Nota</h3><p>El uso de palabras clave técnicas reduce la aleatoriedad de la IA.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Creación de Mockups Hiperrealistas",
+    "content": "<p>Visualizar el logo en soportes reales:</p><ul><li>Genera imágenes de fachadas comerciales, cartelería urbana o papelería corporativa en alta resolución.</li><li>Luego puedes aplicar tu logotipo vectorizado encima en Photoshop con capas inteligentes en perspectiva.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Mockups</h3><p>Acelera la creación de maquetas visuales para el cliente.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Validación Previa en Góndola",
+    "content": "<p>Evaluar el impacto antes de la producción:</p><ul><li>Genera imágenes de estantes de supermercado y coloca tu diseño de empaque al lado de competidores reales.</li><li><strong>Shelf Test:</strong> Verifica si tu paleta y tipografía captan la atención a distancia en un entorno saturado.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Validación</h3><p>Un uso estratégico de la IA para reducir riesgos del cliente.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Generación Responsable y Ética",
+    "content": "<p>Límites legales y morales de la IA:</p><ul><li><strong>Uso de Estilos Ajenos:</strong> Evita imitar de forma directa a ilustradores o estudios específicos sin consentimiento.</li><li><strong>Licencias:</strong> Confirma que la herramienta utilizada cuente con licencias de uso comercial adecuadas para el proyecto final.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Ética</h3><p>La ética profesional protege al diseñador y al cliente de litigios por derechos de autor.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "El Ojo Entrenado: Errores de la IA",
+    "content": "<p>La revisión humana sigue siendo indispensable:</p><ul><li>La IA comete errores sistemáticos: tipografías inventadas e ilegibles, elementos duplicados o deformados y proporciones de perspectiva incoherentes.</li><li>El diseñador debe pulir y corregir estos fallos de forma manual.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Revisión</h3><p>La IA propone, el diseñador dispone y corrige.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Herramientas Líderes en la Industria",
+    "content": "<p>Plataformas comerciales recomendadas:</p><ul><li><strong>Adobe Firefly:</strong> Integrada con Illustrator/Photoshop, segura para uso comercial sin problemas de derechos.</li><li><strong>Midjourney:</strong> Excelente calidad fotorrealista de iluminación y renderizado de materiales.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Herramientas</h3><p>Mencionar la ventaja de Adobe Firefly por su integración nativa.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Cómo justificar el uso de IA ante el cliente",
+    "content": "<p>Comunicar la IA como eficiencia:</p><ul><li>Explica al cliente que usas IA para **acelerar la fase de maquetación** y reducir costos de renders en 3D tradicionales.</li><li>El valor final está en el criterio de curación y vectorización limpia que vos aportás.</li></ul>",
+    "media": "images/d02-martes-slide03.jpg",
+    "notes": "<h3>Tip</h3><p>La IA reduce tiempos de entrega de maquetas visuales.</p>"
+  },
+  {
+    "layout": "grid",
+    "title": "Resumen de Aprendizajes",
+    "content": "<p>Lista de control de prompts profesionales:</p>",
+    "cards": [
+      {
+        "num": "A",
+        "title": "Sintaxis técnica",
+        "desc": "Evita adjetivos subjetivos (ej: 'hermoso'). Usa especificaciones técnicas (ej: 'diffused light')."
+      },
+      {
+        "num": "B",
+        "title": "Limpieza manual",
+        "desc": "Corrige siempre las deformaciones de perspectiva e ilegibilidad tipográfica en Photoshop."
+      },
+      {
+        "num": "C",
+        "title": "Uso comercial",
+        "desc": "Verifica los términos de servicio de la herramienta antes de facturar el diseño."
+      }
+    ],
+    "notes": "<h3>Nota docente</h3><p>Prepara a los alumnos para la dinámica en Discord.</p>"
+  },
+  {
+    "layout": "title",
+    "title": "Actividad del Día: Prompteando Escenarios",
+    "subtitle": "Trabajo en Discord y Miro simulando pedidos de clientes.",
+    "content": "<p>Realizaremos un ejercicio rápido de generación de mockups en escenarios reales utilizando prompts e IA de forma colaborativa simulando requerimientos de un brief real.</p>",
+    "notes": "<h3>Notas de Clase</h3><p>Guiar a los alumnos en el derecho del prompt técnico.</p>"
+  }
+];
+    const courseDays = [
+  {
+    "dayIndex": 1,
+    "folderName": "dia-01",
+    "dayKey": "lunes",
+    "dayTitle": "Lunes: Semiótica y Retórica Visual"
+  },
+  {
+    "dayIndex": 2,
+    "folderName": "dia-02",
+    "dayKey": "martes",
+    "dayTitle": "Martes: Moodboard y Storytelling de Marca"
+  },
+  {
+    "dayIndex": 3,
+    "folderName": "dia-03",
+    "dayKey": "miércoles",
+    "dayTitle": "Miércoles: Técnicas de Dibujo y Boceto"
+  },
+  {
+    "dayIndex": 4,
+    "folderName": "dia-04",
+    "dayKey": "jueves",
+    "dayTitle": "Jueves: El Manual de Marca vs. Guía de Estilo"
+  },
+  {
+    "dayIndex": 5,
+    "folderName": "dia-05",
+    "dayKey": "viernes",
+    "dayTitle": "Viernes: LAB 1 - Afiche Conceptual"
+  },
+  {
+    "dayIndex": 6,
+    "folderName": "dia-06",
+    "dayKey": "lunes",
+    "dayTitle": "Lunes: Sistemas Visuales Abiertos"
+  },
+  {
+    "dayIndex": 7,
+    "folderName": "dia-07",
+    "dayKey": "martes",
+    "dayTitle": "Martes: Patrones (Patterns) y Símbolos"
+  },
+  {
+    "dayIndex": 8,
+    "folderName": "dia-08",
+    "dayKey": "miércoles",
+    "dayTitle": "Miércoles: IA: Ingeniería de Prompts para Mockups"
+  },
+  {
+    "dayIndex": 9,
+    "folderName": "dia-09",
+    "dayKey": "jueves",
+    "dayTitle": "Jueves: Persuadiendo con Universos Visuales"
+  },
+  {
+    "dayIndex": 10,
+    "folderName": "dia-10",
+    "dayKey": "viernes",
+    "dayTitle": "Viernes: LAB 2 - Sistema de Pósters"
+  },
+  {
+    "dayIndex": 11,
+    "folderName": "dia-11",
+    "dayKey": "lunes",
+    "dayTitle": "Lunes: Paleta de Colores de Marca"
+  },
+  {
+    "dayIndex": 12,
+    "folderName": "dia-12",
+    "dayKey": "martes",
+    "dayTitle": "Martes: Versiones de Logo y Mockups"
+  },
+  {
+    "dayIndex": 13,
+    "folderName": "dia-13",
+    "dayKey": "miércoles",
+    "dayTitle": "Miércoles: El Brand Board"
+  },
+  {
+    "dayIndex": 14,
+    "folderName": "dia-14",
+    "dayKey": "jueves",
+    "dayTitle": "Jueves: Brand Guidelines: Reglas y Prohibiciones"
+  },
+  {
+    "dayIndex": 15,
+    "folderName": "dia-15",
+    "dayKey": "viernes",
+    "dayTitle": "Viernes: TP 1 - Lanzamiento Manual de Marca"
+  },
+  {
+    "dayIndex": 16,
+    "folderName": "dia-16",
+    "dayKey": "lunes",
+    "dayTitle": "Lunes: Entrega TP 1 y Storytelling del Pitch"
+  },
+  {
+    "dayIndex": 17,
+    "folderName": "dia-17",
+    "dayKey": "martes",
+    "dayTitle": "Martes: Clase Packaging básico: cómo el sistema se traduce a un empaque"
+  },
+  {
+    "dayIndex": 18,
+    "folderName": "dia-18",
+    "dayKey": "miércoles",
+    "dayTitle": "Miércoles: Oratoria y Presentación Persuasiva"
+  },
+  {
+    "dayIndex": 19,
+    "folderName": "dia-19",
+    "dayKey": "jueves",
+    "dayTitle": "Jueves: Crit Final de Proyectos"
+  },
+  {
+    "dayIndex": 20,
+    "folderName": "dia-20",
+    "dayKey": "viernes",
+    "dayTitle": "Viernes: TP 2 - Marca & Packaging 3D"
+  }
+];
+    const currentDayIndex = 8;
+    let currentIndex = 0;
+    let notesOpen = false;
+
+    const slideWrapper = document.getElementById('slide-wrapper');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const slideCounter = document.getElementById('slide-counter');
+    const progressBar = document.getElementById('progress-bar');
+    const notesDrawer = document.getElementById('notes-drawer');
+    const notesContent = document.getElementById('notes-content');
+    const toggleNotesBtn = document.getElementById('toggle-notes-btn');
+    const closeNotesBtn = document.getElementById('close-notes-btn');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+    // Index Modal Elements
+    const indexModal = document.getElementById('index-modal');
+    const toggleIndexBtn = document.getElementById('toggle-index-btn');
+    const closeIndexBtn = document.getElementById('close-index-btn');
+    const indexGrid = document.getElementById('index-grid');
+    const idxPrevBtn = document.getElementById('idx-prev-btn');
+    const idxNextBtn = document.getElementById('idx-next-btn');
+
+    // Build the 20-day index grid dynamically
+    indexGrid.innerHTML = courseDays.map(d => {
+      const isActive = d.dayIndex === currentDayIndex;
+      const highlightBorder = isActive ? 'border: 2px solid var(--yellow); box-shadow: 0 0 10px rgba(255, 187, 39, 0.25);' : 'border: 1px solid rgba(255, 255, 255, 0.08);';
+      const badgeBg = isActive ? 'background: var(--yellow); color: #1c273a;' : 'background: var(--terracotta); color: var(--white);';
+      const destination = isActive ? '#' : '../' + d.folderName + '/index.html';
+      
+      return `
+        <a href="${destination}" style="
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 10px 14px;
+          background: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          text-decoration: none;
+          color: var(--white);
+          transition: all 0.2s ease;
+          min-height: 64px;
+          box-sizing: border-box;
+          ${highlightBorder}
+        " onmouseover="this.style.background='rgba(255, 255, 255, 0.08)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.04)'">
+          <div style="
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            ${badgeBg}
+          ">${String(d.dayIndex).padStart(2, '0')}</div>
+          <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center;">
+            <div style="
+              font-size: 0.65rem;
+              text-transform: uppercase;
+              letter-spacing: 0.8px;
+              color: rgba(255, 255, 255, 0.4);
+              margin-bottom: 2px;
+              font-weight: 700;
+            ">${d.dayKey}</div>
+            <div style="
+              font-size: 0.82rem;
+              font-weight: 500;
+              color: var(--white);
+              line-height: 1.25;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              word-break: break-word;
+            ">${d.dayTitle}</div>
+          </div>
+        </a>
+      `;
+    }).join('');
+
+    // Setup Bottom Navigation links in the modal
+    const prevDay = currentDayIndex > 1 ? courseDays[currentDayIndex - 2] : null;
+    const nextDay = currentDayIndex < 20 ? courseDays[currentDayIndex] : null;
+
+    if (prevDay) {
+      idxPrevBtn.href = '../' + prevDay.folderName + '/index.html';
+    } else {
+      idxPrevBtn.style.opacity = '0.3';
+      idxPrevBtn.style.pointerEvents = 'none';
+    }
+
+    if (nextDay) {
+      idxNextBtn.href = '../' + nextDay.folderName + '/index.html';
+    } else {
+      idxNextBtn.style.opacity = '0.3';
+      idxNextBtn.style.pointerEvents = 'none';
+    }
+
+    function toggleIndex() {
+      const isHidden = indexModal.style.display === 'none' || indexModal.style.display === '';
+      indexModal.style.display = isHidden ? 'flex' : 'none';
+    }
+
+    toggleIndexBtn.addEventListener('click', toggleIndex);
+    closeIndexBtn.addEventListener('click', () => {
+      indexModal.style.display = 'none';
+    });
+    indexModal.addEventListener('click', (e) => {
+      if (e.target === indexModal) {
+        indexModal.style.display = 'none';
+      }
+    });
+
+    // Automatic extension fallback if image format differs (.png, .jpg, .svg, .webp)
+    function handleImageError(img) {
+      const cleanSrc = img.src.split('?')[0];
+      if (!img.dataset.triedExt) {
+        img.dataset.triedExt = 'png';
+        img.src = cleanSrc.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '.png') + '?t=' + Date.now();
+      } else if (img.dataset.triedExt === 'png') {
+        img.dataset.triedExt = 'jpg';
+        img.src = cleanSrc.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '.jpg') + '?t=' + Date.now();
+      } else if (img.dataset.triedExt === 'jpg') {
+        img.dataset.triedExt = 'svg';
+        img.src = cleanSrc.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '.svg') + '?t=' + Date.now();
+      } else if (img.dataset.triedExt === 'svg') {
+        img.dataset.triedExt = 'webp';
+        img.src = cleanSrc.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '.webp') + '?t=' + Date.now();
+      }
+    }
+
+    function renderSlide(index) {
+      const slide = slidesData[index];
+      const slideNum = String(index + 1).padStart(2, '0');
+      
+      let layoutHtml = '';
+
+      if (slide.layout === 'title') {
+        layoutHtml = `
+          <div class="slide-content layout-title">
+            <div class="class-pill">MÓDULO 2 &bull; DÍA 1</div>
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            ${slide.subtitle ? `<div class="highlight-text" style="margin-top:20px;">${slide.subtitle}</div>` : ''}
+          </div>
+        `;
+      } else if (slide.layout === 'quote') {
+        layoutHtml = `
+          <div class="slide-content layout-quote">
+            <div class="quote-text">“${slide.content}”</div>
+            <div class="quote-author">— ${slide.title}</div>
+          </div>
+        `;
+      } else if (slide.layout === 'split') {
+        let mediaContent = '';
+        if (slide.media) {
+          const mediaSrc = slide.media.startsWith('images/') ? '../' + slide.media : slide.media;
+          if (slide.media.trim().startsWith('<svg')) {
+            mediaContent = slide.media;
+          } else {
+            mediaContent = `<div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+              <img src="${mediaSrc}?t=${Date.now()}" onerror="handleImageError(this)" alt="${slide.title}" style="max-width:100%; max-height:300px; object-fit:cover; border-radius:8px;">
+              ${slide.caption ? `<p style="font-size:0.76rem; color:rgba(255,255,255,0.45); margin-top:12px; text-align:center; line-height:1.4; font-family:var(--font-body); max-width:92%;">${slide.caption}</p>` : ''}
+            </div>`;
+          }
+        } else {
+          mediaContent = `<div class="image-placeholder">[IMAGEN: Ilus. o diagrama de ${slide.title}]</div>`;
+        }
+
+        layoutHtml = `
+          <div class="layout-split">
+            <div class="slide-content">
+              <h2 class="slide-title">${slide.title}</h2>
+              <div class="slide-body">${slide.content || ''}</div>
+            </div>
+            <div class="media-container">
+              ${mediaContent}
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'grid') {
+        let cardsHtml = '';
+        let gridCols = 'grid-3';
+        if (slide.cards) {
+          if (slide.cards.length === 2) gridCols = 'grid-2';
+          else if (slide.cards.length === 4) gridCols = 'grid-4';
+
+          cardsHtml = slide.cards.map(c => `
+            <div class="card">
+              ${c.icon ? `<div class="card-icon">${c.icon}</div>` : ''}
+              ${c.num && !c.icon ? `<div class="card-num">${c.num}</div>` : ''}
+              <div class="card-title">${c.title || c.text || ''}</div>
+              <div class="card-desc">${c.desc}</div>
+            </div>
+          `).join('');
+        }
+
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            <div class="layout-grid-container ${gridCols}">
+              ${cardsHtml}
+            </div>
+          </div>
+        `;
+      } else {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+          </div>
+        `;
+      }
+
+      slideWrapper.innerHTML = `
+        <div class="slide-indicator">
+          <span class="slide-num-badge">${slideNum}</span>
+        </div>
+        ${layoutHtml}
+        <div class="slide-footer-bar">
+          <span>Miércoles: IA: Ingeniería de Prompts para Mockups</span>
+          <span>Día 8</span>
+        </div>
+      `;
+
+      // Update speaker notes
+      notesContent.innerHTML = slide.notes || '<p>No hay notas adicionales para esta diapositiva.</p>';
+
+      // Update controls
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slidesData.length - 1;
+      slideCounter.textContent = `${slideNum} / ${String(slidesData.length).padStart(2, '0')}`;
+      progressBar.style.width = `${((index + 1) / slidesData.length) * 100}%`;
+    }
+
+    function goToNext() {
+      if (currentIndex < slidesData.length - 1) {
+        currentIndex++;
+        renderSlide(currentIndex);
+      }
+    }
+
+    function goToPrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderSlide(currentIndex);
+      }
+    }
+
+    // Navigation Events
+    nextBtn.addEventListener('click', goToNext);
+    prevBtn.addEventListener('click', goToPrev);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        goToNext();
+      } else if (e.key === 'ArrowLeft') {
+        goToPrev();
+      } else if (e.key.toLowerCase() === 'p') {
+        toggleNotes();
+      } else if (e.key.toLowerCase() === 'i') {
+        toggleIndex();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      }
+    });
+
+    // Notes drawer toggle
+    function toggleNotes() {
+      notesOpen = !notesOpen;
+      notesDrawer.classList.toggle('open', notesOpen);
+    }
+
+    toggleNotesBtn.addEventListener('click', toggleNotes);
+    closeNotesBtn.addEventListener('click', () => {
+      notesOpen = false;
+      notesDrawer.classList.remove('open');
+    });
+
+    // Fullscreen toggle
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.log(err));
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    // Initial Render
+    renderSlide(currentIndex);
+  </script>
+</body>
+</html>
