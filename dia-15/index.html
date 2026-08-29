@@ -732,11 +732,30 @@
     "notes": "<h3>Apertura</h3><p>Hoy cerramos la semana de directrices lanzando la Entrega 1 del TP. Resolveremos dudas técnicas de diagramación en PDF.</p>"
   },
   {
-    "layout": "split",
+    "layout": "steps",
     "title": "Agenda de la Clase",
-    "content": "<p>Hoy organizaremos el ensamblado y entrega de nuestro Manual de Marca v1:</p><ul><li>Pautas del encargo y especificaciones del formato de entrega.</li><li>El formato apaisado corporativo 16:9 y sus ventajas.</li><li>Uso de grillas y retículas de diagramación asimétrica.</li><li>Rúbrica detallada de calificación de la Entrega 1.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
+    "content": "<p>Hoy organizaremos el ensamblado y entrega de nuestro Manual de Marca v1:</p>",
+    "steps": [
+      {
+        "title": "01. Pautas TP 1",
+        "desc": "Formatos, plazos y especificaciones obligatorias de entrega."
+      },
+      {
+        "title": "02. Maquetado 16:9",
+        "desc": "Uso de grillas modulares horizontales y jerarquías."
+      },
+      {
+        "title": "03. Trabajo Guiado",
+        "desc": "Taller de compaginación y exportación de PDFs vectoriales."
+      }
+    ],
     "notes": "<h3>Agenda</h3><p>Presenta la agenda. Asegúrate de despejar cualquier duda técnica antes de iniciar el taller.</p>"
+  },
+  {
+    "layout": "quote",
+    "title": "Adrian Frutiger",
+    "content": "La diagramación de un manual técnico es en sí misma una declaración de la identidad de la marca. Si el manual es desordenado, la marca nace rota.",
+    "notes": "<h3>Cita</h3><p>Frutiger es uno de los diseñadores tipográficos y maquetadores técnicos más importantes de Suiza.</p>"
   },
   {
     "layout": "split",
@@ -746,66 +765,30 @@
     "notes": "<h3>Retícula</h3><p>Un manual asimétrico sin grilla da imagen de descuido.</p>"
   },
   {
-    "layout": "split",
-    "title": "Ventajas del Formato Apaisado 16:9",
-    "content": "<p>Por qué se abandonó el formato vertical A4 tradicional:</p><ul><li>Los manuales de marca ya no se imprimen; se visualizan en pantallas de ordenadores de desarrolladores o proyectores de salas de reuniones.</li><li>El formato 16:9 aprovecha el 100% de la superficie de visualización digital sin dejar bandas negras laterales.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>16:9</h3><p>El estándar industrial actual es el PDF interactivo apaisado de alta definición.</p>"
+    "layout": "vs",
+    "title": "Formatos de Maquetación: Horizontal vs. Vertical",
+    "content": "<p>Por qué se consolidó el estándar apaisado interactivo:</p>",
+    "vs1": {
+      "title": "Formato A4 Vertical (Histórico)",
+      "desc": "Pensado para impresión física en carpetas de oficina. Deja bandas negras en monitores actuales y requiere hacer scroll vertical constante.",
+      "badge": "Obsoleto",
+      "highlighted": false
+    },
+    "vs2": {
+      "title": "Formato 16:9 Horizontal (Digital)",
+      "desc": "Aprovecha el 100% de la superficie de visualización en pantallas y proyectores. El estándar definitivo en juntas corporativas.",
+      "badge": "Estándar Industrial",
+      "highlighted": true
+    },
+    "notes": "<h3>Formatos</h3><p>Insiste en maquetar en proporción 16:9 horizontal exacta.</p>"
   },
   {
-    "layout": "split",
-    "title": "La Retícula Modular en la Compaginación",
-    "content": "<p>Cómo ordenar la grilla en el lienzo de tu manual de marca:</p><ul><li>Usa una grilla modular de 4 o 6 columnas horizontales.</li><li>Mantén la misma posición para los cabezales de página, títulos de sección y numeración de folios para que el manual sea consistente.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Retícula</h3><p>Una grilla modular rígida mantiene el orden en manuales extensos de marca.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "La Jerarquía Tipográfica de la Lámina",
-    "content": "<p>Fijando las reglas de lectura en los manuales de marca:</p><ul><li><strong>Título de Sección:</strong> Fuente sans serif de alta visibilidad, tamaño de 24 a 32 puntos.</li><li><strong>Subtítulos Técnicos:</strong> Tamaño medio (16 a 18 puntos) para las directrices.</li><li><strong>Cuerpo Explicativo:</strong> Legibilidad absoluta, tamaño de 10 a 11 puntos.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Jerarquía</h3><p>El manual debe ser un ejemplo impecable del uso de jerarquías de la tipografía corporativa.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Integración Conceptual y Visual",
-    "content": "<p>El manual debe nacer de la historia de origen definida en la semana 5:</p><ul><li>Los adjetivos del Moodboard deben justificar visualmente las elecciones de la tipografía y el color en el manual.</li><li>Evita las explicaciones subjetivas; fundamenta cada decisión en base al arquetipo de marca.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Integración</h3><p>La coherencia conceptual es la mitad de la nota del jurado.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "La Página de Portada: Reglas",
-    "content": "<p>Diseño y minimalismo en la carátula técnica del manual:</p><ul><li>Coloca únicamente el logotipo principal centrado o alineado a la grilla asimétrica.</li><li>Incluye el subtítulo 'Manual de Identidad Visual v1.0' y el año actual.</li><li>Evita las texturas ruidosas; prioriza un fondo corporativo plano y elegante.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Carátula</h3><p>La carátula debe denotar sofisticación y orden desde el primer golpe de vista.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Tabla de Contenidos e Introducción",
-    "content": "<p>Cómo dar la bienvenida y guiar al lector del manual:</p><ul><li>La página 2 debe incluir un índice con links interactivos directos a las secciones.</li><li>Agrega un breve párrafo explicando el propósito y espíritu conceptual de la marca a modo de bienvenida.</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Índice</h3><p>Los enlaces interactivos en el PDF facilitan el trabajo diario del desarrollador front-end.</p>"
-  },
-  {
-    "layout": "steps",
-    "title": "Estructura Mínima de Entrega (TP 1)",
-    "content": "<p>Láminas obligatorias que debe incluir el PDF del manual de marca este lunes:</p>",
-    "steps": [
-      {
-        "title": "01. Portada y Concepto",
-        "desc": "Nombre de marca, grupo y justificación de la historia de origen."
-      },
-      {
-        "title": "02. Normalización de Logo",
-        "desc": "Retícula con coordenadas vectoriales, áreas de resguardo y tamaños mínimos."
-      },
-      {
-        "title": "03. Muestras de Color",
-        "desc": "Fichas técnicas con valores Pantone, CMYK, RGB y códigos HEX."
-      }
-    ],
-    "notes": "<h3>Nota</h3><p>El lunes continuaremos con las secciones de color y tipografía en la v2.</p>"
+    "layout": "stat",
+    "title": "El Valor de la Grilla de Maquetado",
+    "number": "4",
+    "statTitle": "Columnas Mínimas de Diagramación",
+    "content": "Para estructurar de forma prolija y armónica las páginas horizontales del manual, exige utilizar una grilla modular de al menos 4 columnas en Illustrator, ordenando de forma rígida y simétrica los cabezales de página, números de folio y títulos.",
+    "notes": "<h3>Grilla</h3><p>El orden en la diagramación demuestra solidez profesional en la agencia.</p>"
   },
   {
     "layout": "grid",
@@ -832,24 +815,101 @@
   },
   {
     "layout": "split",
-    "title": "Optimización del PDF Corporativo",
-    "content": "<p>Cómo exportar el archivo definitivo sin perder calidad vectorial:</p><ul><li>Exporta desde Illustrator en modo **PDF interactivo o de alta calidad**.</li><li>Usa la herramienta Optimizar PDF de Acrobat para comprimir el peso de las imágenes secundarias de mockups a 150 DPI.</li><li>El peso de archivo ideal no debe superar los 15 megabytes para envíos por correo.</li></ul>",
+    "title": "La Jerarquía Tipográfica de la Lámina",
+    "content": "<p>Fijando las reglas de lectura en los manuales de marca:</p><ul><li><strong>Título de Sección:</strong> Fuente sans serif de alta visibilidad, tamaño de 24 a 32 puntos.</li><li><strong>Subtítulos Técnicos:</strong> Tamaño medio (16 a 18 puntos) para las directrices.</li><li><strong>Cuerpo Explicativo:</strong> Legibilidad absoluta, tamaño de 10 a 11 puntos.</li></ul>",
     "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Compresión</h3><p>Un manual muy pesado genera resistencia en la lectura digital del cliente.</p>"
+    "notes": "<h3>Jerarquía</h3><p>El manual debe ser un ejemplo impecable del uso de jerarquías de la tipografía corporativa.</p>"
   },
   {
-    "layout": "split",
-    "title": "Checklist de Pre-Entrega Final",
-    "content": "<p>Pasos finales indispensables para la carga del lunes por la mañana:</p><ul><li>¿El enlace a la carpeta de Drive está configurado como público (lector)?</li><li>¿El archivo PDF final tiene el nombre del proyecto y grupo correctos?</li><li>¿Están convertidos a curvas todos los logotipos del manual?</li></ul>",
-    "media": "images/d15-viernes-slide02.jpg",
-    "notes": "<h3>Carga</h3><p>Evita los enlaces privados que demoran la evaluación de la entrega.</p>"
+    "layout": "steps",
+    "title": "Estructura Mínima de Entrega (TP 1)",
+    "content": "<p>Láminas obligatorias que debe incluir el PDF del manual de marca este lunes:</p>",
+    "steps": [
+      {
+        "title": "01. Portada y Concepto",
+        "desc": "Nombre de marca, grupo y justificación de la historia de origen."
+      },
+      {
+        "title": "02. Normalización de Logo",
+        "desc": "Retícula con coordenadas vectoriales, áreas de resguardo y tamaños mínimos."
+      },
+      {
+        "title": "03. Muestras de Color",
+        "desc": "Fichas técnicas con valores Pantone, CMYK, RGB y códigos HEX."
+      }
+    ],
+    "notes": "<h3>Nota</h3><p>El lunes continuaremos con las secciones de color y tipografía en la v2.</p>"
+  },
+  {
+    "layout": "highlight",
+    "title": "La Portada y la Tabla de Contenidos",
+    "highlightTitle": "Elegancia en las Primeras Páginas",
+    "content": "La carátula del manual debe ser extremadamente minimalista: coloca solo el logotipo principal centrado, el año y el subtítulo 'Guidelines v1.0'. La página 2 debe incluir una tabla de contenidos limpia con enlaces interactivos directos a las secciones para agilizar la lectura.",
+    "notes": "<h3>Carátula</h3><p>Las primeras páginas definen el tono de sofisticación del documento.</p>"
+  },
+  {
+    "layout": "vs",
+    "title": "Exportación PDF de Alta Calidad vs. Comprimido",
+    "content": "<p>Cómo guardar los manuales técnicos antes de subirlos a Drive:</p>",
+    "vs1": {
+      "title": "PDF de Alta Calidad Vectorial",
+      "desc": "El entregable formal. Conserva los textos vectorizados limpios sin pixelar los trazos, ideal para que los desarrolladores web copien códigos HEX.",
+      "badge": "Entregable",
+      "highlighted": true
+    },
+    "vs2": {
+      "title": "PDF Comprimido (Liviano)",
+      "desc": "Optimizar imágenes de mockups secundarios a 150 DPI para reducir el peso a menos de 15 megabytes, facilitando envíos rápidos por correo electrónico.",
+      "badge": "Consulta",
+      "highlighted": false
+    },
+    "notes": "<h3>PDF</h3><p>Generar siempre una versión vectorial limpia para asegurar el copiado exacto de los códigos de color.</p>"
+  },
+  {
+    "layout": "grid",
+    "title": "Errores Comunes en la Compaginación",
+    "content": "<p>Fallas que arruinan la presentación de tu manual de marca v1:</p>",
+    "cards": [
+      {
+        "num": "❌",
+        "title": "Sin Grilla",
+        "desc": "Títulos y numeraciones de folios alineados de forma diferente en cada lámina, provocando saltos visuales incómodos al pasar páginas."
+      },
+      {
+        "num": "❌",
+        "title": "Fuentes sin Enlace",
+        "desc": "Omitir los nombres de las familias tipográficas comerciales necesarias para que la imprenta compre la licencia."
+      },
+      {
+        "num": "❌",
+        "title": "Drive Cerrado",
+        "desc": "Dejar la carpeta de Google Drive como privada, imposibilitando la apertura del manual por el tribunal."
+      }
+    ],
+    "notes": "<h3>Fallo</h3><p>Evitar los enlaces privados que demoran la evaluación de la entrega.</p>"
   },
   {
     "layout": "title",
     "title": "Actividad del Día: TP 1 Lanzamiento",
     "subtitle": "Clase de repaso y organización de la entrega progresiva.",
     "content": "<p>Espacio de trabajo guiado en el aula para finalizar la versión 1 del Manual de Marca simple. Trabajo en grupos de 3 integrantes afinando grilla y vectores.</p>",
-    "notes": "<h3>Notas de Clase</h3><p>Alinear los requerimientos de la entrega y resolver dudas de compaginación en PDF horizontal.</p>"
+    "notes": "<h3>Notas de Clase</h3><p>Alinear los requerimientos de la entrega y resolver dudas de maquetación en PDF horizontal.</p>"
+  },
+  {
+    "layout": "steps",
+    "title": "Checklist de Carga de la Entrega 1",
+    "content": "<p>Consignas indispensables para finalizar la entrega hoy:</p>",
+    "steps": [
+      {
+        "title": "PDF Interactivo",
+        "desc": "Exporta el manual en PDF horizontal interactivo 16:9 de alta resolución."
+      },
+      {
+        "title": "Carga en Drive",
+        "desc": "Sube el PDF final y las fuentes vectoriales editables a la carpeta compartida."
+      }
+    ],
+    "notes": "<h3>Carga</h3><p>Verificar los accesos compartidos en la nube de almacenamiento del Drive.</p>"
   },
   {
     "layout": "split",

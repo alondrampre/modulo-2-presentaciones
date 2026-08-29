@@ -732,11 +732,30 @@
     "notes": "<h3>Apertura</h3><p>Hoy entraremos en una de las disciplinas con mayor rigor técnico del diseño: la adaptación a objetos tridimensionales y el plano de troquel.</p>"
   },
   {
-    "layout": "split",
+    "layout": "steps",
     "title": "Agenda de la Clase",
-    "content": "<p>Hoy dominaremos el diseño estructural de empaques:</p><ul><li>La interfaz física del packaging y sus funciones.</li><li>Niveles de lectura cognitiva del envase en el supermercado.</li><li>Estudio del caso de rediseño de Tropicana.</li><li>Análisis del Dieline técnico (troquel) y modelado 3D en Illustrator.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "content": "<p>Hoy dominaremos el diseño estructural de empaques:</p>",
+    "steps": [
+      {
+        "title": "01. Interfaz Física",
+        "desc": "Funciones logísticas y simbólicas del envase o packaging."
+      },
+      {
+        "title": "02. El Dieline Técnico",
+        "desc": "Trazado geométrico del troquel: cortes, dobleces y sangrados."
+      },
+      {
+        "title": "03. Mapeado 3D",
+        "desc": "Modelado tridimensional de empaques en Adobe Illustrator."
+      }
+    ],
     "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que un error de un milímetro en packaging arruina tiradas completas de producción.</p>"
+  },
+  {
+    "layout": "quote",
+    "title": "Tropicana Redesign Fail",
+    "content": "La pérdida de las marcas distintivas (naranja real con pajita) en el rediseño de 2009 demostró que el minimalismo ciego puede destruir el capital de marca en el supermercado.",
+    "notes": "<h3>Cita</h3><p>El caso Tropicana es el contraejemplo obligatorio en todas las escuelas de diseño del mundo.</p>"
   },
   {
     "layout": "split",
@@ -746,31 +765,22 @@
     "notes": "<h3>Envase</h3><p>El packaging es el vendedor silencioso en la góndola.</p>"
   },
   {
-    "layout": "split",
-    "title": "La Dimensión Logística vs. Simbólica",
-    "content": "<p>Las dos fuerzas que determinan el diseño estructural del envase:</p><ul><li><strong>Logística:</strong> Debe apilarse en palés de madera de forma eficiente, resistir la humedad del transporte y proteger la integridad física del producto.</li><li><strong>Simbólica:</strong> El diseño de la etiqueta debe atraer e incitar a la compra a distancia en segundos.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "layout": "vs",
+    "title": "Dimensión Logística vs. Dimensión Simbólica",
+    "content": "<p>Las dos fuerzas que determinan el diseño estructural del envase:</p>",
+    "vs1": {
+      "title": "Dimensión Logística (Funcional)",
+      "desc": "Debe apilarse eficientemente, resistir la humedad del transporte y proteger la integridad física del producto.",
+      "badge": "Estructural / Logística",
+      "highlighted": false
+    },
+    "vs2": {
+      "title": "Dimensión Simbólica (Persuasiva)",
+      "desc": "El diseño de la etiqueta debe atraer e incitar a la compra a distancia en segundos.",
+      "badge": "Persuasión Visual",
+      "highlighted": true
+    },
     "notes": "<h3>Fuerzas</h3><p>Un empaque hermoso que se rompe en el transporte es un fracaso de diseño industrial.</p>"
-  },
-  {
-    "layout": "steps",
-    "title": "Niveles de Lectura Cognitiva en Góndola",
-    "content": "<p>El orden en el que el cerebro del comprador decodifica el envase en el supermercado:</p>",
-    "steps": [
-      {
-        "title": "Lectura Primaria",
-        "desc": "Color del envase y forma de la silueta. Ocurre a 3 metros de distancia."
-      },
-      {
-        "title": "Lectura Secundaria",
-        "desc": "Nombre de la marca y sabor o variante del producto. Distancia media."
-      },
-      {
-        "title": "Lectura Terciaria",
-        "desc": "Ingredientes, código de barras e información nutricional. Sosteniendo el envase."
-      }
-    ],
-    "notes": "<h3>Nota</h3><p>Frenar la lectura terciaria si la primaria falla en llamar la atención.</p>"
   },
   {
     "layout": "stat",
@@ -781,57 +791,84 @@
     "notes": "<h3>Caso</h3><p>Un clásico ejemplo de por qué proteger el capital semiótico de marca.</p>"
   },
   {
-    "layout": "split",
-    "title": "Las Lecciones de Tropicana",
-    "content": "<p>Las conclusiones estratégicas del rediseño fallido más famoso de la historia:</p><ul><li>Nunca sacrifiques el **reconocimiento espontáneo** de la marca por modas estéticas minimalistas.</li><li>El consumidor no lee en el supermercado; escanea formas y colores conocidos rápidamente.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Lecciones</h3><p>El rediseño debe evolucionar la marca sin alienar a los consumidores leales actuales.</p>"
-  },
-  {
-    "layout": "steps",
-    "title": "Anatomía del Dieline (Troquel)",
-    "content": "<p>Las 3 capas vectoriales obligatorias que componen un plano técnico de troquel a escala 1:1:</p>",
-    "steps": [
+    "layout": "grid",
+    "title": "Niveles de Lectura Cognitiva en Góndola",
+    "content": "<p>El orden en el que el cerebro del comprador decodifica el envase en el supermercado:</p>",
+    "cards": [
       {
-        "title": "Línea de Corte (Roja)",
-        "desc": "Línea continua que indica por dónde pasará la cuchilla de acero en fábrica."
+        "num": "1",
+        "title": "Lectura Primaria",
+        "desc": "Color del envase y forma de la silueta. Ocurre a 3 metros de distancia."
       },
       {
-        "title": "Línea de Doblez (Azul)",
-        "desc": "Línea punteada que indica por dónde se realizará el hendido o plegado."
+        "num": "2",
+        "title": "Lectura Secundaria",
+        "desc": "Nombre de la marca y sabor o variante del producto. Distancia media."
       },
       {
-        "title": "Reserva de Cola (Limpia)",
-        "desc": "Áreas sin impresión de tinta ni barnices para permitir que el pegamento actúe."
+        "num": "3",
+        "title": "Lectura Terciaria",
+        "desc": "Ingredientes, código de barras e información nutricional. Sosteniendo el envase."
       }
     ],
+    "notes": "<h3>Nota</h3><p>Frenar la lectura terciaria si la primaria falla en llamar la atención.</p>"
+  },
+  {
+    "layout": "split",
+    "title": "Anatomía del Dieline (Troquel)",
+    "content": "<p>Las 3 capas vectoriales obligatorias que componen un plano técnico de troquel a escala 1:1:</p><ul><li><strong>Línea de Corte (Roja):</strong> Línea continua que indica por dónde pasará la cuchilla de acero en fábrica.</li><li><strong>Línea de Doblez (Azul):</strong> Línea punteada que indica por dónde se realizará el plegado.</li><li><strong>Reserva de Cola:</strong> Áreas sin impresión de tinta ni barnices para permitir que el pegamento actúe.</li></ul>",
+    "media": "images/d17-martes-slide02.jpg",
     "notes": "<h3>Dieline</h3><p>Un error de 1mm en el dieline puede hacer que miles de envases no encastren.</p>"
   },
   {
-    "layout": "split",
+    "layout": "steps",
+    "title": "Modelado 3D en Adobe Illustrator",
+    "content": "<p>Pasos para generar la maqueta volumétrica tridimensional en pantalla:</p>",
+    "steps": [
+      {
+        "title": "Perfil Vectorial",
+        "desc": "Dibuja el contorno lateral de media botella en el eje medio en Illustrator."
+      },
+      {
+        "title": "Efecto Giro (Revolve)",
+        "desc": "Aplica 3D y materiales -> Giro (Revolve) a 360 grados en vivo."
+      },
+      {
+        "title": "Mapeado de Etiqueta",
+        "desc": "Arrastra tu motivo vectorial al panel de materiales y aplícalo a la superficie del envase."
+      }
+    ],
+    "notes": "<h3>Illustrator</h3><p>El mapeado 3D de Illustrator ayuda a previsualizar deformaciones de etiqueta de forma rápida.</p>"
+  },
+  {
+    "layout": "highlight",
     "title": "La Reserva de Cola (Pegamento)",
-    "content": "<p>Pautas de armado técnico del troquel para evitar fallas de armado:</p><ul><li>Las solapas de pegado deben permanecer libres de tinta o barnices protectores.</li><li>Si imprimes tinta sobre la solapa, el adhesivo químico no penetrará las fibras del cartón y la caja se abrirá en la góndola ante el peso del producto.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "highlightTitle": "Fricción de Fibras de Cartón",
+    "content": "Las solapas de pegado de las cajas de cartón deben permanecer libres de tinta o barnices protectores en el archivo de troquel técnico. Si imprimes tinta sobre la solapa, el adhesivo químico no penetrará las fibras del cartón y la caja se abrirá en la góndola ante el peso del producto.",
     "notes": "<h3>Pegado</h3><p>Especifica siempre la reserva de cola en el plano vectorial de troquel.</p>"
   },
   {
-    "layout": "split",
-    "title": "Modelado 3D en Adobe Illustrator",
-    "content": "<p>El uso de la herramienta de modelado 3D integrada en el software:</p><ul><li>Dibuja el perfil vectorial de media botella en Illustrator.</li><li>Usa el filtro **3D y materiales -> Giro (Revolve)** para generar el cuerpo 3D del envase en segundos.</li><li>Esto permite mapear la etiqueta sobre el volumen real para verificar deformaciones visuales.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Modelado</h3><p>Mostrar la herramienta en vivo en el proyector de clase.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Barnices y Acabados de Impresión",
-    "content": "<p>Agregando texturas y sofisticación al envase en el manual de marca:</p><ul><li><strong>Stamping Metálico (Hot Stamping):</strong> Lámina de oro o plata aplicada con calor para marcas de lujo.</li><li><strong>Laca UV Sectorizada:</strong> Capa de brillo translúcido solo en zonas del logotipo para contrastar con el fondo mate del cartón.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Acabados</h3><p>Los acabados especiales aumentan de forma drástica el valor percibido del envase físico en mano.</p>"
+    "layout": "vs",
+    "title": "Hot Stamping vs. Laca UV Sectorizada",
+    "content": "<p>Dos acabados especiales premium para embalajes corporativos:</p>",
+    "vs1": {
+      "title": "Hot Stamping (Metálico)",
+      "desc": "Lámina dorada, plateada o cobre aplicada mediante presión y calor. Aporta un brillo metálico reflectante inigualable, ideal para marcas de lujo y licores.",
+      "badge": "Brillo Metálico",
+      "highlighted": false
+    },
+    "vs2": {
+      "title": "Laca UV Sectorizada",
+      "desc": "Capa de brillo barniz translúcido colocada únicamente sobre partes del logotipo. Genera contraste táctil y visual contra el fondo mate de la caja de cartón.",
+      "badge": "Brillo Táctil",
+      "highlighted": true
+    },
+    "notes": "<h3>Acabados</h3><p>El uso de acabados especiales aumenta de forma drástica el valor percibido del envase físico en mano.</p>"
   },
   {
     "layout": "grid",
-    "title": "Errores Técnicos en Dielines",
-    "content": "<p>Fallas comunes en los planos de troquel vectoriales:</p>",
+    "title": "Errores Técnicos en Planos de Troquel",
+    "content": "<p>Evita estos fallos comunes en packaging físico:</p>",
     "cards": [
       {
         "num": "❌",
@@ -852,31 +889,27 @@
     "notes": "<h3>Fallo</h3><p>Los errores de sangrado en el troquel son los más costosos en la imprenta.</p>"
   },
   {
-    "layout": "steps",
-    "title": "Protocolos de Validación del Mockup Físico",
-    "content": "<p>Métodos indispensables para testear la funcionalidad del envase antes de imprimir la tirada masiva:</p>",
-    "steps": [
-      {
-        "title": "Prueba de Apertura y Uso",
-        "desc": "Verificar la ergonomía del cierre y que el consumidor pueda abrirlo sin romper el cartón."
-      },
-      {
-        "title": "Prueba de Góndola Simulada",
-        "desc": "Colocar la maqueta en papel al lado de competidores reales para validar los colores."
-      },
-      {
-        "title": "Prueba de Estrés Logístico",
-        "desc": "Comprobar que el empaque resiste el peso al ser apilado en cajas secundarias."
-      }
-    ],
-    "notes": "<h3>Tip</h3><p>El mockup en papel evita errores de escala imposibles de ver en monitor.</p>"
-  },
-  {
     "layout": "title",
     "title": "Actividad del Día: Modelado en Envases",
     "subtitle": "Bocetado de packaging y modelado 3D en vivo con Illustrator.",
     "content": "<p>Investigación de referentes de empaque en Padlet y desarrollo de un boceto propio. Live class aplicando herramientas 3D y mapeado de motivos en Illustrator.</p>",
     "notes": "<h3>Notas de Clase</h3><p>Guiar a los alumnos en el uso de la herramienta de 3D y materiales de Illustrator sobre las caras del envase.</p>"
+  },
+  {
+    "layout": "steps",
+    "title": "Instrucciones de Maquetado 3D",
+    "content": "<p>Consignas para el taller de packaging en el aula:</p>",
+    "steps": [
+      {
+        "title": "1. Perfil",
+        "desc": "Dibuja la silueta geométrica del envase a escala real en milímetros."
+      },
+      {
+        "title": "2. Mapear",
+        "desc": "Coloca tu pattern en los materiales y aplícalo a las caras de la botella."
+      }
+    ],
+    "notes": "<h3>Consignas</h3><p>Ayudar a resolver dudas de extrusión 3D de Illustrator en vivo.</p>"
   },
   {
     "layout": "split",

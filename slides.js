@@ -15,11 +15,30 @@ const slidesData = {
             "notes": "<h3>Guía del Docente</h3><p>Den la bienvenida al Módulo 2. Expliquen que el branding va más allá del diseño visual y que entraremos en la psicología de la marca.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy abordaremos el análisis semiótico y su rol en la memorabilidad de las marcas:</p><ul><li>Introducción al signo marcario y Ferdinand de Saussure.</li><li>La clasificación del signo según Charles Peirce: Ícono, Índice y Símbolo.</li><li>Uso de metáforas y figuras retóricas en el diseño de logotipos corporativos.</li></ul>",
-            "media": "images/d01-lunes-slide02.jpg",
+            "content": "<p>Hoy abordaremos el análisis semiótico y su rol en la memorabilidad de las marcas:</p>",
+            "steps": [
+              {
+                "title": "01. Teoría del Signo",
+                "desc": "Introducción al signo marcario y la clasificación de Peirce."
+              },
+              {
+                "title": "02. Retórica Visual",
+                "desc": "Uso de metáforas, sinécdoques y contraste en diseño de logos."
+              },
+              {
+                "title": "03. Dinámica en Miro",
+                "desc": "Análisis colaborativo de marcas reales y su significado."
+              }
+            ],
             "notes": "<h3>Nota</h3><p>Presenta el temario de forma clara y establece las expectativas del día.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Ferdinand de Saussure",
+            "content": "La lengua es un sistema de signos que expresan ideas, y por eso comparte naturaleza con la escritura, el alfabeto de los sordomudos y los ritos simbólicos.",
+            "notes": "<h3>Cita teórica</h3><p>Explicar cómo la tipografía y el color actúan como el lenguaje de la marca.</p>"
           },
           {
             "layout": "split",
@@ -29,59 +48,11 @@ const slidesData = {
             "notes": "<h3>Puntos clave</h3><p>Enfatizar que todo comunica. El silencio visual también es un signo.</p>"
           },
           {
-            "layout": "highlight",
-            "title": "La Mente del Espectador y los Sesgos Visuales",
-            "highlightTitle": "Economía Cognitiva del Cerebro",
-            "content": "El cerebro humano busca patrones de forma automática para ahorrar energía cognitiva. Interpreta líneas, círculos y contrastes basándose en experiencias previas, convenciones sociales y contextos culturales. Si no controlamos lo que comunica nuestro signo, el público le dará su propio significado al azar.",
-            "notes": "<h3>Comentario</h3><p>La mente asocia formas a conceptos. Un círculo sugiere unión; un triángulo, dinamismo.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "La Tríada del Signo según Charles Peirce",
-            "content": "<p>El filósofo Charles Sanders Peirce clasificó los signos en tres grandes categorías según la relación física, mental o causal que mantienen con el objeto real:</p>",
-            "steps": [
-              {
-                "title": "El Ícono",
-                "desc": "Mantiene una semejanza física directa con su referente. Es la representación literal de un objeto. Ej: la silueta de una cámara."
-              },
-              {
-                "title": "El Índice",
-                "desc": "Mantiene una relación física de causa-efecto con su objeto. Es un indicio o huella. Ej: el humo de un incendio o la marca de derrape."
-              },
-              {
-                "title": "El Símbolo",
-                "desc": "Mantiene una relación convencional de significado aprendido. No hay parecido físico. Ej: las letras de nuestro alfabeto."
-              }
-            ],
-            "notes": "<h3>Peirce</h3><p>Explicar que un buen sistema gráfico utiliza los tres niveles para comunicar con efectividad.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Ícono (Semejanza Física)",
-            "content": "<p>Representa de forma directa e inequívoca el objeto real:</p><ul><li>Se parece físicamente a lo que representa sin necesidad de abstracción.</li><li><strong>Ejemplo en Branding:</strong> La silueta realista de una taza de café para una cafetería de barrio o la ilustración de una hoja para una floristería. Es inmediato pero poco diferenciador.</li></ul>",
-            "media": "images/d01-lunes-slide02.jpg",
-            "notes": "<h3>Nota</h3><p>El ícono es directo y fácil de comprender, pero carece de misterio o diferenciación.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Índice (Causa-Efecto)",
-            "content": "<p>No describe el objeto pero apunta directamente hacia él mediante indicios:</p><ul><li>Establece una conexión existencial.</li><li><strong>Ejemplo en Branding:</strong> Las marcas de pisadas en una marca de calzado deportivo de montaña, o una chispa eléctrica en una marca de cargadores rápidos. Invita al usuario a deducir el mensaje.</li></ul>",
-            "media": "images/d01-lunes-slide02.jpg",
-            "notes": "<h3>Nota</h3><p>El índice requiere una deducción mental rápida por parte del receptor.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Símbolo (Convención Cultural)",
-            "content": "<p>La relación es puramente cultural, arbitraria y acordada:</p><ul><li>Su significado debe ser enseñado y aprendido mediante el uso repetido.</li><li><strong>Ejemplo en Branding:</strong> Los dos círculos entrelazados de Mastercard, la pipa o *swoosh* de Nike, o la manzana mordida de Apple. Es el identificador más potente pero el más difícil de instalar.</li></ul>",
-            "media": "images/d01-lunes-slide02.jpg",
-            "notes": "<h3>Nota</h3><p>El símbolo es la estructura más fuerte, pero requiere posicionamiento y tiempo para aprenderse.</p>"
-          },
-          {
             "layout": "vs",
             "title": "Símbolos Marcarios vs. Íconos Genéricos",
             "content": "<p>La elección de diseño afecta directamente la registrabilidad y recordación:</p>",
             "vs1": {
-              "title": "Íconos Genéricos (Descripctivos)",
+              "title": "Íconos Genéricos (Descriptivos)",
               "desc": "Representan literalmente el producto. Son fáciles de entender pero casi imposibles de registrar ante marcas y patentes por falta de distintividad.",
               "badge": "Descriptivo",
               "highlighted": false
@@ -95,6 +66,40 @@ const slidesData = {
             "notes": "<h3>Importante</h3><p>Indicar a los alumnos la importancia de diseñar marcas registrables.</p>"
           },
           {
+            "layout": "stat",
+            "title": "El Origen de la Semiótica Moderna",
+            "number": "1896",
+            "statTitle": "El Nacimiento del Pragmatismo Americano",
+            "content": "El filósofo Charles Sanders Peirce consolida su teoría del signo en esta época. Peirce argumentó que un signo no existe de forma aislada, sino que siempre requiere un 'Intérprete' y un 'Objeto' de referencia real, sentando las bases del branding y la publicidad actual.",
+            "notes": "<h3>Peirce</h3><p>Mencionar cómo su pragmatismo dio origen al análisis de mercado actual.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "La Clasificación del Signo según Peirce",
+            "content": "<p>La mente humana decodifica las imágenes en tres niveles según la semiótica pragmática:</p>",
+            "cards": [
+              {
+                "num": "Ícono",
+                "icon": "📷",
+                "title": "Ícono (Físico)",
+                "desc": "Mantiene semejanza directa con el objeto real. Ej: dibujo de una taza."
+              },
+              {
+                "num": "Índice",
+                "icon": "👣",
+                "title": "Índice (Causal)",
+                "desc": "Indicio físico o rastro del objeto. Ej: la huella de una pata de perro."
+              },
+              {
+                "num": "Símbolo",
+                "icon": "🍎",
+                "title": "Símbolo (Convención)",
+                "desc": "Significado aprendido por cultura. Ej: la manzana de Apple."
+              }
+            ],
+            "notes": "<h3>Clasificación</h3><p>Los tres niveles deben usarse coordinadamente en una marca.</p>"
+          },
+          {
             "layout": "split",
             "title": "Retórica Visual: Comunicar con poco",
             "content": "<p>La retórica visual es el arte de usar imágenes para persuadir o sugerir significados ocultos de forma estética y limpia:</p><ul><li>Consiste en comprimir conceptos abstractos complejos en trazos sencillos.</li><li>Evita el ruido visual eliminando elementos decorativos y texturas redundantes para acelerar la comprensión del mensaje.</li></ul>",
@@ -102,11 +107,49 @@ const slidesData = {
             "notes": "<h3>Concepto</h3><p>El diseño gráfico profesional busca la máxima economía de recursos con el máximo significado.</p>"
           },
           {
-            "layout": "highlight",
+            "layout": "steps",
             "title": "La Metáfora Visual en Diseño",
-            "highlightTitle": "Cruzar Conceptos Distintos",
-            "content": "Una metáfora visual ocurre cuando trasladamos el significado de un concepto (como velocidad, protección, ecología o conexión) a una forma gráfica que no le pertenece originalmente. Un ejemplo clásico es la flecha oculta en el espacio negativo de FedEx, que sugiere dirección y dinamismo sin escribir la palabra.",
-            "notes": "<h3>Explicación</h3><p>Mencionar cómo los logos de tecnología suelen comprimir conceptos complejos en formas geométricas simples.</p>"
+            "content": "<p>Cómo fusionar conceptos para crear un logotipo memorable e inteligente:</p>",
+            "steps": [
+              {
+                "title": "Identificar Concepto A",
+                "desc": "La actividad o rubro del cliente (ej. entregas de encomiendas)."
+              },
+              {
+                "title": "Identificar Concepto B",
+                "desc": "El beneficio estratégico o valor clave (ej. rapidez y dirección)."
+              },
+              {
+                "title": "Fusionar Formas",
+                "desc": "Crear el cruce visual (ej. la flecha oculta en el espacio negativo de FedEx)."
+              }
+            ],
+            "notes": "<h3>Ejemplo</h3><p>Menciona marcas famosas que usan espacio negativo o ilusiones ópticas.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "La Mente del Espectador y los Sesgos Visuales",
+            "highlightTitle": "Economía Cognitiva del Cerebro",
+            "content": "El cerebro humano busca patrones de forma automática para ahorrar energía cognitiva. Interpreta líneas, círculos y contrastes basándose en experiencias previas, convenciones sociales y contextos culturales. Si no controlamos lo que comunica nuestro signo, el público le dará su propio significado al azar.",
+            "notes": "<h3>Comentario</h3><p>La mente asocia formas a conceptos. Un círculo sugiere unión; un triángulo, dinamismo.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Denotación vs. Connotación Visual",
+            "content": "<p>Los dos niveles de lectura de cualquier pieza de diseño gráfico:</p>",
+            "vs1": {
+              "title": "Denotación (Lo Objetivo)",
+              "desc": "La descripción física literal de lo que está dibujado en la diapositiva (ej. 'una silueta de oso color azul'). Es igual para todos los observadores.",
+              "badge": "Literal",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Connotación (Lo Subjetivo)",
+              "desc": "La carga emocional o cultural asociada al dibujo (ej. 'ternura, seguridad, infancia'). Varía según el contexto y perfil del receptor.",
+              "badge": "Emocional",
+              "highlighted": true
+            },
+            "notes": "<h3>Lectura</h3><p>El diseñador de marcas debe dominar el nivel de connotación visual.</p>"
           },
           {
             "layout": "grid",
@@ -132,29 +175,6 @@ const slidesData = {
             "notes": "<h3>Tip</h3><p>La retórica visual hace que el logo sea inolvidable y genere satisfacción al descubrir el mensaje oculto.</p>"
           },
           {
-            "layout": "grid",
-            "title": "Puntos Clave de la Clase",
-            "content": "<p>Conceptos que debés recordar para el desarrollo de identidades:</p>",
-            "cards": [
-              {
-                "num": "A",
-                "title": "Todo comunica",
-                "desc": "No existen formas vacías; la mente siempre dará un significado al signo."
-              },
-              {
-                "num": "B",
-                "title": "Ley de renuncia",
-                "desc": "Para comunicar con impacto, debés renunciar a los detalles innecesarios."
-              },
-              {
-                "num": "C",
-                "title": "Convención",
-                "desc": "El símbolo puro es el fin del branding; requiere consistencia prolongada."
-              }
-            ],
-            "notes": "<h3>Resumen</h3><p>Alineen las ideas para la dinámica de Miro que realizaremos a continuación.</p>"
-          },
-          {
             "layout": "title",
             "title": "Actividad del Día: Adivina el Mensaje",
             "subtitle": "Trabajamos en Miro para interpretar los signos de diferentes marcas.",
@@ -162,8 +182,28 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Guiar a los alumnos en el tablero. Fomentar la discusión sobre la relación entre significante y significado.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Instrucciones de la Dinámica",
+            "content": "<p>Pasos para realizar el taller semiótico en Miro de forma grupal:</p>",
+            "steps": [
+              {
+                "title": "Ingreso y Asignación",
+                "desc": "Únanse al enlace de Miro en la sección del Día 21 según su número de grupo."
+              },
+              {
+                "title": "Análisis de Signos",
+                "desc": "Aíslen el logo asignado y detallen en posits amarillos sus íconos, índices y símbolos."
+              },
+              {
+                "title": "Showcase y Debate",
+                "desc": "Presenten sus conclusiones al resto de la clase en un pitch rápido de 1 minuto."
+              }
+            ],
+            "notes": "<h3>Instrucciones</h3><p>Controlar que todos los grupos escriban posits y participen de forma equitativa.</p>"
+          },
+          {
             "layout": "split",
-            "title": "Cierre y Próxima Clase",
+            "title": "Cierre y Tareas del Día",
             "content": "<p>Objetivos para la próxima sesión:</p><ul><li>Verificar la retórica de sus logotipos preliminares.</li><li>Traer seleccionados 3 adjetivos de sus marcas para la clase de Storytelling.</li><li><strong>Próximo tema:</strong> Moodboards y Storytelling de marca.</li></ul>",
             "media": "images/d01-lunes-slide02.jpg",
             "notes": "<h3>Cierre</h3><p>Motiva a los alumnos a observar críticamente la publicidad de camino a casa.</p>"
@@ -181,11 +221,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy veremos cómo construir el concepto y la historia de marca antes de abrir cualquier programa de diseño vectorial.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy organizaremos el relato detrás de las marcas y su traducción visual:</p><ul><li>El Storytelling de Marca y su importancia comercial.</li><li>El framework del Círculo Dorado y StoryBrand.</li><li>La personalidad de marca y el tono de voz.</li><li>Taller práctico de creación de Moodboards inspiracionales.</li></ul>",
-            "media": "images/d03-miercoles-slide03.jpg",
+            "content": "<p>Hoy organizaremos el relato detrás de las marcas y su traducción visual:</p>",
+            "steps": [
+              {
+                "title": "01. Storytelling de Marca",
+                "desc": "La historia de origen y el Círculo Dorado de Simon Sinek."
+              },
+              {
+                "title": "02. Personalidad de Marca",
+                "desc": "Dimensiones de Aaker y el tono de voz corporativo."
+              },
+              {
+                "title": "03. Creación de Moodboards",
+                "desc": "Taller práctico de curaduría visual y estética."
+              }
+            ],
             "notes": "<h3>Nota</h3><p>Presenta la agenda. Remarca que el storytelling no es inventar mentiras, sino contar la verdad con empatía.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Simon Sinek",
+            "content": "La gente no compra lo que haces; compra por qué lo haces. Y lo que haces simplemente demuestra lo que crees.",
+            "notes": "<h3>Cita</h3><p>Esta frase resume la filosofía del 'Start with Why'.</p>"
           },
           {
             "layout": "split",
@@ -193,67 +252,6 @@ const slidesData = {
             "content": "<p>Las marcas que perduran en el tiempo no se limitan a vender productos, sino que defienden una narrativa clara:</p><ul><li>Toda gran marca construye una **historia de origen** que humaniza a la empresa.</li><li>Este relato expone una frustración o problema del fundador que la marca promete solucionar de forma constante para la audiencia.</li></ul>",
             "media": "images/d03-miercoles-slide03.jpg",
             "notes": "<h3>Explicación</h3><p>El público no compra lo que hacés; compra por qué lo hacés.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "El Círculo Dorado de Simon Sinek",
-            "content": "<p>Las marcas líderes inspiran su comunicación de adentro hacia afuera, siguiendo tres capas de significado:</p>",
-            "steps": [
-              {
-                "title": "Por qué (Why)",
-                "desc": "El propósito profundo, creencia o causa fundacional. ¿Por qué existe tu marca?"
-              },
-              {
-                "title": "Cómo (How)",
-                "desc": "Los procesos, valores o diferenciadores técnicos que te hacen único."
-              },
-              {
-                "title": "Qué (What)",
-                "desc": "Los productos, servicios y especificaciones físicas que vendes."
-              }
-            ],
-            "notes": "<h3>Sinek</h3><p>El 'Por qué' debe ser el núcleo de la historia de origen y del diseño visual.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Definiendo el 'Por Qué' Fundacional",
-            "content": "<p>El motor conceptual que define todas las piezas de comunicación:</p><ul><li><strong>Ejemplo de Apple:</strong> Su 'Why' no es hacer computadoras, sino desafiar el status quo pensando diferente. Las computadoras son solo su 'What'.</li><li><strong>Ejemplo de Nike:</strong> Su 'Why' es traer inspiración a cada atleta del mundo. Las zapatillas son su medio físico.</li></ul>",
-            "media": "images/d03-miercoles-slide03.jpg",
-            "notes": "<h3>Ejemplo</h3><p>Insiste en que el 'Why' nunca puede ser 'hacer dinero'. El dinero es un resultado.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "El Viaje del Héroe según Donald Miller",
-            "content": "<p>El framework de StoryBrand propone simplificar los mensajes comerciales usando las bases de la mitología narrativa:</p>",
-            "steps": [
-              {
-                "title": "El Cliente es el Héroe",
-                "desc": "La marca no debe presentarse como el protagonista. El cliente es quien tiene el conflicto a resolver."
-              },
-              {
-                "title": "La Marca es el Guía",
-                "desc": "El rol de la marca es proveer un plan con empatía y autoridad. Como Yoda para Luke."
-              },
-              {
-                "title": "El Plan y los Destinos",
-                "desc": "Ofrecer un camino claro y predecible que les ayude a alcanzar el éxito y evitar el fracaso."
-              }
-            ],
-            "notes": "<h3>Star Wars</h3><p>Usa la metáfora clásica: el cliente es Luke Skywalker; la marca es Yoda.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Rol de la Marca como Guía",
-            "content": "<p>La marca se posiciona en base a dos pilares narrativos:</p><ul><li><strong>Empatía:</strong> Demostrar que entiendes el dolor o problema del cliente ('Sabemos lo frustrante que es...').</li><li><strong>Autoridad:</strong> Demostrar mediante estadísticas, testimonios o premios que eres capaz de resolverlo de forma confiable.</li></ul>",
-            "media": "images/d03-miercoles-slide03.jpg",
-            "notes": "<h3>Guía</h3><p>Un cliente frustrado no busca otro héroe confundido; busca un guía sólido.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Dimensiones de Personalidad de Jennifer Aaker",
-            "content": "<p>Las 5 dimensiones de personalidad de marca identificadas en su investigación:</p><ul><li><strong>Sinceridad:</strong> Honestidad, orientación familiar (ej. Disney).</li><li><strong>Entusiasmo:</strong> Audaz, imaginativo, moderno (ej. Red Bull).</li><li><strong>Competencia:</strong> Confiable, inteligente, líder (ej. Intel).</li><li><strong>Sofisticación:</strong> Glamurosa, clase alta (ej. Chanel).</li><li><strong>Robustez:</strong> Fuerte, rústico (ej. Jeep).</li></ul>",
-            "media": "images/d03-miercoles-slide03.jpg",
-            "notes": "<h3>Aaker</h3><p>El arquetipo de personalidad define el tono gráfico.</p>"
           },
           {
             "layout": "vs",
@@ -274,18 +272,42 @@ const slidesData = {
             "notes": "<h3>Aaker</h3><p>El tono de voz condiciona la paleta de color y la diagramación visual.</p>"
           },
           {
+            "layout": "stat",
+            "title": "StoryBrand y Donald Miller",
+            "number": "7",
+            "statTitle": "Pasos del Viaje del Cliente Héroe",
+            "content": "El framework StoryBrand reduce la confusión comercial estructurando el mensaje de ventas en 7 pasos narrativos indispensables, donde el cliente es el Héroe que enfrenta un problema y la marca actúa como el Guía que le ofrece un plan claro de éxito.",
+            "notes": "<h3>Miller</h3><p>Explicar que la marca nunca debe presentarse como el héroe de la historia.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Dimensiones de Personalidad de Aaker",
+            "content": "<p>Los 5 rasgos de personalidad marcarios que determinan el tono gráfico:</p>",
+            "cards": [
+              {
+                "num": "01",
+                "title": "Sinceridad",
+                "desc": "Orientado a la familia, honesto y genuino (ej. Disney, Coca-Cola)."
+              },
+              {
+                "num": "02",
+                "title": "Entusiasmo",
+                "desc": "Audaz, enérgico, moderno e imaginativo (ej. Red Bull, Apple)."
+              },
+              {
+                "num": "03",
+                "title": "Sofisticación",
+                "desc": "Clase alta, glamuroso y de alto valor (ej. Chanel, Rolex)."
+              }
+            ],
+            "notes": "<h3>Aaker</h3><p>Pide a los alumnos que ubiquen sus marcas en alguna de estas dimensiones.</p>"
+          },
+          {
             "layout": "split",
             "title": "¿Qué es un Moodboard?",
             "content": "<p>Un Moodboard (muro de inspiración) es una herramienta visual imprescindible para alinear al equipo antes de diseñar:</p><ul><li>Es un collage curado de referencias tipográficas, paletas de color de la naturaleza, texturas, arquitectura y fotografías atmosféricas.</li><li>**No contiene logotipos directos a copiar**, sino el universo visual conceptual que albergará a la marca.</li></ul>",
             "media": "images/d02-martes-slide03.jpg",
             "notes": "<h3>Moodboard</h3><p>No es una colección de fotos bonitas sin criterio; debe tener un hilo conductor.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Curación Visual y la Dirección Estética",
-            "content": "<p>La importancia de seleccionar imágenes por su textura e iluminación:</p><ul><li>Busca referencias que transmitan temperatura cromática (cálidos analógicos vs. fríos tecnológicos).</li><li>Agrega tipografías históricas o cartelería urbana de épocas específicas para fijar el estilo conceptual.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Curación</h3><p>Explica que menos es más al curar referencias.</p>"
           },
           {
             "layout": "steps",
@@ -308,27 +330,52 @@ const slidesData = {
             "notes": "<h3>Nota</h3><p>La curación es la verdadera tarea del diseñador.</p>"
           },
           {
+            "layout": "highlight",
+            "title": "La Coherencia Fotográfica y Lumínica",
+            "highlightTitle": "Temperatura y Textura",
+            "content": "Un moodboard profesional no mezcla fotos de stock con flash de estudio con imágenes analógicas granuladas de luz natural. Elige una única temperatura de color (cálido/frío) y un tipo de luz (directa/difusa) para que el moodboard comunique una atmósfera unificada y creíble.",
+            "notes": "<h3>Tip</h3><p>La consistencia cromática del moodboard define la futura paleta de la marca.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Referencias Directas vs. Inspiración Abstracta",
+            "content": "<p>El error de buscar en la misma categoría comercial:</p>",
+            "vs1": {
+              "title": "Búsqueda Directa (Cliché)",
+              "desc": "Buscar fotos de otras cafeterías si estás diseñando una cafetería. Lleva a copiar de forma inconsciente las mismas paletas y estilos del competidor.",
+              "badge": "Límite",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Búsqueda Abstracta (Inspiración)",
+              "desc": "Buscar referencias de arquitectura industrial, texturas de café de grano de cerca o paletas de bosques húmedos. Genera una estética única.",
+              "badge": "Innovador",
+              "highlighted": true
+            },
+            "notes": "<h3>Nota</h3><p>Fomentar la búsqueda fuera del rubro comercial directo.</p>"
+          },
+          {
             "layout": "grid",
-            "title": "Errores Comunes al Crear un Moodboard",
-            "content": "<p>Evita estos fallos que arruinan la utilidad del collage:</p>",
+            "title": "Errores Comunes en el Moodboard",
+            "content": "<p>Evita estos fallos comunes que destruyen el collage:</p>",
             "cards": [
               {
                 "num": "❌",
-                "title": "Exceso de Referentes",
-                "desc": "Colocar logotipos terminados de competidores directos en lugar de buscar atmósferas conceptuales."
+                "title": "Muchos Logos",
+                "desc": "Colocar logotipos de competidores directos en lugar de buscar texturas y tipografías puras."
               },
               {
                 "num": "❌",
-                "title": "Incoherencia Cromática",
-                "desc": "Mezclar tonos cálidos con fríos de forma aleatoria sin un criterio de contraste claro."
+                "title": "Sin Contraste",
+                "desc": "Mezclar fotos de baja resolución o ruidosas sin una paleta de color coherente de fondo."
               },
               {
                 "num": "❌",
-                "title": "Falta de Jerarquía",
+                "title": "Sin Jerarquía",
                 "desc": "Organizar todas las fotos del mismo tamaño, lo que dificulta que el ojo encuentre la dirección estética principal."
               }
             ],
-            "notes": "<h3>Nota docente</h3><p>Prepara a los alumnos para la dinámica de Padlet.</p>"
+            "notes": "<h3>Errores</h3><p>El desorden visual anula el valor conceptual de la lámina.</p>"
           },
           {
             "layout": "title",
@@ -338,11 +385,31 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Revisar las redacciones en vivo y dar feedback sobre la empatía y la definición del conflicto inicial.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Guía para la Dinámica de Storytelling",
+            "content": "<p>Pautas de redacción para el ejercicio colaborativo en el Padlet:</p>",
+            "steps": [
+              {
+                "title": "1. El Dolor",
+                "desc": "Define en una oración el problema principal de tu Buyer Persona."
+              },
+              {
+                "title": "2. La Solución",
+                "desc": "Redacta el plan y beneficio único que tu marca ofrece de forma diferenciada."
+              },
+              {
+                "title": "3. Publicación",
+                "desc": "Carga la historia en la sección del Día 22 y vota por la redacción de tu compañero."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Garantizar que todos los alumnos tengan posits individuales en el Padlet.</p>"
+          },
+          {
             "layout": "split",
-            "title": "Cierre y Tareas del Día",
-            "content": "<p>Tareas para cerrar esta clase y prepararse para mañana:</p><ul><li>Finalizar la redacción del relato StoryBrand.</li><li>Traer hojas de papel de boceto y marcadores gruesos para mañana.</li><li><strong>Próximo tema:</strong> Dibujo, boceto analógico rápido y modo juego.</li></ul>",
+            "title": "Cierre de la Clase",
+            "content": "<p>Tareas y preparación de cara a la siguiente sesión:</p><ul><li>Finalizar la redacción del relato StoryBrand.</li><li>Traer hojas de papel de boceto y marcadores gruesos para mañana.</li><li><strong>Próximo tema:</strong> Dibujo, boceto analógico rápido y modo juego.</li></ul>",
             "media": "images/d03-miercoles-slide03.jpg",
-            "notes": "<h3>Cierre</h3><p>Despide la clase reforzando la importancia de la fase conceptual.</p>"
+            "notes": "<h3>Cierre</h3><p>Despide la clase de hoy motivándolos a conceptualizar.</p>"
           }
         ]
       },
@@ -357,11 +424,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy quitaremos el miedo a la hoja en blanco. Diseñar es pensar, no ilustrar de forma perfecta.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy soltaremos la mano mediante técnicas analógicas de bocetado rápido:</p><ul><li>Filosofía de la imperfección productiva: bocetos veloces.</li><li>Bocetar como herramienta de diagramación mental en papel.</li><li>Técnicas de experimentación: marcadores y recortes.</li><li>Taller individual de generación de 10 ideas en 10 minutos.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
+            "content": "<p>Hoy soltaremos la mano mediante técnicas analógicas de bocetado rápido:</p>",
+            "steps": [
+              {
+                "title": "01. Filosofía Ágil",
+                "desc": "Better done than perfect. Cantidad sobre calidad técnica."
+              },
+              {
+                "title": "02. Técnicas de Dibujo",
+                "desc": "Marcadores de trazo grueso y recortes físicos de papel."
+              },
+              {
+                "title": "03. Taller Práctico",
+                "desc": "Producción guiada de bocetos conceptuales rápidos."
+              }
+            ],
             "notes": "<h3>Nota</h3><p>Establece un ambiente relajado. El objetivo hoy no es hacer obras de arte, sino generar conceptos.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Paul Rand",
+            "content": "El diseño es simple. Por eso es tan complicado. Todo nace de la síntesis geométrica en el papel.",
+            "notes": "<h3>Cita</h3><p>Rand bocetaba decenas de alternativas simples en papel de estraza antes de diseñar.</p>"
           },
           {
             "layout": "split",
@@ -369,48 +455,6 @@ const slidesData = {
             "content": "<p>El valor de avanzar y no estancarse en el perfeccionismo prematuro:</p><ul><li>Es mejor tener 20 bocetos rápidos con ideas interesantes que un solo vector pulido pero sin concepto.</li><li>La velocidad al inicio del proceso creativo abre caminos que la parálisis del diseño digital suele cerrar de forma definitiva.</li></ul>",
             "media": "images/d01-lunes-slide09.jpg",
             "notes": "<h3>Filosofía</h3><p>Fomentar la cantidad de ideas al inicio sobre la calidad técnica.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Parálisis Digital vs. Fluidez Analógica",
-            "content": "<p>¿Por qué el ordenador restringe tu creatividad al inicio del proyecto?</p><ul><li>El software exige tomar decisiones técnicas de inmediato (grosor de trazo, alineación, color).</li><li>El lápiz te permite concentrarte de forma exclusiva en la estructura, proporción y significado básico.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Nota</h3><p>El mouse limita la fluidez cognitiva que otorga la mano alzada.</p>"
-          },
-          {
-            "layout": "highlight",
-            "title": "Pensar con la Mano",
-            "highlightTitle": "Bocetar como Diagrama Mental",
-            "content": "Bocetar no es dibujar de forma artística para colgar en un museo. Bocetar es realizar diagramas mentales rápidos sobre papel para materializar ideas abstractas en milésimas de segundo, evaluando proporciones y contrastes espaciales sin la interferencia de las herramientas del software.",
-            "notes": "<h3>Nota</h3><p>Enfatizar que los bocetos feos pero con buen concepto son los más útiles.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Fallar Rápido y Barato en Papel",
-            "content": "<p>La relación entre economía y libertad creativa:</p><ul><li>Descartar una mala idea en papel toma 5 segundos y cuesta milésimas de centavo.</li><li>Descartar un logo vectorizado en el que invertiste 5 horas genera resistencia psicológica a cambiar el diseño.</li><li><strong>Regla:</strong> Falla rápido en papel para llegar al concepto ganador limpio.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Tip</h3><p>Insiste en no abrir Illustrator hasta tener al menos 10 bocetos en papel.</p>"
-          },
-          {
-            "layout": "highlight",
-            "title": "Diseñar en 'Modo Juego'",
-            "highlightTitle": "Permitirse el Error Controlado",
-            "content": "Para innovar visualmente es fundamental desactivar el sensor del juicio interno. El 'Modo Juego' consiste en explorar escalas absurdas, rotaciones y deformaciones voluntarias en papel, forzando cruces de formas geométricas que en una pantalla digital descartarías de inmediato por prejuicios técnicos.",
-            "notes": "<h3>Modo Juego</h3><p>El juego reduce la tensión y permite que el cerebro explore rutas no lógicas.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Experimentación Analógica con Sharpie",
-            "content": "<p>Técnicas físicas para forzar la síntesis gráfica en tus diseños:</p><ul><li><strong>Marcador Sharpie grueso:</strong> Evita que te detengas en detalles anatómicos innecesarios y te obliga a ver el logo como silueta pura.</li><li>Si un logo funciona dibujado con un marcador gastado de punta gruesa, funcionará vectorizado en cualquier pantalla.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Tip</h3><p>El marcador Sharpie es excelente para bocetar logos por su grosor.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Técnicas de Recorte de Papel",
-            "content": "<p>Entendiendo el espacio negativo a través del recorte físico:</p><ul><li>Usa tijeras y cartulinas negras para recortar formas básicas.</li><li>Deslizar formas físicas de color sobre un fondo blanco ayuda a entrenar el ojo para percibir tensiones y contrapuntos visuales.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Recortes</h3><p>Un método clásico de maestros como Matisse o Paul Rand para lograr síntesis extrema.</p>"
           },
           {
             "layout": "vs",
@@ -429,6 +473,44 @@ const slidesData = {
               "highlighted": true
             },
             "notes": "<h3>Nota</h3><p>No estamos evaluando habilidades de bellas artes, sino de comunicación visual.</p>"
+          },
+          {
+            "layout": "stat",
+            "title": "La Ley de Cantidad Creativa",
+            "number": "10",
+            "statTitle": "Bocetos Mínimos antes del Vector",
+            "content": "Para forzar al cerebro a salir de las soluciones obvias y clichés, exige realizar un mínimo de 10 bocetos rápidos en papel. Las primeras 3 ideas suelen ser copias inconscientes de marcas existentes; la verdadera originalidad surge a partir del boceto 7.",
+            "notes": "<h3>Cantidad</h3><p>Forzar a los alumnos a no detenerse en el primer dibujo.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Técnicas Físicas de Bocetado",
+            "content": "<p>Materiales y métodos analógicos para forzar la síntesis de silueta:</p>",
+            "cards": [
+              {
+                "num": "🖋️",
+                "title": "Sharpie Grueso",
+                "desc": "Evita los detalles pequeños y obliga a ver el logotipo como una silueta sólida."
+              },
+              {
+                "num": "✂️",
+                "title": "Papel Recortado",
+                "desc": "Cortar cartulinas oscuras ayuda a entender la tensión del espacio de fondo."
+              },
+              {
+                "num": "✏️",
+                "title": "Lápiz Blando (4B)",
+                "desc": "Permite trazos rápidos de volumen y escala sin precisión geométrica."
+              }
+            ],
+            "notes": "<h3>Técnicas</h3><p>Explica las ventajas de cada material en la mesa de trabajo.</p>"
+          },
+          {
+            "layout": "split",
+            "title": "Fallar Rápido y Barato en Papel",
+            "content": "<p>La relación entre economía y libertad creativa:</p><ul><li>Descartar una mala idea en papel toma 5 segundos y cuesta milésimas de centavo.</li><li>Descartar un logo vectorizado en el que invertiste 5 horas genera resistencia psicológica a cambiar el diseño.</li><li><strong>Regla:</strong> Falla rápido en papel para llegar al concepto ganador limpio.</li></ul>",
+            "media": "images/d01-lunes-slide09.jpg",
+            "notes": "<h3>Tip</h3><p>Insiste en no abrir Illustrator hasta tener al menos 10 bocetos en papel.</p>"
           },
           {
             "layout": "steps",
@@ -451,18 +533,52 @@ const slidesData = {
             "notes": "<h3>Filtrado</h3><p>Enseña a curar de forma objetiva en base al brief.</p>"
           },
           {
-            "layout": "split",
-            "title": "Filtro de Clichés: El Enemigo",
-            "content": "<p>Cómo evitar caer en las soluciones visuales comunes de la categoría:</p><ul><li>Si diseñas para una cafetería, evita el grano de café o la taza humeante.</li><li>Si diseñas para una inmobiliaria, evita la silueta del techo de una casa.</li><li><strong>Filtro:</strong> Dibuja el cliché para sacarlo de tu mente y forzarte a buscar ideas secundarias más profundas.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Cliché</h3><p>El cliché es cómodo para el cerebro pero inútil para la diferenciación marcaria.</p>"
+            "layout": "highlight",
+            "title": "Diseñar en 'Modo Juego'",
+            "highlightTitle": "Permitirse el Error Controlado",
+            "content": "Para innovar visualmente es fundamental desactivar el sensor del juicio interno. El 'Modo Juego' consiste en explorar escalas absurdas, rotaciones y deformaciones voluntarias en papel, forzando cruces de formas geométricas que en una pantalla digital descartarías de inmediato por prejuicios técnicos.",
+            "notes": "<h3>Modo Juego</h3><p>El juego reduce la tensión y permite que el cerebro explore rutas no lógicas.</p>"
           },
           {
-            "layout": "split",
-            "title": "Criterios de Traducción Digital",
-            "content": "<p>Pautas para llevar el boceto del papel a los vectores sin perder su esencia:</p><ul><li>Toma una foto de tu boceto con iluminación difusa y vertical.</li><li>Impórtala a Illustrator y redúcele la opacidad al 30% en una capa bloqueada.</li><li>Utiliza figuras geométricas básicas (círculos, rectángulos) para trazar encima; no calques a mano alzada.</li></ul>",
-            "media": "images/d01-lunes-slide09.jpg",
-            "notes": "<h3>Traducción</h3><p>Digitalizar es reconstruir geométricamente, no calcar.</p>"
+            "layout": "vs",
+            "title": "Vectorización Geométrica vs. Calco Libre",
+            "content": "<p>Dos formas de digitalizar las ideas del papel a Illustrator:</p>",
+            "vs1": {
+              "title": "Calco a Mano Alzada",
+              "desc": "Seguir la línea del boceto de forma libre con la pluma. Produce curvas temblorosas e imprecisiones de simetría evidentes a escala.",
+              "badge": "Impreciso",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Construcción Geométrica",
+              "desc": "Utilizar círculos, rectángulos y líneas guías rígidas para reconstruir el boceto. Logra la prolijidad técnica que exige el mercado.",
+              "badge": "Profesional",
+              "highlighted": true
+            },
+            "notes": "<h3>Vectorización</h3><p>Diseñar es construir con geometría, no pintar en pantalla.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Criterios de Evaluación del Boceto",
+            "content": "<p>Características que hacen viable a un boceto analógico:</p>",
+            "cards": [
+              {
+                "num": "A",
+                "title": "Síntesis",
+                "desc": "El contorno del logo debe ser entendible al entrecerrar los ojos."
+              },
+              {
+                "num": "B",
+                "title": "Legibilidad",
+                "desc": "No debe tener líneas delgadas paralelas que se empasten a pequeña escala."
+              },
+              {
+                "num": "C",
+                "title": "Concepto",
+                "desc": "Debe responder directamente a uno de los adjetivos de marca."
+              }
+            ],
+            "notes": "<h3>Criterios</h3><p>El boceto viable ahorra re-trabajos en la fase vectorial digital.</p>"
           },
           {
             "layout": "title",
@@ -470,6 +586,26 @@ const slidesData = {
             "subtitle": "Bocetos rápidos en Miro y búsqueda de estilos visuales.",
             "content": "<p>Realizaremos un taller interactivo de bocetado rápido en Miro (Open Mic) para explorar estilos gráficos sin juzgar los dibujos iniciales.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Fomentar el 'modo juego'. El objetivo es perder el miedo a la hoja en blanco y soltar la mano.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Instrucciones del Taller de Boceto",
+            "content": "<p>Pasos para realizar el bocetado analógico guiado en clase:</p>",
+            "steps": [
+              {
+                "title": "1. Bocetar en Papel",
+                "desc": "Dibuja de forma libre y rápida al menos 10 variaciones de tu logotipo."
+              },
+              {
+                "title": "2. Foto y Carga",
+                "desc": "Toma una foto limpia de tu hoja de papel y súbela a tu sección del Miro."
+              },
+              {
+                "title": "3. Crítica Grupal",
+                "desc": "Analizaremos de forma abierta qué bocetos tienen mayor viabilidad geométrica."
+              }
+            ],
+            "notes": "<h3>Actividad</h3><p>Monitorear y animar a dibujar rápido sin buscar la perfección estética.</p>"
           },
           {
             "layout": "split",
@@ -491,11 +627,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy aprenderemos a especificar los entregables de identidad para asegurar la consistencia del sistema visual.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy revisaremos la documentación técnica del diseño marcario:</p><ul><li>El valor del sistema de identidad corporativa en el mercado.</li><li>Comparativa técnica de alcances entre Guías y Manuales.</li><li>Los 5 componentes mandatorios de especificación visual.</li><li>La autonomía del manual frente a terceros.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
+            "content": "<p>Hoy revisaremos la documentación técnica del diseño marcario:</p>",
+            "steps": [
+              {
+                "title": "01. Valor del Sistema",
+                "desc": "Por qué documentar las reglas gráficas del logotipo."
+              },
+              {
+                "title": "02. Manual vs. Guía",
+                "desc": "Diferencias técnicas, alcances y especificaciones."
+              },
+              {
+                "title": "03. Componentes Obligatorios",
+                "desc": "Análisis de pautas cromáticas, retículas y tipografía."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que el manual de marca es un contrato técnico de diseño.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Massimo Vignelli",
+            "content": "El manual de marca no restringe la creatividad. Protege al sistema gráfico del desorden y la degradación visual de terceros.",
+            "notes": "<h3>Cita</h3><p>Vignelli diseñó manuales de marca legendarios como el de la NYC Transit Authority.</p>"
           },
           {
             "layout": "split",
@@ -503,13 +658,6 @@ const slidesData = {
             "content": "<p>Diseñar un buen logotipo es inútil si no creas las directrices para protegerlo en aplicaciones reales:</p><ul><li>Sin un documento regulador, la imprenta o el propio cliente deformará tipografías y colores.</li><li>La consistencia visual repetida es lo que construye confianza comercial en el mercado.</li></ul>",
             "media": "images/d16-lunes-slide02.jpg",
             "notes": "<h3>Consistencia</h3><p>La consistencia visual es sinónimo de profesionalismo corporativo.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "¿Por qué documentar la marca?",
-            "content": "<p>La documentación protege el activo intelectual de tu cliente:</p><ul><li>Evita interpretaciones erróneas de programadores, agencias asociadas e imprentas.</li><li>Garantiza que el valor estético de tu diseño se mantenga inalterado durante años de uso comercial.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Por qué</h3><p>El manual protege el trabajo del diseñador ante alteraciones futuras.</p>"
           },
           {
             "layout": "vs",
@@ -530,11 +678,35 @@ const slidesData = {
             "notes": "<h3>Comparación</h3><p>Asegúrate de que los alumnos entiendan la diferencia de valor.</p>"
           },
           {
-            "layout": "split",
-            "title": "Anatomía de la Guía de Estilo Rápida",
-            "content": "<p>Componentes esenciales que integran una guía ágil:</p><ul><li><strong>Logo principal:</strong> Versión vectorial positiva y negativa.</li><li><strong>Paleta de color básica:</strong> HEX para web y RGB para pantallas.</li><li><strong>Fuentes principales:</strong> Tipografías de encabezados y cuerpo.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Style Guide</h3><p>Es el entregable ideal para desarrolladores front-end en fases de maquetado web.</p>"
+            "layout": "stat",
+            "title": "El Costo de la Inconsistencia",
+            "number": "60%",
+            "statTitle": "Pérdida de Reconocimiento de Marca",
+            "content": "Estudios de marketing demuestran que las marcas que aplican sus colores y logotipos de forma inconsistente en redes y papelería pierden más de la mitad de su impacto y memorabilidad visual ante el consumidor.",
+            "notes": "<h3>Estadística</h3><p>La consistencia visual se traduce en rentabilidad comercial directa.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Los 5 Componentes Mandatorios del Manual",
+            "content": "<p>Secciones que todo manual de marca profesional debe documentar de forma clara:</p>",
+            "cards": [
+              {
+                "num": "1",
+                "title": "Conceptualización",
+                "desc": "Misión, historia de origen y tono de voz del arquetipo."
+              },
+              {
+                "num": "2",
+                "title": "Geometría del Logo",
+                "desc": "Retícula de construcción, área de exclusión y tamaños mínimos."
+              },
+              {
+                "num": "3",
+                "title": "Cromática",
+                "desc": "Equivalencias cromáticas exactas en Pantone, CMYK, RGB y HEX."
+              }
+            ],
+            "notes": "<h3>Componentes</h3><p>Estos tres bloques constituyen el núcleo duro de la especificación técnica.</p>"
           },
           {
             "layout": "split",
@@ -545,31 +717,23 @@ const slidesData = {
           },
           {
             "layout": "steps",
-            "title": "Componentes de un Manual Corporativo",
-            "content": "<p>Las 5 secciones técnicas obligatorias que debe incluir un manual de marca profesional:</p>",
+            "title": "Especificación Tipográfica en el Manual",
+            "content": "<p>Cómo normalizar las fuentes tipográficas del sistema corporativo:</p>",
             "steps": [
               {
-                "title": "Sección Conceptual",
-                "desc": "Misión, visión, historia de origen de marca y tono de voz."
+                "title": "Tipografía Primaria",
+                "desc": "La fuente del logotipo y de títulos principales de alta jerarquía."
               },
               {
-                "title": "Normas del Logotipo",
-                "desc": "Retícula de construcción geométrica, áreas de resguardo y reducción mínima."
+                "title": "Tipografía Secundaria",
+                "desc": "Fuente complementaria muy legible para bloques extensos de texto."
               },
               {
-                "title": "Normalización de Colores",
-                "desc": "Muestras de color con equivalencias exactas en Pantone, CMYK, RGB y HEX."
-              },
-              {
-                "title": "Sistema Tipográfico",
-                "desc": "Jerarquías tipográficas claras, fuentes primarias, secundarias y de sistema."
-              },
-              {
-                "title": "Usos Incorrectos",
-                "desc": "Catálogo de prohibiciones visuales explícitas para evitar malas aplicaciones."
+                "title": "Fuentes de Sistema (Fallback)",
+                "desc": "Opción gratuita preinstalada en ordenadores de oficina (ej. Arial) para uso administrativo."
               }
             ],
-            "notes": "<h3>Nota</h3><p>Detallaremos estos componentes en las siguientes clases.</p>"
+            "notes": "<h3>Tipografía</h3><p>La tipografía de fallback garantiza que la marca no se deforme en correos diarios de secretaría.</p>"
           },
           {
             "layout": "highlight",
@@ -579,29 +743,26 @@ const slidesData = {
             "notes": "<h3>Tip</h3><p>Un manual que genera dudas es un manual mal diseñado.</p>"
           },
           {
-            "layout": "split",
-            "title": "Especificación Técnica: Tipografía",
-            "content": "<p>Cómo normalizar las fuentes tipográficas en el manual corporativo:</p><ul><li>Define la tipografía **primaria** para títulos de alta jerarquía.</li><li>Define la tipografía **secundaria** para textos extensos.</li><li>Define fuentes de **sistema o fallback** (como Arial o Georgia) para que los empleados usen en correos diarios.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Tipografía</h3><p>Las fuentes de fallback salvan la legibilidad en entornos corporativos estándar.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Especificación Técnica: Color",
-            "content": "<p>Cómo normalizar las equivalencias del color en soportes físicos y digitales:</p><ul><li><strong>Pantone:</strong> Para tintas planas directas en imprentas offset.</li><li><strong>CMYK:</strong> Para impresiones estándar de cuatricromía.</li><li><strong>RGB y HEX:</strong> Para entornos digitales e interactivos.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Color</h3><p>Fijar colores exactos evita que el logo de Coca-Cola se imprima rosa.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Retícula de Construcción",
-            "content": "<p>La retícula de coordenadas geométricas que define el dibujo del logotipo:</p><ul><li>Muestra la proporción interna de los trazos mediante una unidad básica (X).</li><li>Explica los centros de curvatura e inclinaciones geométricas para que un maquetador 3D pueda reconstruir el logo en metal o relieve físico.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Retícula</h3><p>Otorga credibilidad y demuestra rigor técnico en el diseño marcario.</p>"
+            "layout": "vs",
+            "title": "Normalización de Color Impreso vs. Digital",
+            "content": "<p>La especificación de color según el soporte de salida:</p>",
+            "vs1": {
+              "title": "Entorno Impreso (Físico)",
+              "desc": "Normalizar bajo muestras Pantone (para tintas planas directas de imprenta offset) y valores CMYK (para impresión por cuatricromía).",
+              "badge": "CMYK / Pantone",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Entorno Digital (Pantallas)",
+              "desc": "Normalizar bajo valores RGB e indicar explícitamente el código Hexadecimal (HEX) de 6 caracteres para maquetado CSS web.",
+              "badge": "RGB / HEX",
+              "highlighted": true
+            },
+            "notes": "<h3>Colores</h3><p>Normalizar de forma incorrecta el color provoca variaciones indeseadas del tono del logo.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores al Escribir Manuales Corporativos",
+            "title": "Errores al Redactar Manuales Corporativos",
             "content": "<p>Evita estos fallos comunes que destruyen el manual técnico:</p>",
             "cards": [
               {
@@ -630,6 +791,26 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Ayudar a identificar las diferencias entre una guía de estilo simple y un manual de marca formal.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Instrucciones de la Actividad de Auditoría",
+            "content": "<p>Pasos para desglosar el manual de marca de Duolingo de forma grupal:</p>",
+            "steps": [
+              {
+                "title": "1. Cargar PDF",
+                "desc": "Abran la sección del manual de Duolingo asignado en su zona de Miro."
+              },
+              {
+                "title": "2. Extraer Normas",
+                "desc": "Usa posits para identificar la unidad X de resguardo y sus equivalencias cromáticas."
+              },
+              {
+                "title": "3. Evaluar Prohibiciones",
+                "desc": "Analicen la utilidad de su sección de prohibiciones y expongan las conclusiones."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Ayuda a los alumnos a entender cómo las marcas maduras protegen su identidad.</p>"
+          },
+          {
             "layout": "split",
             "title": "Cierre de la Clase",
             "content": "<p>Metas para la próxima sesión:</p><ul><li>Preparar los editores vectoriales de Illustrator.</li><li>Traer dudas de dimensionamiento para el laboratorio práctico.</li><li><strong>Próximo tema:</strong> Lanzamiento del LAB 1 - Afiche conceptual de marca.</li></ul>",
@@ -649,11 +830,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy lanzamos formalmente el LAB 1. Resolveremos dudas técnicas y daremos espacio para los primeros bocetos analógicos.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy nos enfocaremos en las pautas y producción de nuestra primera entrega de laboratorio:</p><ul><li>Especificaciones y propósito de la entrega.</li><li>Reglas compositivas de asimetría y tensión en afiches.</li><li>Uso de espacio negativo para la retórica visual.</li><li>Configuración del lienzo técnico en Adobe Illustrator.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
+            "content": "<p>Hoy nos enfocaremos en las pautas y producción de nuestra primera entrega de laboratorio:</p>",
+            "steps": [
+              {
+                "title": "01. Pautas LAB 1",
+                "desc": "Especificaciones técnicas de la entrega de afiche y logotipo."
+              },
+              {
+                "title": "02. Composición Visual",
+                "desc": "Tensión espacial, asimetría y el uso expresivo del espacio vacío."
+              },
+              {
+                "title": "03. Taller en Aula",
+                "desc": "Espacio de trabajo guiado para los primeros bocetos analógicos."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Alinea los contenidos y establece los plazos con los estudiantes.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Saul Bass",
+            "content": "Diseñar es pensar en grande de forma simple. Un afiche debe sintetizar toda la emoción de una historia en un solo trazo.",
+            "notes": "<h3>Cita</h3><p>Bass es el gran referente histórico de la síntesis en cartelería de cine.</p>"
           },
           {
             "layout": "split",
@@ -663,55 +863,30 @@ const slidesData = {
             "notes": "<h3>Propósito</h3><p>El afiche debe justificar la retórica elegida.</p>"
           },
           {
-            "layout": "split",
-            "title": "Retórica Visual a Gran Escala",
-            "content": "<p>El afiche de calle exige una legibilidad instantánea a distancia:</p><ul><li>El mensaje gráfico debe decodificarse en menos de 2 segundos desde un vehículo en movimiento.</li><li>Utiliza un único punto focal visual potente en lugar de múltiples elementos decorativos pequeños de fondo.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Afiche</h3><p>El diseño de afiches es el test definitivo de síntesis gráfica de un diseñador.</p>"
+            "layout": "vs",
+            "title": "Tensión Asimétrica vs. Centralización Plana",
+            "content": "<p>Dos formas de organizar los elementos gráficos en el lienzo del póster:</p>",
+            "vs1": {
+              "title": "Composición Central (Estática)",
+              "desc": "Alinear todos los elementos al eje medio vertical del afiche. Es equilibrado y clásico, pero puede resultar predecible y falto de dinamismo.",
+              "badge": "Equilibrio Rígido",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Tensión Asimétrica (Dinámica)",
+              "desc": "Desplazar elementos pesados a los tercios laterales y compensarlos con espacio vacío. Genera tensión visual activa y capta mayor atención.",
+              "badge": "Tensión Activa",
+              "highlighted": true
+            },
+            "notes": "<h3>Composición</h3><p>Fomentar el uso de grillas asimétricas para dar interés al afiche.</p>"
           },
           {
-            "layout": "highlight",
-            "title": "La Regla de las 10 Palabras en Afiches",
-            "highlightTitle": "Economía de Texto",
-            "content": "Un afiche conceptual de marca no es un folleto corporativo. Todo el texto de la pieza debe limitarse al titular retórico y al logotipo. El mensaje debe sostenerse mediante la relación de formas, el contraste de color y el uso expresivo del espacio negativo.",
-            "notes": "<h3>Tip</h3><p>La tensión entre figura y fondo es muy útil en afiches de autor.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Composición Visual: Tensión Espacial",
-            "content": "<p>Cómo guiar la mirada del espectador a través del lienzo de forma asimétrica:</p><ul><li>Evita centrar todos los elementos en el eje medio del lienzo.</li><li>Utiliza el contraste de tamaños y alinea bloques pequeños de texto cerca de los bordes para generar tensiones dinámicas e interés.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Composición</h3><p>La asimetría activa hace que el afiche capte mayor atención.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Espacio Negativo en el Afiche",
-            "content": "<p>El uso del fondo como actor principal de la narrativa visual:</p><ul><li>El aire compositivo no es 'vacío'; es espacio cargado de tensión y significado.</li><li>Asegúrate de que la forma del logotipo y las tipografías interactúen de forma armónica con las zonas no impresas de fondo.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Espacio</h3><p>El espacio negativo es el recurso de diseño más sofisticado y memorable.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Preparación del Archivo en Illustrator",
-            "content": "<p>Cómo estructurar tu documento técnico para evitar errores de preimpresión:</p>",
-            "steps": [
-              {
-                "title": "Tamaño y Modo de Color",
-                "desc": "Configura tu mesa de trabajo en modo de color RGB (1200 x 1800 px) para pantallas."
-              },
-              {
-                "title": "Capas Ordenadas",
-                "desc": "Crea una capa para el fondo, otra para la retícula y una tercera para el logo y tipografía."
-              }
-            ],
-            "notes": "<h3>Illustrator</h3><p>Explicar la importancia de no mezclar vectores de fondo con textos en la misma capa.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Trabajo Vectorial Limpio",
-            "content": "<p>Asegurando la prolijidad técnica de la entrega:</p><ul><li>Evita nodos sueltos o superposiciones vectoriales sucias.</li><li>Convierte todos los textos y fuentes de logotipo a curvas (`Ctrl+Shift+O` en Illustrator) para evitar enlaces tipográficos rotos.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Vectores</h3><p>Las curvas limpias facilitan el escalado futuro del logotipo.</p>"
+            "layout": "stat",
+            "title": "La Regla de Oro de los Afiches",
+            "number": "10",
+            "statTitle": "Límite Máximo de Palabras Permitidas",
+            "content": "Un afiche conceptual no es un folleto de texto corporativo. Todo el peso comunicativo debe sostenerse mediante la silueta retórica y el logotipo. Fija un límite estricto de 10 palabras de texto total de lectura para acelerar el impacto en vía pública.",
+            "notes": "<h3>Estadística</h3><p>La síntesis en afiches aumenta la memorabilidad del mensaje en vía pública.</p>"
           },
           {
             "layout": "grid",
@@ -738,38 +913,104 @@ const slidesData = {
           },
           {
             "layout": "split",
-            "title": "Flujo de Trabajo del LAB 1",
-            "content": "<p>Cronograma recomendado para desarrollar el proyecto este fin de semana:</p><ul><li><strong>Sábado mañana:</strong> Bocetos analógicos rápidos y refinamiento del concepto.</li><li><strong>Sábado tarde:</strong> Vectorización limpia del logotipo.</li><li><strong>Domingo:</strong> Composición y diagramación del afiche en Illustrator.</li></ul>",
+            "title": "El Espacio Negativo como Recurso",
+            "content": "<p>El uso del fondo como actor principal de la narrativa visual:</p><ul><li>El aire compositivo no es 'vacío'; es espacio cargado de tensión y significado.</li><li>Asegúrate de que la forma del logotipo y las tipografías interactúen de forma armónica con las zonas no impresas de fondo.</li></ul>",
             "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Cronograma</h3><p>Fomentar la organización y gestión del tiempo de los estudiantes.</p>"
+            "notes": "<h3>Espacio</h3><p>El espacio negativo es el recurso de diseño más sofisticado y memorable.</p>"
           },
           {
-            "layout": "split",
-            "title": "Inspiración: Grandes Maestros",
-            "content": "<p>Referentes históricos para estudiar la síntesis en afiches:</p><ul><li><strong>Toulouse-Lautrec:</strong> El uso de la silueta plana para captar movimiento.</li><li><strong>A.M. Cassandre:</strong> Grillas rigurosas y tipografías industriales geométricas.</li><li><strong>Saul Bass:</strong> La síntesis extrema del concepto cinematográfico.</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Maestros</h3><p>Mencionar cómo Saul Bass resumía películas enteras en una sola silueta cortada.</p>"
+            "layout": "steps",
+            "title": "Preparación del Archivo en Illustrator",
+            "content": "<p>Cómo estructurar tu documento técnico para evitar errores de preimpresión:</p>",
+            "steps": [
+              {
+                "title": "Tamaño y Modo de Color",
+                "desc": "Configura tu mesa de trabajo en modo de color RGB (1200 x 1800 px) para pantallas."
+              },
+              {
+                "title": "Capas Ordenadas",
+                "desc": "Crea una capa para el fondo, otra para la retícula y una tercera para el logo y tipografía."
+              }
+            ],
+            "notes": "<h3>Illustrator</h3><p>Explicar la importancia de no mezclar vectores de fondo con textos en la misma capa.</p>"
           },
           {
-            "layout": "split",
-            "title": "Checklist Técnico de Pre-Entrega",
-            "content": "<p>Verificaciones rápidas antes de subir tus archivos al portal de evaluación:</p><ul><li>¿Las fuentes de logotipo están convertidas a contornos (curvas)?</li><li>¿El tamaño de archivo es de 1200 x 1800 px exactos?</li><li>¿Has exportado un archivo PNG de alta resolución sin transparencias?</li></ul>",
-            "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Checklist</h3><p>El checklist técnico reduce a cero los errores de entrega comunes.</p>"
+            "layout": "highlight",
+            "title": "La Conversión de Textos a Curvas",
+            "highlightTitle": "Bloqueo de Enlaces Rotos",
+            "content": "Antes de exportar el editable original de Illustrator, selecciona todo el documento e indica 'Crear Contornos' (Ctrl+Shift+O). Esto convierte las fuentes tipográficas en trazados vectoriales sólidos, evitando que el archivo se rompa en el ordenador del docente si no tiene la fuente instalada.",
+            "notes": "<h3>Tip</h3><p>La conversión a curvas es obligatoria en entregables corporativos profesionales.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Exportaciones de Calidad Técnica",
+            "content": "<p>Cómo guardar los archivos antes de subirlos al Drive corporativo:</p>",
+            "vs1": {
+              "title": "Archivo Editable (.ai)",
+              "desc": "El archivo de trabajo. Debe tener las capas nombradas y organizadas, sin nodos huérfanos ni paletas de color basura no usadas.",
+              "badge": "Editable",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Archivo PNG Final",
+              "desc": "Imagen de alta calidad exportada a 300 DPI de resolución, sin transparencias. Optimizado para visualización directa en navegadores.",
+              "badge": "Presentación",
+              "highlighted": true
+            },
+            "notes": "<h3>Carga</h3><p>Ambos archivos son obligatorios para validar la calidad técnica de la entrega.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Errores Comunes en el LAB 1",
+            "content": "<p>Fallas que arruinan la calificación de tu primer laboratorio:</p>",
+            "cards": [
+              {
+                "num": "❌",
+                "title": "Mala Resolución",
+                "desc": "Exportar el PNG en baja calidad o con distorsión de compresión pixelada."
+              },
+              {
+                "num": "❌",
+                "title": "Falta de Bocetos",
+                "desc": "No adjuntar fotos de los 5 bocetos analógicos requeridos en el Miro."
+              },
+              {
+                "num": "❌",
+                "title": "Líneas de Guía",
+                "desc": "Dejar las líneas guías vectoriales visibles en el PNG exportado final."
+              }
+            ],
+            "notes": "<h3>Fallo</h3><p>El descuido en la exportación final devalúa la calidad de tu trabajo de diseño.</p>"
           },
           {
             "layout": "title",
             "title": "Actividad del LAB 1: Primer Boceto",
-            "subtitle": "Inicio del diseño conceptual y refinamiento de logotipo.",
+            "subtitle": "Inicio del diseño conceptual and refinamiento de logotipo.",
             "content": "<p>Trabajo práctico individual o en parejas en el aula para plasmar el primer boceto del afiche de marca y el refinamiento de su logotipo.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Monitorear a los alumnos en su proceso analógico de bocetado rápido antes de pasar a lo digital.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Checklist Técnico de Entrega",
+            "content": "<p>Pasos finales indispensables para la carga del lunes por la mañana:</p>",
+            "steps": [
+              {
+                "title": "1. Vectorización Limpia",
+                "desc": "Comprobar curvas cerradas y sin nodos sueltos en el logotipo."
+              },
+              {
+                "title": "2. Carga en Drive",
+                "desc": "Subir el .ai y el PNG a la carpeta del grupo con permisos de acceso públicos."
+              }
+            ],
+            "notes": "<h3>Checklist</h3><p>El checklist evita errores de último minuto por caídas de internet.</p>"
+          },
+          {
             "layout": "split",
             "title": "Cierre de la Semana 5",
-            "content": "<p>Indicaciones finales para la entrega:</p><ul><li>Sube el archivo PNG final y el archivo editable (.ai) a la carpeta de Drive asignada.</li><li><strong>Fecha límite:</strong> Lunes antes del inicio de la clase.</li><li><strong>Próximo tema:</strong> Recepción de entregas y Sistemas Visuales Abiertos.</li></ul>",
+            "content": "<p>Indicaciones finales para la entrega de afiches:</p><ul><li>Sube los archivos antes del inicio de la clase del lunes.</li><li>Recuerda traer tu pitch estratégico ensayado de 1 minuto.</li><li><strong>Próximo tema:</strong> Recepción de entregas y Sistemas Visuales Abiertos.</li></ul>",
             "media": "images/d05-viernes-slide02.jpg",
-            "notes": "<h3>Cierre</h3><p>Desearles buen fin de semana y motivarlos para el desarrollo del afiche.</p>"
+            "notes": "<h3>Cierre</h3><p>Despide la clase. Desea buen fin de semana y motivar al cierre de entregas.</p>"
           }
         ]
       }
@@ -789,18 +1030,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy cerramos la entrega del LAB 1 y analizamos las ventajas de los sistemas de identidad elásticos frente a los rígidos.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy abordaremos el comportamiento flexible de las identidades modernas:</p><ul><li>Recepción, entrega final y nivelación del LAB 1.</li><li>Diferencias operativas entre Sistemas Abiertos y Cerrados.</li><li>El Brief estratégico según Alina Wheeler (Diagnóstico vs. Pedido).</li><li>Variables de análisis de Buyer Persona y mapeo de competencia.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
+            "content": "<p>Hoy abordaremos el comportamiento flexible de las identidades modernas:</p>",
+            "steps": [
+              {
+                "title": "01. Nivelación LAB 1",
+                "desc": "Recepción formal de entregas y comentarios cruzados."
+              },
+              {
+                "title": "02. Sistemas Dinámicos",
+                "desc": "Diferencias técnicas entre sistemas abiertos y cerrados de marca."
+              },
+              {
+                "title": "03. El Brief Estratégico",
+                "desc": "El enfoque de Alina Wheeler sobre el diagnóstico marcario."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Establece los tiempos. Dedica los primeros 10 minutos a resolver dudas de la entrega del LAB 1.</p>"
           },
           {
-            "layout": "split",
-            "title": "Recepción y Feedback del LAB 1",
-            "content": "<p>Nivelación de los afiches conceptuales entregados hoy:</p><ul><li>Evaluación rápida de la legibilidad de las siluetas vectoriales.</li><li>Análisis de la economía de recursos tipográficos y retóricos.</li><li>Felicitar los aciertos conceptuales y marcar puntos de mejora en trazados.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Feedback</h3><p>Usa ejemplos de alumnos (con su permiso) para dar feedback constructivo en vivo.</p>"
+            "layout": "quote",
+            "title": "Alina Wheeler",
+            "content": "El brief de branding no es una lista de deseos del cliente; es una herramienta de diagnóstico estratégico que guía el diseño visual en base a metas de negocio.",
+            "notes": "<h3>Cita</h3><p>Wheeler es la gran referente en procesos técnicos de construcción marcaria.</p>"
           },
           {
             "layout": "split",
@@ -828,73 +1081,22 @@ const slidesData = {
             "notes": "<h3>Abierto</h3><p>La consistencia sistémica reemplaza a la repetición literal.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Elasticidad Marcaria",
-            "content": "<p>Cómo una marca se expande o contrae según el soporte físico o interactivo:</p><ul><li>Un sistema elástico permite usar variantes cromáticas del logotipo según la estacionalidad o la categoría del producto.</li><li>El logotipo puede fragmentarse, permitiendo que el isotipo actúe solo en entornos reducidos de avatares sin perder recordación.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Elasticidad</h3><p>Las marcas modernas deben ser elásticas para habitar desde un favicon hasta un cartel de carretera.</p>"
-          },
-          {
-            "layout": "vs",
-            "title": "El Brief: Solución Presuntiva vs. Diagnóstico",
-            "content": "<p>El enfoque estratégico de Alina Wheeler sobre la consultoría de marca corporativa:</p>",
-            "vs1": {
-              "title": "Solución Presuntiva",
-              "desc": "El pedido inicial ingenuo del cliente ('necesito un logotipo moderno'). Responder de forma pasiva a esto suele dar como resultado marcas decorativas que no resuelven el problema comercial.",
-              "badge": "Cliente",
-              "highlighted": false
-            },
-            "vs2": {
-              "title": "Diagnóstico de Branding",
-              "desc": "El análisis estratégico de la necesidad real de negocio ('perdimos presencia en punto de venta ante nuevos competidores digitales'). El brief se co-construye diagnosticando.",
-              "badge": "Diseñador",
-              "highlighted": true
-            },
-            "notes": "<h3>Wheeler</h3><p>El brief se construye de manera colaborativa, no se recibe pasivamente.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Preguntas de Diagnóstico Indispensables",
-            "content": "<p>Preguntas clave para desarmar la solución presuntiva del cliente en la fase de brief:</p>",
-            "steps": [
-              {
-                "title": "¿Qué hace realmente la empresa?",
-                "desc": "Definir el beneficio core o propuesta de valor que el cliente compra en su día a día."
-              },
-              {
-                "title": "¿A quién le vende y a quién necesita atraer?",
-                "desc": "Identificar la brecha de audiencia entre el comprador actual y el consumidor futuro."
-              },
-              {
-                "title": "¿Cuáles son las restricciones reales?",
-                "desc": "Mapear los límites de presupuesto, tiempos de entrega y limitaciones técnicas de reproducción."
-              }
-            ],
-            "notes": "<h3>Preguntas</h3><p>Preguntar hasta lo más mínimo. ¿Qué significa 'atemporal' para el cliente?</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Restricciones de Negocio en el Brief",
-            "content": "<p>Mapear los límites de producción física antes de diseñar la identidad:</p><ul><li>¿El logotipo debe ser bordado en uniformes de tela porosa?</li><li>¿Debe ser estampado en bolsas de plástico reciclado de bajo presupuesto?</li><li><strong>Consecuencia:</strong> La restricción de impresión limita el grosor de línea del logo.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Restricciones</h3><p>Diseñar sin conocer las restricciones técnicas del cliente lleva a re-trabajos costosos.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Público y Competencia: Más allá de la edad",
-            "content": "<p>Las variables demográficas tradicionales (*hombres de 25 a 40 años*) son insuficientes para guiar un sistema gráfico actual:</p><ul><li>Debes definir al **Buyer Persona** por su comportamiento: motivaciones profundas, miedos cotidianos y hábitos de consumo reales.</li><li>Esto permite que el tono visual de la tipografía y el color resuenen de forma empática con sus vivencias.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Público</h3><p>Diseñar para 'todo el mundo' significa no conectar con nadie.</p>"
+            "layout": "stat",
+            "title": "La Retención del Reconocimiento de Marca",
+            "number": "80%",
+            "statTitle": "Recordación Marcaria sin Logotipo",
+            "content": "Estudios globales de identidad corporativa indican que los sistemas visuales abiertos logran altos índices de memorabilidad de marca a través del color y de texturas secundarias, sin requerir la presencia obligatoria del logo principal.",
+            "notes": "<h3>Estadística</h3><p>El color y la textura son los verdaderos impulsores del branding subconsciente.</p>"
           },
           {
             "layout": "grid",
-            "title": "Mapeo de la Competencia",
-            "content": "<p>Niveles de análisis según la literatura de branding corporativo:</p>",
+            "title": "Niveles de Mapeo de Competencia",
+            "content": "<p>Mapeo estratégico para situar la personalidad visual de tu proyecto:</p>",
             "cards": [
               {
                 "num": "⚔️",
                 "title": "Competencia Directa",
-                "desc": "Marcas que ofrecen el mismo producto al mismo nicho de público (misma categoría)."
+                "desc": "Marcas del mismo rubro que ofrecen el mismo producto al mismo público."
               },
               {
                 "num": "🔄",
@@ -904,10 +1106,37 @@ const slidesData = {
               {
                 "num": "🌟",
                 "title": "Competencia Aspiracional",
-                "desc": "Referentes globales de diseño y posicionamiento que elevan la expectativa estética."
+                "desc": "Referentes estéticos globales de diseño que inspiran el tono visual."
               }
             ],
-            "notes": "<h3>Competencia</h3><p>Analizar la competencia evita repetir sus códigos cromáticos y tipográficos.</p>"
+            "notes": "<h3>Mapeo</h3><p>El mapeo de competencia evita repetir los colores y tipografías del sector.</p>"
+          },
+          {
+            "layout": "split",
+            "title": "La Elasticidad Marcaria",
+            "content": "<p>Cómo una marca se expande o contrae según el soporte físico o interactivo:</p><ul><li>Un sistema elástico permite usar variantes cromáticas del logotipo según la estacionalidad o la categoría del producto.</li><li>El logotipo puede fragmentarse, permitiendo que el isotipo actúe solo en entornos reducidos de avatares sin perder recordación.</li></ul>",
+            "media": "images/d06-lunes-slide02.jpg",
+            "notes": "<h3>Elasticidad</h3><p>Las marcas modernas deben ser elásticas para habitar desde un favicon hasta un cartel de carretera.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Preguntas del Briefing de Alina Wheeler",
+            "content": "<p>Las 3 preguntas de diagnóstico obligatorias para desarmar pedidos ingenuos del cliente:</p>",
+            "steps": [
+              {
+                "title": "¿Qué valor compra el usuario?",
+                "desc": "Identificar el beneficio core real detrás de la transacción comercial."
+              },
+              {
+                "title": "¿A quién necesita atraer hoy?",
+                "desc": "Mapear la brecha de audiencia entre el comprador actual y la meta del negocio."
+              },
+              {
+                "title": "¿Cuáles son los límites técnicos?",
+                "desc": "Definir restricciones de presupuesto, plazos y sistemas de impresión física."
+              }
+            ],
+            "notes": "<h3>Wheeler</h3><p>El brief se co-construye diagnosticando de forma estratégica, no recibiendo pedidos pasivamente.</p>"
           },
           {
             "layout": "highlight",
@@ -917,11 +1146,45 @@ const slidesData = {
             "notes": "<h3>Caso</h3><p>Un hito de diseño de sistemas dinámicos generativos.</p>"
           },
           {
-            "layout": "split",
-            "title": "Consistencia a través de Texturas y Colores",
-            "content": "<p>Cómo proteger la marca cuando el logo cambia en sistemas abiertos:</p><ul><li>Fija una **paleta cromática rígida** e inalterable.</li><li>Desarrolla patrones o texturas secundarias con simetría modular para dar coherencia visual.</li><li>Usa una única familia tipográfica de alta personalidad para unificar la voz visual.</li></ul>",
-            "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Consistencia</h3><p>El color y la tipografía son los verdaderos pilares del reconocimiento de marca dinámico.</p>"
+            "layout": "vs",
+            "title": "Buyer Persona vs. Datos Demográficos",
+            "content": "<p>Cómo caracterizar a la audiencia de forma profesional:</p>",
+            "vs1": {
+              "title": "Perfil Demográfico (Clásico)",
+              "desc": "Variables rígidas como 'mujeres de 30 a 50 años'. Aporta escasa información sobre la motivación de compra y la estética que atrae al público.",
+              "badge": "Vago",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Buyer Persona (Comportamental)",
+              "desc": "Mapeo de hábitos de consumo, miedos cotidianos y valores éticos. Define de forma empática el color, la composición y el arquetipo de marca.",
+              "badge": "Estratégico",
+              "highlighted": true
+            },
+            "notes": "<h3>Audiencia</h3><p>Diseñar para un Buyer Persona específico evita las marcas genéricas sin personalidad.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Puntos de Consistencia del Sistema Visual",
+            "content": "<p>Recursos que unifican al sistema dinámico cuando el logo cambia:</p>",
+            "cards": [
+              {
+                "num": "🎨",
+                "title": "Paleta Rígida",
+                "desc": "Uso estricto de los colores del manual de marca de forma regular."
+              },
+              {
+                "num": "🖋️",
+                "title": "Tipografía Fija",
+                "desc": "Selección de una familia tipográfica secundaria de alta personalidad visual."
+              },
+              {
+                "num": "📐",
+                "title": "Grilla Compositiva",
+                "desc": "Márgenes y alineaciones asimétricas de diagramación constantes."
+              }
+            ],
+            "notes": "<h3>Consistencia</h3><p>El color y la tipografía secundaria son los verdaderos unificadores en sistemas dinámicos.</p>"
           },
           {
             "layout": "title",
@@ -931,11 +1194,27 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Ayudar a ver cómo la repetición y los módulos de diseño extienden la personalidad de la marca.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Instrucciones de Carga de Patterns",
+            "content": "<p>Pasos técnicos para el ejercicio de Miro del día de hoy:</p>",
+            "steps": [
+              {
+                "title": "1. Cargar Logotipo",
+                "desc": "Coloquen el logotipo vectorial del LAB 1 en su zona de Miro."
+              },
+              {
+                "title": "2. Trazar Rapport",
+                "desc": "Exploren 3 rapports de repetición geométrica usando partes aisladas del logo."
+              }
+            ],
+            "notes": "<h3>Actividad</h3><p>Monitorear y aconsejar sobre el contraste y los encastres de las tramas vectoriales.</p>"
+          },
+          {
             "layout": "split",
-            "title": "Cierre y Próxima Clase",
-            "content": "<p>Tareas obligatorias para preparar la siguiente sesión:</p><ul><li>Alinear los archivos vectoriales para el taller de motivos.</li><li>Investigar el significado cultural de los patrones tradicionales geométricos.</li><li><strong>Próximo tema:</strong> Creación de Patrones (Patterns) y Símbolos de Apoyo.</li></ul>",
+            "title": "Cierre de la Sesión",
+            "content": "<p>Tareas obligatorias para preparar la siguiente clase de IA:</p><ul><li>Alinear los archivos vectoriales para el taller de motivos.</li><li>Investigar el significado cultural de los patrones tradicionales geométricos.</li><li><strong>Próximo tema:</strong> Creación de Patrones (Patterns) y Símbolos de Apoyo.</li></ul>",
             "media": "images/d06-lunes-slide02.jpg",
-            "notes": "<h3>Cierre</h3><p>Despide la clase. Motívalos a buscar patterns en envoltorios cotidianos.</p>"
+            "notes": "<h3>Cierre</h3><p>Despide la clase de hoy animándolos a experimentar.</p>"
           }
         ]
       },
@@ -950,66 +1229,86 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy veremos cómo construir tramas repetitivas complejas a partir de módulos geométricos simples de la marca.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy profundizaremos en el diseño de tramas repetitivas corporativas:</p><ul><li>Concepto de Pattern de Marca y Rapport.</li><li>Diseño de encastres sin costuras (seamless patterns).</li><li>Tipos de repetición geométrica y ritmos visuales.</li><li>Casos históricos de posicionamiento con tramas en la industria del lujo.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
+            "content": "<p>Hoy profundizaremos en el diseño de tramas repetitivas corporativas:</p>",
+            "steps": [
+              {
+                "title": "01. Concepto de Pattern",
+                "desc": "El valor estético de las tramas secundarias y el Rapport."
+              },
+              {
+                "title": "02. Repetición Geométrica",
+                "desc": "Grillas de alineación, rotación y desplazamientos."
+              },
+              {
+                "title": "03. Casos de Posicionamiento",
+                "desc": "Historia del lujo marcas icónicas en base a patrones."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta el recorrido de la sesión. Fomenta el análisis de tramas cotidianas.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Louis Vuitton Monogram",
+            "content": "El Monogram Canvas creado en 1896 no requería la presencia del nombre de la marca. El patrón de flores entrelazadas era el verdadero logotipo de lujo reconocible en el mundo.",
+            "notes": "<h3>Cita teórica</h3><p>Explicar cómo el patrón puede llegar a valer más que el logotipo principal.</p>"
           },
           {
             "layout": "split",
             "title": "¿Qué es un Pattern de Marca?",
-            "content": "<p>Una trama o textura visual consistente que viste los soportes antes de aplicar el logo:</p><ul><li>Se construye aislando un elemento gráfico, silueta o parte del isotipo de la marca.</li><li>Se repite de forma infinita siguiendo reglas de simetría y ritmo visual para habitar superficies de embalajes y fondos.</li></ul>",
+            "content": "<p>Una trama o textura visual consistente que viste los soportes antes de aplicar el logo:</p><ul><li>Se construye aislando un elemento gráfico, silueta o parte del isotipo de la marca.</li><li>Se repite de forma infraestructural siguiendo reglas de simetría y ritmo visual para habitar superficies de embalajes y fondos.</li></ul>",
             "media": "images/d07-martes-slide02.jpg",
             "notes": "<h3>Patterns</h3><p>El pattern es el papel de regalo de la marca. Debe lucir premium.</p>"
           },
           {
-            "layout": "highlight",
-            "title": "El Módulo de Diseño (Rapport)",
-            "highlightTitle": "Seamless Encastre",
-            "content": "El rapport es la unidad mínima repetitiva de un patrón. Técnicamente, debe diseñarse de forma que encastre perfectamente con sus copias en los 4 bordes (arriba, abajo, izquierda, derecha) para garantizar que, al repetirse, no se vean cortes o líneas divisorias ('seamless').",
-            "notes": "<h3>Rapport</h3><p>Explicar el concepto de encastre sin costuras (seamless patterns).</p>"
+            "layout": "vs",
+            "title": "Grilla Ortogonal vs. Desplazamiento en Ladrillo",
+            "content": "<p>Dos formas de ordenar la trama en base a la repetición modular:</p>",
+            "vs1": {
+              "title": "Grilla Ortogonal Rígida",
+              "desc": "El módulo se repite de forma idéntica en filas y columnas perfectas. Transmite estabilidad matemática, orden institucional y seriedad tecnológica.",
+              "badge": "Estructurado",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Desplazamiento en Ladrillo (Half-Drop)",
+              "desc": "Desplazar cada fila alternando la posición media respecto a la anterior. Disimula las costuras divisorias de la trama, dando sensación de fluidez orgánica.",
+              "badge": "Fluido",
+              "highlighted": true
+            },
+            "notes": "<h3>Comparación</h3><p>Muestra ambos ejemplos en la pantalla para evidenciar el dinamismo visual del medio ladrillo.</p>"
           },
           {
-            "layout": "steps",
-            "title": "Tipos de Repetición Geométrica",
-            "content": "<p>Cómo estructurar la trama en base al arquetipo de la marca:</p>",
-            "steps": [
+            "layout": "stat",
+            "title": "El Rapport de Encastre Perfecto",
+            "number": "1:1",
+            "statTitle": "Proporción del Módulo Seamless",
+            "content": "La unidad mínima del patrón (Rapport) debe ser diseñada en proporción cuadrada exacta 1:1, asegurando que las líneas de salida del borde izquierdo coincidan exactamente con la entrada del derecho para lograr repeticiones sin costuras visibles.",
+            "notes": "<h3>Rapport</h3><p>Explicar la simetría del rapport para evitar cortes vectoriales.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Errores Comunes en el Diseño de Patterns",
+            "content": "<p>Fallas que arruinan la aplicación del patrón secundario:</p>",
+            "cards": [
               {
-                "title": "Grilla Lineal",
-                "desc": "Repetición regular en columnas y filas perfectas. Transmite estabilidad y orden."
+                "num": "❌",
+                "title": "Costura Visible",
+                "desc": "Dejar saltos o desalineaciones en los bordes del rapport, evidenciando cortes en la trama."
               },
               {
-                "title": "Desplazamiento (Ladrillo)",
-                "desc": "Desplaza cada fila un 50% respecto a la anterior. Rompe la rigidez."
+                "num": "❌",
+                "title": "Alto Contraste",
+                "desc": "Usar colores saturados de alto contraste que impiden leer los textos de marca sobre el fondo."
               },
               {
-                "title": "Rotación Alternada",
-                "desc": "Gira el módulo en diferentes ángulos en cada celda para dar ritmo dinámico."
+                "num": "❌",
+                "title": "Falta de Escala",
+                "desc": "Hacer la repetición muy densa y pequeña, generando ruido visual molesto a la distancia."
               }
             ],
-            "notes": "<h3>Nota</h3><p>El ritmo visual del patrón debe reflejar el arquetipo de la marca.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Grilla Lineal en Patterns",
-            "content": "<p>Estructura perfecta de repetición ortogonal:</p><ul><li>Mantiene el mismo eje de simetría horizontal y vertical.</li><li>Muy utilizada en identidades corporativas del sector corporativo, financiero y tecnológico por su formalidad matemática.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Grilla</h3><p>La grilla es formal y rígida; ideal para marcas que venden seguridad o precisión.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Desplazamiento en Ladrillo",
-            "content": "<p>Dinámica de desfase espacial para romper el orden obvio:</p><ul><li>Desplaza la mitad del ancho del módulo en filas alternas, imitando la colocación de ladrillos en una pared.</li><li>Disimula las líneas divisorias, haciendo que el ojo perciba la trama como un plano uniforme fluido.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Ladrillo</h3><p>El desplazamiento ayuda a disimular el patrón de repetición original.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Pattern en la Historia del Lujo",
-            "content": "<p>Dos casos icónicos de posicionamiento de marca a través de tramas de autor:</p><ul><li><strong>Louis Vuitton:</strong> El Monogram Canvas creado en 1896 viste bolsos y maletas, siendo reconocible sin ver el logo principal.</li><li><strong>Burberry:</strong> El tartán de cuadros cruzados es un activo registrado e identificable instantáneamente.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Caso</h3><p>Mencionar cómo los patterns de lujo se convierten en activos más valiosos que el propio logo.</p>"
+            "notes": "<h3>Errores</h3><p>El pattern de fondo debe actuar con timidez cromática para no opacar al logo principal.</p>"
           },
           {
             "layout": "split",
@@ -1019,48 +1318,72 @@ const slidesData = {
             "notes": "<h3>Semiótica</h3><p>El pattern es branding pasivo de alta sofisticación.</p>"
           },
           {
-            "layout": "split",
-            "title": "Aplicaciones de Tramas Corporativas",
-            "content": "<p>Lugares estratégicos para aplicar el pattern en el sistema de marca:</p><ul><li>Papel seda de envoltorio de productos en envíos e-commerce.</li><li>Interiores de sobres corporativos para dar una sorpresa de diseño al abrir.</li><li>Texturas de fondo en cabeceras de sitios web o perfiles de LinkedIn.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Aplicación</h3><p>Remarca que el patrón es un fondo de apoyo, no el logo principal.</p>"
+            "layout": "steps",
+            "title": "Creando Motivos en Adobe Illustrator",
+            "content": "<p>Los 3 pasos técnicos para automatizar la trama en el panel de muestras:</p>",
+            "steps": [
+              {
+                "title": "1. Agrupar Trazos",
+                "desc": "Selecciona el módulo vectorial y agrúpalo con Ctrl+G en Illustrator."
+              },
+              {
+                "title": "2. Panel Muestras",
+                "desc": "Arrastra y suelta el grupo vectorial dentro del panel de Muestras (Swatches)."
+              },
+              {
+                "title": "3. Aplicar y Escalar",
+                "desc": "Selecciona un objeto y rellénalo con el swatch. Usa la herramienta Escala desactivando 'Transformar Objetos'."
+              }
+            ],
+            "notes": "<h3>Illustrator</h3><p>Mostrar la herramienta en vivo en el proyector. Es clave para el laboratorio.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "El Módulo de Diseño (Rapport)",
+            "highlightTitle": "Seamless Encastre",
+            "content": "El rapport es la unidad mínima repetitiva de un patrón. Técnicamente, debe diseñarse de forma que encastre perfectamente con sus copias en los 4 bordes (arriba, abajo, izquierda, derecha) para garantizar que, al repetirse, no se vean cortes o líneas divisorias ('seamless').",
+            "notes": "<h3>Rapport</h3><p>Explicar el concepto de encastre sin costuras (seamless patterns).</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Patterns Vectoriales vs. Patrones Fotográficos",
+            "content": "<p>La elección técnica según el soporte corporativo:</p>",
+            "vs1": {
+              "title": "Patterns Vectoriales (.ai / .svg)",
+              "desc": "Líneas geométricas limpias y colores planos. Escalabilidad infinita sin pérdida de definición, ideales para papelería técnica e impresión.",
+              "badge": "Escalable",
+              "highlighted": true
+            },
+            "vs2": {
+              "title": "Patrones Fotográficos / Texturas",
+              "desc": "Imágenes realistas de materiales (ej. mármol, madera, cuero). Aportan fotorrealismo táctil pero aumentan el peso de los archivos digitales.",
+              "badge": "Táctil",
+              "highlighted": false
+            },
+            "notes": "<h3>Texturas</h3><p>Los patterns vectoriales son más versátiles y livianos en el desarrollo de marca.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores Técnicos en Patterns",
-            "content": "<p>Evita estas fallas en la entrega del módulo:</p>",
+            "title": "Pautas de Aplicación en el Manual",
+            "content": "<p>Normas obligatorias para documentar el uso de tramas en las Brand Guidelines:</p>",
             "cards": [
               {
-                "num": "❌",
-                "title": "Costuras Visibles",
-                "desc": "Saltos en los trazos vectoriales que rompen la continuidad de la trama."
+                "num": "A",
+                "title": "Escala Mínima",
+                "desc": "Especificar el límite de reducción del patrón para evitar empastes en imprenta."
               },
               {
-                "num": "❌",
-                "title": "Exceso de Contraste",
-                "desc": "Usar colores muy contrastantes que impiden la lectura del texto encima."
+                "num": "B",
+                "title": "Colores Permitidos",
+                "desc": "Listar las combinaciones de color de la paleta válidas para colorear las líneas."
               },
               {
-                "num": "❌",
-                "title": "Falta de Escala",
-                "desc": "Hacer la trama muy pequeña, produciendo ruido visual a distancia."
+                "num": "C",
+                "title": "Margen de Texto",
+                "desc": "Área de exclusión de textos para asegurar la legibilidad sobre la trama."
               }
             ],
-            "notes": "<h3>Nota</h3><p>El patrón es un fondo de apoyo; debe actuar con bajo contraste en la mayoría de los casos.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Uso de Motivos en Adobe Illustrator",
-            "content": "<p>Trazado técnico y automatización del motivo vectorial:</p><ul><li>Selecciona el módulo del logotipo. Arrólalo dentro del panel de **Muestras (Swatches)**.</li><li>Illustrator creará un motivo que rellenará cualquier forma geométrica automáticamente sin distorsionar el vector.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Muestras</h3><p>Mostrar en el proyector la herramienta de creación de motivos rápida en el panel de muestras de Illustrator.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Guía de Documentación para el Manual",
-            "content": "<p>Cómo especificar las normas de uso del pattern en el manual técnico:</p><ul><li>Fija el porcentaje de escala mínimo y máximo permitido para la reproducción.</li><li>Especifica los colores corporativos permitidos para colorear las líneas del patrón.</li><li>Indica el área de exclusión alrededor de textos que pasen por encima de la trama.</li></ul>",
-            "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Normas</h3><p>El manual debe indicar explícitamente cómo aplicar la trama sin generar ruido visual.</p>"
+            "notes": "<h3>Manual</h3><p>Establecer reglas claras previene que el cliente aplique patrones ilegibles.</p>"
           },
           {
             "layout": "title",
@@ -1070,11 +1393,27 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Explicar los parámetros de escala, estilo y fuerza del prompt en la herramienta de IA.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Pautas del Taller de Motivos",
+            "content": "<p>Instrucciones para la dinámica grupal en el Illustrator:</p>",
+            "steps": [
+              {
+                "title": "Paso 1. Importación",
+                "desc": "Carga el rapport inicial en una mesa de trabajo limpia en Illustrator."
+              },
+              {
+                "title": "Paso 2. Motivo",
+                "desc": "Crea el swatch y rellena un cuadrado gigante de fondo de afiche."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Revisar las uniones y prolijidad vectorial de los rapports de los alumnos en vivo.</p>"
+          },
+          {
             "layout": "split",
-            "title": "Cierre de la Sesión",
-            "content": "<p>Tareas obligatorias para preparar la siguiente clase de IA:</p><ul><li>Crear una cuenta gratuita en Adobe Firefly o Midjourney.</li><li>Traer seleccionada una imagen de un frasco de perfume o empaque para promptear.</li><li><strong>Próximo tema:</strong> Ingeniería de prompts técnicos para mockups.</li></ul>",
+            "title": "Cierre y Tarea",
+            "content": "<p>Pasos finales de preparación para la sesión de IA:</p><ul><li>Guardar los 3 motivos en su panel de Illustrator.</li><li>Traer seleccionada una imagen de un envase para promptear de fondo.</li><li><strong>Próximo tema:</strong> Ingeniería de prompts técnicos para mockups con Inteligencia Artificial.</li></ul>",
             "media": "images/d07-martes-slide02.jpg",
-            "notes": "<h3>Cierre</h3><p>Finaliza la clase y motivar a los alumnos a refinar sus rapports geométricos.</p>"
+            "notes": "<h3>Cierre</h3><p>Despedida de la sesión.</p>"
           }
         ]
       },
@@ -1089,11 +1428,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy aprenderemos a usar la inteligencia artificial de forma profesional como un acelerador de propuestas visuales de marca.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy dominaremos el prompteo técnico aplicado a maquetas cromáticas:</p><ul><li>La IA en el flujo de trabajo de branding corporativo.</li><li>Diferencias entre Prompts Vagos y Prompts Técnicos de composición.</li><li>Estructuración de iluminación de estudio en inglés técnico.</li><li>Montaje de vectores vectoriales sobre renders de Inteligencia Artificial.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
+            "content": "<p>Hoy dominaremos el prompteo técnico aplicado a maquetas cromáticas:</p>",
+            "steps": [
+              {
+                "title": "01. IA en Branding",
+                "desc": "El rol conceptual de la inteligencia artificial y su flujo técnico."
+              },
+              {
+                "title": "02. Prompts Técnicos",
+                "desc": "Estructura descriptiva, materiales e iluminación en inglés."
+              },
+              {
+                "title": "03. Fotomontaje",
+                "desc": "Técnicas de integración de vectores limpios sobre renders de IA."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que la IA no hace logos, sino que asiste en los fotomontajes.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Adobe Firefly Guidelines",
+            "content": "La Inteligencia Artificial es un amplificador de la imaginación humana, pero la dirección de arte y el criterio de composición final pertenecen siempre al diseñador.",
+            "notes": "<h3>Cita</h3><p>Firefly está diseñado con bases éticas respetando derechos de autor de artistas.</p>"
           },
           {
             "layout": "split",
@@ -1101,13 +1459,6 @@ const slidesData = {
             "content": "<p>La inteligencia artificial es un copiloto para explorar ideas, no un reemplazo de tu criterio de diseño:</p><ul><li>Permite maquetar el logotipo en entornos complejos de iluminación en minutos.</li><li>Reduce los costos de renderizado 3D tradicionales en etapas tempranas de presentación al cliente.</li></ul>",
             "media": "images/d02-martes-slide03.jpg",
             "notes": "<h3>IA</h3><p>La IA asiste al diseñador; no reemplaza el criterio técnico ni de composición.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Rol del Diseñador en la Era Artificial",
-            "content": "<p>Tu valor reside en la curación estratégica y la composición de la pieza:</p><ul><li>La IA puede generar miles de imágenes al azar, pero carece de la intención conceptual definida en el brief.</li><li>El diseñador selecciona, edita, refina y ajusta las imágenes a la paleta corporativa rígida.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Diseñador</h3><p>Un prompt técnico necesita la mirada de un director de arte experimentado para tener valor comercial.</p>"
           },
           {
             "layout": "vs",
@@ -1126,6 +1477,44 @@ const slidesData = {
               "highlighted": true
             },
             "notes": "<h3>Prompts</h3><p>Enfatizar la importancia de especificar materiales (vidrio esmerilado, piedra) y luz.</p>"
+          },
+          {
+            "layout": "stat",
+            "title": "El Fracaso de Tropicana (2009)",
+            "number": "-20%",
+            "statTitle": "Pérdida en Ventas en 8 Semanas",
+            "content": "Tropicana contrató un rediseño que eliminó su icónica naranja real con pajita para colocar un vaso genérico de jugo con estética minimalista. Los clientes no reconocieron el envase en la góndola, creyendo que era una marca blanca barata, lo que destruyó sus activos distintivos y provocó pérdidas millonarias directas.",
+            "notes": "<h3>Caso</h3><p>Un clásico ejemplo de por qué proteger el capital semiótico de marca.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Parámetros Técnicos en Prompts de IA",
+            "content": "<p>Variables indispensables para estructurar la calidad fotorrealista en la imagen:</p>",
+            "cards": [
+              {
+                "num": "📷",
+                "title": "Lente de Cámara",
+                "desc": "Especificar lentes de gran campo (85mm o 50mm macro) para desenfocar fondos."
+              },
+              {
+                "num": "💡",
+                "title": "Tipo de Luz",
+                "desc": "Indicar luces difusas de ventana (diffused daylight) para evitar sombras duras."
+              },
+              {
+                "num": "🪨",
+                "title": "Podio / Entorno",
+                "desc": "Describir el material de soporte de forma explícita (mármol, concreto, madera)."
+              }
+            ],
+            "notes": "<h3>Parámetros</h3><p>Especificar variables fotográficas reales reduce el margen de error de la IA.</p>"
+          },
+          {
+            "layout": "split",
+            "title": "Control de Materiales en Prompts",
+            "content": "<p>Cómo indicar las texturas exactas de los empaques a la IA:</p><ul><li><strong>Frosted Glass:</strong> Vidrio esmerilado translúcido para marcas de alta cosmética.</li><li><strong>Matte Cardboard:</strong> Cartón mate reciclado de tacto poroso para marcas eco-friendly.</li><li><strong>Polished Brass:</strong> Acabados de latón pulido para apliques dorados metálicos de lujo.</li></ul>",
+            "media": "images/d02-martes-slide03.jpg",
+            "notes": "<h3>Materiales</h3><p>La correcta descripción de texturas ahorra horas de postproducción en Photoshop.</p>"
           },
           {
             "layout": "steps",
@@ -1148,13 +1537,6 @@ const slidesData = {
             "notes": "<h3>Nota</h3><p>El uso de palabras clave técnicas reduce la aleatoriedad de la IA.</p>"
           },
           {
-            "layout": "split",
-            "title": "Control de Materiales en Prompts",
-            "content": "<p>Cómo indicar las texturas exactas de los empaques a la IA:</p><ul><li><strong>Frosted Glass:</strong> Vidrio esmerilado translúcido para marcas de alta cosmética.</li><li><strong>Matte Cardboard:</strong> Cartón mate reciclado de tacto poroso para marcas eco-friendly.</li><li><strong>Polished Brass:</strong> Acabados de latón pulido para apliques dorados metálicos de lujo.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Materiales</h3><p>La correcta descripción de texturas ahorra horas de postproducción en Photoshop.</p>"
-          },
-          {
             "layout": "highlight",
             "title": "Validación con Shelf Test (Góndola)",
             "highlightTitle": "Evaluación Silenciosa",
@@ -1162,55 +1544,45 @@ const slidesData = {
             "notes": "<h3>Validación</h3><p>Un uso estratégico de la IA para reducir riesgos del cliente.</p>"
           },
           {
-            "layout": "split",
-            "title": "Herramientas Líderes en la Industria",
-            "content": "<p>Plataformas que debes integrar en tu flujo de trabajo creativo:</p><ul><li><strong>Midjourney:</strong> Excelente para la conceptualización artística y fotorrealismo extremo en renders.</li><li><strong>Adobe Firefly:</strong> Ideal para la generación y el relleno generativo directamente integrado en Photoshop, respetando los derechos de autor comerciales.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Herramientas</h3><p>Adobe Firefly es la opción más segura legalmente para uso comercial en agencias.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Recorte y Edición en Adobe Photoshop",
-            "content": "<p>Cómo limpiar el fondo generado por la IA para integrar tu logotipo:</p><ul><li>Usa la herramienta **Seleccionar Sujeto** para separar el envase del fondo generado.</li><li>Crea máscaras de capa precisas.</li><li>Fija la capa del logo vectorial en modo de fusión **Multiplicar** o **Superponer** para que adopte la luz y texturas naturales del frasco.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Photoshop</h3><p>Explica las capas de ajuste cromático para fundir el logo vectorial de forma creíble.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Fundido de Luces y Sombras vectoriales",
-            "content": "<p>Asegurando la credibilidad del fotomontaje en el mockup:</p><ul><li>Dibuja sombras proyectadas en capas separadas con baja opacidad en Photoshop.</li><li>Usa el pincel difuminado con tonos oscuros cálidos para imitar la sombra de contacto física en la base del podio.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Sombras</h3><p>Un mockup sin sombras proyectadas parece 'flotar' y pierde fotorrealismo inmediato.</p>"
+            "layout": "vs",
+            "title": "Adobe Firefly vs. Midjourney",
+            "content": "<p>Comparativa de plataformas generativas para el flujo de branding:</p>",
+            "vs1": {
+              "title": "Adobe Firefly (Comercial)",
+              "desc": "Seguridad legal comercial integrada. Excelente relleno generativo integrado directamente en Photoshop para ampliaciones de lienzo rápidas.",
+              "badge": "Seguro",
+              "highlighted": true
+            },
+            "vs2": {
+              "title": "Midjourney (Artístico)",
+              "desc": "Calidad estética y fotorrealismo insuperable en renderizado de luces complejas, pero exige el uso de la app de chat Discord y tiene barreras legales de autor.",
+              "badge": "Estético",
+              "highlighted": false
+            },
+            "notes": "<h3>Plataformas</h3><p>Firefly es el estándar para agencias por su integración técnica con Adobe Creative Cloud.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores Cromáticos y de Iluminación",
-            "content": "<p>Fallas que arruinan la credibilidad del render de marca:</p>",
+            "title": "Fallas Comunes al Montar Logos en Renders",
+            "content": "<p>Errores que destruyen la credibilidad del fotomontaje digital:</p>",
             "cards": [
               {
                 "num": "❌",
-                "title": "Ángulo de Luz",
-                "desc": "Montar un logotipo plano con luz frontal sobre una botella iluminada de forma trasera (rim lighting)."
+                "title": "Sin Deformación",
+                "desc": "Colocar el logo recto sobre superficies cilíndricas sin usar la distorsión de perspectiva en Photoshop."
               },
               {
                 "num": "❌",
-                "title": "Perspectiva Rota",
-                "desc": "Colocar el logotipo recto en un envase cilíndrico sin deformar los bordes con la herramienta Deformar."
+                "title": "Negro Puro",
+                "desc": "Usar color negro absoluto (#000000) en el logotipo, perdiendo las luces y reflejos del material."
               },
               {
                 "num": "❌",
-                "title": "Contraste Puro",
-                "desc": "Usar negro absoluto (#000000) en el logo en lugar de adoptar los reflejos y grises del material real."
+                "title": "Sombra Voladora",
+                "desc": "Omitir la sombra de contacto física en la base del envase, pareciendo que flota en el aire."
               }
             ],
-            "notes": "<h3>Nota</h3><p>La distorsión es clave en envases cilíndricos para dar volumen 3D.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Marco Ético en el Uso de IA",
-            "content": "<p>Límites éticos y legales en la presentación de marcas corporativas:</p><ul><li>Nunca presentes imágenes de stock o marcas reales modificadas como propias.</li><li>Declara al cliente que las imágenes de contexto de mockup son renders conceptuales creados mediante asistencia de inteligencia artificial.</li></ul>",
-            "media": "images/d02-martes-slide03.jpg",
-            "notes": "<h3>Ética</h3><p>La transparencia con el cliente construye relaciones comerciales de confianza a largo plazo.</p>"
+            "notes": "<h3>Errores</h3><p>Un fotomontaje descuidado resta credibilidad a la identidad del logotipo.</p>"
           },
           {
             "layout": "title",
@@ -1220,8 +1592,24 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Guiar a los alumnos en la redacción de prompts descriptivos técnicos que respeten los valores de marca.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Instrucciones de la Dinámica de IA",
+            "content": "<p>Consignas para el prompteo y edición de imágenes en clase:</p>",
+            "steps": [
+              {
+                "title": "1. Prompt",
+                "desc": "Redacta el prompt descriptivo de tu envase en inglés en Adobe Firefly."
+              },
+              {
+                "title": "2. Edición",
+                "desc": "Descarga el render, llévalo a Photoshop e integra el logo en modo Multiplicar."
+              }
+            ],
+            "notes": "<h3>Consignas</h3><p>Asistir a los estudiantes con las palabras clave en inglés de iluminación.</p>"
+          },
+          {
             "layout": "split",
-            "title": "Cierre de la Clase",
+            "title": "Cierre y Tareas del Día",
             "content": "<p>Tareas y preparación de cara a la siguiente sesión:</p><ul><li>Guardar los 3 mejores renders generados por la IA en la carpeta de proyectos.</li><li><strong>Próximo tema:</strong> Persuasión, universos visuales y los arquetipos de Carl Jung aplicados.</li></ul>",
             "media": "images/d02-martes-slide03.jpg",
             "notes": "<h3>Cierre</h3><p>Despide a la clase felicitándolos por la calidad técnica de las imágenes obtenidas hoy.</p>"
@@ -1239,11 +1627,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy veremos cómo el conjunto coordinado de recursos gráficos (ilustración, color, tipografía) sitúan a la marca en una categoría clara.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy analizaremos la persuasión y la dirección de arte corporativa:</p><ul><li>El concepto de Universo Visual y el sistema secundario.</li><li>Los arquetipos de marca de Carl Jung y su traducción estética.</li><li>Comparativa: Ilustración propia contra fotografía de stock genérica.</li><li>Normas de Dirección de Arte fotográfica y jerarquías tipográficas.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
+            "content": "<p>Hoy analizaremos la persuasión y la dirección de arte corporativa:</p>",
+            "steps": [
+              {
+                "title": "01. Universo Visual",
+                "desc": "La atmósfera e identidad secundaria del sistema marcario."
+              },
+              {
+                "title": "02. Arquetipos de Jung",
+                "desc": "Personalidad y decisiones de diseño traducidas a formas gráficas."
+              },
+              {
+                "title": "03. Dirección de Arte",
+                "desc": "Pautas fotográficas y jerarquías tipográficas en catálogos."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que el logo no es el salvador; el sistema completo es lo que vende.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Paul Rand",
+            "content": "Un logotipo no vende de forma directa; identifica. El sistema gráfico secundario regular es lo que realmente persuade e instala la marca en el mercado.",
+            "notes": "<h3>Cita</h3><p>Rand insistía en la importancia sistémica del diseño comercial.</p>"
           },
           {
             "layout": "split",
@@ -1253,72 +1660,53 @@ const slidesData = {
             "notes": "<h3>Universo</h3><p>El universo es el escenario donde vive el logotipo.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Psicología de Carl Jung en Branding",
-            "content": "<p>Cómo los arquetipos inconscientes facilitan la conexión marcaria:</p><ul><li>Jung identificó patrones de comportamiento universales en la mitología humana.</li><li>Las marcas adoptan estas identidades para resonar instantáneamente con los valores del comprador sin explicaciones técnicas extensas.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Jung</h3><p>Los arquetipos simplifican la comunicación en mercados saturados.</p>"
+            "layout": "vs",
+            "title": "Arquetipos de Marca: El Sabio vs. El Gobernante",
+            "content": "<p>Cómo el arquetipo de marca define el estilo compositivo:</p>",
+            "vs1": {
+              "title": "El Arquetipo del Sabio (Google)",
+              "desc": "Prioriza la legibilidad absoluta, interfaces extremadamente limpias, paletas cromáticas primarias sencillas y grillas rígidas sin decoración.",
+              "badge": "Estructura y Razón",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "El Arquetipo del Gobernante (Rolex)",
+              "desc": "Prioriza simetrías perfectas, colores asociados al estatus (oro, verde botella, negro carbón) y tipografías serif de alto contraste tipográfico.",
+              "badge": "Estatus y Control",
+              "highlighted": true
+            },
+            "notes": "<h3>Comparación</h3><p>Analizar cómo cambian las fuentes tipográficas según el arquetipo psicológico.</p>"
           },
           {
-            "layout": "steps",
-            "title": "Arquetipos de Marca y Diseño Visual",
-            "content": "<p>Margaret Mark y Carol S. Pearson adaptaron la psicología de Jung para guiar las decisiones estéticas:</p>",
-            "steps": [
-              {
-                "title": "El Héroe (Nike)",
-                "desc": "Tipografías condensadas, diagonales marcadas, alto contraste cromático y layouts activos."
-              },
-              {
-                "title": "El Mago (Apple)",
-                "desc": "Espacios en blanco muy generosos, formas puras, acabados pulidos y minimalismo."
-              },
-              {
-                "title": "El Sabio (Google)",
-                "desc": "Interfaces limpias, grillas rigurosas e importancia absoluta de la legibilidad tipográfica."
-              }
-            ],
-            "notes": "<h3>Jung</h3><p>El arquetipo define la personalidad visual del sistema.</p>"
+            "layout": "stat",
+            "title": "La Fuerza de la Coherencia de Arquetipo",
+            "number": "12",
+            "statTitle": "Arquetipos Clásicos de Personalidad de Jung",
+            "content": "Margaret Mark y Carol S. Pearson adaptaron los 12 arquetipos de personalidad de Carl Jung para branding. Los sistemas gráficos que respetan las variables estéticas asociadas a su arquetipo logran mayor credibilidad en el mercado comercial.",
+            "notes": "<h3>Jung</h3><p>Detallar cómo la coherencia de personalidad reduce el costo publicitario de la marca.</p>"
           },
           {
             "layout": "grid",
-            "title": "Otros Arquetipos y su Estilo Visual",
-            "content": "<p>La personalidad psicológica traducida a variables de composición gráfica:</p>",
+            "title": "Arquetipos y sus Decisiones Estéticas",
+            "content": "<p>Rasgos compositivos asociados a las personalidades psicológicas:</p>",
             "cards": [
               {
                 "num": "🔥",
-                "title": "El Rebelde (Harley)",
-                "desc": "Texturas crudas, paleta cromática oscura y tipografías toscas e industriales."
+                "title": "El Rebelde",
+                "desc": "Texturas industriales rotas, tipografías toscas sans y paletas de color oscuras (ej. Harley-Davidson)."
+              },
+              {
+                "num": "🎨",
+                "title": "El Creador",
+                "desc": "Layouts asimétricos dinámicos, colores saturados contrastantes y libertad compositiva (ej. Lego, Adobe)."
               },
               {
                 "num": "👑",
-                "title": "El Gobernante (Rolex)",
-                "desc": "Composiciones simétricas, acabados dorados y tipografías serif de alto contraste."
-              },
-              {
-                "num": "🤡",
-                "title": "El Bufón (Oreo)",
-                "desc": "Tipografía rounded, colores saturados y layouts desordenados y divertidos."
+                "title": "El Mago",
+                "desc": "Espacios en blanco muy generosos, formas geométricas puras, minimalismo y acabados pulidos (ej. Apple)."
               }
             ],
-            "notes": "<h3>Arquetipos II</h3><p>Analizar cómo el minimalismo de Apple refleja el arquetipo del mago.</p>"
-          },
-          {
-            "layout": "vs",
-            "title": "Ilustración Propietaria vs. Foto de Stock",
-            "content": "<p>La elección de los recursos de imagen en base al presupuesto y la diferenciación:</p>",
-            "vs1": {
-              "title": "Ilustración Propietaria",
-              "desc": "Genera diferenciación única e inimitable. El estilo de trazo y la paleta son 100% consistentes con el manual de marca, elevando el valor percibido.",
-              "badge": "Premium",
-              "highlighted": true
-            },
-            "vs2": {
-              "title": "Fotografía de Stock",
-              "desc": "Es económica y rápida de conseguir, pero se corre el riesgo de usar la misma imagen de modelo que tu competidor directo, diluyendo la personalidad.",
-              "badge": "Genérico",
-              "highlighted": false
-            },
-            "notes": "<h3>Comparación</h3><p>Aconsejar crear ilustraciones propietarias o pautas de estilo fotográfico estrictas.</p>"
+            "notes": "<h3>Arquetipos</h3><p>Pide ejemplos de marcas locales asociadas a cada grupo.</p>"
           },
           {
             "layout": "split",
@@ -1328,30 +1716,54 @@ const slidesData = {
             "notes": "<h3>Dirección</h3><p>La dirección de arte garantiza que las fotos parezcan de la misma familia visual.</p>"
           },
           {
-            "layout": "split",
-            "title": "Pautas de Encuadre e Iluminación",
-            "content": "<p>Detalles técnicos para los fotógrafos de la marca:</p><ul><li>Usa profundidades de campo cortas para desenfocar los fondos ruidosos.</li><li>Mantén encuadres descentrados, dejando un tercio del espacio libre para colocar texto de catálogo sin interferencias.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Encuadre</h3><p>Dejar aire en las fotos facilita el trabajo de los maquetadores de catálogos.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Tipografía Secundaria en Sistemas",
-            "content": "<p>La fuente que sostiene los bloques extensos de texto técnico:</p><ul><li>Debe poseer una legibilidad absoluta a escalas pequeñas (generalmente tipografías Sans Serif limpias como Roboto o Inter).</li><li>Define un rango estricto de pesos (Light, Regular, Medium, Bold) para evitar anarquía visual.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Fuentes</h3><p>La tipografía secundaria equilibra la personalidad expresiva de la tipografía principal del logotipo.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Jerarquías de Texto en Composición",
-            "content": "<p>Cómo ordenar la lectura cognitiva del espectador en folletos o sitios web:</p><ul><li><strong>Título (H1):</strong> Ocupa el 60% del peso visual. Tipografía con personalidad.</li><li><strong>Subtítulo (H2):</strong> Aporta contexto a tamaño intermedio.</li><li><strong>Cuerpo (Body):</strong> Altamente legible, tamaño de 9 a 12 puntos.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
+            "layout": "steps",
+            "title": "Jerarquía de Contenidos en Catálogos",
+            "content": "<p>El orden tipográfico recomendado para guiar la lectura visual:</p>",
+            "steps": [
+              {
+                "title": "H1. Encabezado",
+                "desc": "Ocupa el 60% del peso visual. Fuente tipográfica de alta personalidad."
+              },
+              {
+                "title": "H2. Subtítulo",
+                "desc": "Aporta contexto complementario, tamaño medio y peso regular."
+              },
+              {
+                "title": "Cuerpo explicativo",
+                "desc": "Altamente legible, tipografía sans limpia de 9 a 11 puntos."
+              }
+            ],
             "notes": "<h3>Jerarquías</h3><p>Sin jerarquía tipográfica, el usuario se confunde y abandona la lectura.</p>"
           },
           {
+            "layout": "highlight",
+            "title": "Ilustración Propietaria vs. Foto de Stock",
+            "highlightTitle": "Diferenciación Única",
+            "content": "La ilustración propia permite crear un estilo de trazo y paleta de color 100% exclusivo y registrado, haciendo al universo visual inimitable. Las fotos de stock son rápidas de descargar, pero corres el riesgo de ver el mismo modelo en la web de tu competidor directo.",
+            "notes": "<h3>Ilustración</h3><p>Aconsejar el desarrollo de ilustraciones propietarias en proyectos premium.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Pautas de Encuadre de Imagen",
+            "content": "<p>Cómo estructurar los fotomontajes según el manual técnico:</p>",
+            "vs1": {
+              "title": "Composición Centrada de Retrato",
+              "desc": "Encuadrar al sujeto en el eje medio del plano. Ideal para fotos de perfil corporativo administrativo formal.",
+              "badge": "Formal",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Composición Asimétrica de Tercio",
+              "desc": "Desplazar al sujeto hacia el tercio lateral izquierdo, dejando dos tercios de aire libre para colocar textos y CTAs de maquetación digital.",
+              "badge": "Maquetable",
+              "highlighted": true
+            },
+            "notes": "<h3>Encuadres</h3><p>Dejar aire en las fotografías es vital para los maquetadores web corporativos.</p>"
+          },
+          {
             "layout": "grid",
-            "title": "Errores al Mezclar Tipografías",
-            "content": "<p>Fallas comunes en composiciones de texto corporativas:</p>",
+            "title": "Errores Comunes en Tipografías de Apoyo",
+            "content": "<p>Fallas que arruinan la legibilidad del sistema de marca:</p>",
             "cards": [
               {
                 "num": "❌",
@@ -1360,23 +1772,16 @@ const slidesData = {
               },
               {
                 "num": "❌",
-                "title": "Bajo Contraste",
-                "desc": "Usar fuentes muy delgadas (ultralight) sobre fondos cromáticos complejos, arruinando la accesibilidad."
+                "title": "Fuentes Finas",
+                "desc": "Usar fuentes ultra delgadas (ultralight) sobre fondos de color, arruinando la accesibilidad."
               },
               {
                 "num": "❌",
-                "title": "Mismo Peso",
+                "title": "Falta de Contraste",
                 "desc": "Omitir el contraste de grosores entre títulos y textos, haciendo que la página luzca monótona."
               }
             ],
-            "notes": "<h3>Nota</h3><p>Recomienda limitar el sistema a dos familias tipográficas como máximo.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Consistencia en el Tiempo",
-            "content": "<p>El verdadero secreto para fijar la marca en la mente pública:</p><ul><li>Una marca necesita repetir de forma rígida sus colores y fuentes secundarias durante al menos 18 meses para comenzar a generar reconocimiento espontáneo.</li><li>La tentación del cliente de cambiar de estilo cada mes debilita la recordación.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Tiempo</h3><p>La consistencia es más importante que la genialidad visual aislada.</p>"
+            "notes": "<h3>Errores</h3><p>La legibilidad del texto de cuerpo es innegociable en branding.</p>"
           },
           {
             "layout": "title",
@@ -1386,11 +1791,27 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Evaluar si el universo visual coincide con el arquetipo de marca seleccionado.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Consignas del Ejercicio Práctico",
+            "content": "<p>Pautas para subir tu atmósfera de marca al Padlet:</p>",
+            "steps": [
+              {
+                "title": "1. Selección de Fotos",
+                "desc": "Sube 3 fotografías que definan la iluminación y tono de tu arquetipo."
+              },
+              {
+                "title": "2. Fuentes Secundarias",
+                "desc": "Indica el nombre y estilo de tu tipografía de cuerpo seleccionada."
+              }
+            ],
+            "notes": "<h3>Dinámica</h3><p>Dar feedback rápido sobre la relación entre las fuentes y las fotos de stock elegidas.</p>"
+          },
+          {
             "layout": "split",
             "title": "Cierre de la Clase",
             "content": "<p>Metas de cara al fin de semana y lanzamiento de mañana:</p><ul><li>Tener definidas las tipografías secundarias del sistema visual.</li><li>Traer una grilla de composición digital pensada para afiches verticales.</li><li><strong>Próximo tema:</strong> Lanzamiento del LAB 2 - Sistema de pósters.</li></ul>",
             "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Cierre</h3><p>Despide la clase. Anímalos a mantener la coherencia conceptual.</p>"
+            "notes": "<h3>Cierre</h3><p>Despide la clase de hoy.</p>"
           }
         ]
       },
@@ -1405,11 +1826,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy cerramos la semana de Universos Visuales lanzando el LAB 2. Veremos los requerimientos de la entrega del lunes.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy lanzamos y organizamos la producción del LAB 2:</p><ul><li>Pautas del encargo: Serie de 3 pósteres dinámicos.</li><li>El desafío de la elasticidad de los sistemas gráficos.</li><li>El contraste dramático de tamaños y uso de espacio negativo.</li><li>Configuración del lienzo vertical 9:16 en Illustrator.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
+            "content": "<p>Hoy lanzamos y organizamos la producción del LAB 2:</p>",
+            "steps": [
+              {
+                "title": "01. Pautas LAB 2",
+                "desc": "Especificaciones técnicas del encargo de pósters coordinados."
+              },
+              {
+                "title": "02. Tensión Tipográfica",
+                "desc": "Contrastes de escala y maquetación asimétrica activa."
+              },
+              {
+                "title": "03. Taller en Aula",
+                "desc": "Taller guiado para el inicio del diseño vectorial en el Illustrator."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Alinea las pautas técnicas y rúbricas antes de dar espacio al taller práctico.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Josef Müller-Brockmann",
+            "content": "El uso racional de la grilla y el orden asimétrico de los textos en afiches suizos genera mayor impacto y legibilidad que cualquier adorno gráfico.",
+            "notes": "<h3>Cita</h3><p>Müller-Brockmann es el padre del estilo tipográfico internacional suizo.</p>"
           },
           {
             "layout": "split",
@@ -1419,64 +1859,35 @@ const slidesData = {
             "notes": "<h3>LAB 2</h3><p>El reto es lograr variedad compositiva manteniendo el sistema de color y tipografía rígido.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Serie frente al Diseño Aislado",
-            "content": "<p>Una serie de pósteres exige una consistencia sintáctica profunda:</p><ul><li>El usuario debe reconocer que pertenecen a la misma marca a primera vista, aun si las ilustraciones y títulos cambian.</li><li>Esto se logra anclando rígidamente la paleta de color y la posición o el estilo del logotipo.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Serie</h3><p>La serie enseña al diseñador a crear sistemas visuales modulares, no obras de arte aisladas.</p>"
+            "layout": "vs",
+            "title": "Tensión de Escala vs. Composición Monótona",
+            "content": "<p>Cómo contrastar los tamaños de texto en la diagramación:</p>",
+            "vs1": {
+              "title": "Diagramación Clásica (Monótona)",
+              "desc": "Títulos y textos de cuerpo a tamaños similares. El afiche se percibe plano, carece de un punto focal dominante y aburre rápidamente al lector.",
+              "badge": "Sin Tensión",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Contraste de Escala Dramático",
+              "desc": "Títulos gigantes que ocupan el 70% del lienzo al lado de bloques mínimos de texto técnico. El contraste extremo capta la atención del ojo en segundos.",
+              "badge": "Impactante",
+              "highlighted": true
+            },
+            "notes": "<h3>Escala</h3><p>Incentiva a los alumnos a no temerle al tamaño tipográfico gigante en afiches.</p>"
           },
           {
-            "layout": "highlight",
-            "title": "Tensión Tipográfica y Escala",
-            "highlightTitle": "Contraste Dramático de Tamaños",
-            "content": "Para evitar pósters aburridos y planos, implementa contrastes dramáticos de escala. Coloca una letra o palabra del título que ocupe el 70% de la página al lado de pequeños bloques de texto técnico alineados a la grilla. El espacio en blanco debe actuar como aire activo de composition.",
-            "notes": "<h3>Tip</h3><p>El contraste de escala genera impacto dinámico en afiches.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Integración del Pattern de Marca",
-            "content": "<p>Cómo vestir el fondo del afiche utilizando tramas secundarias:</p><ul><li>El patrón de marca debe usarse con bajo contraste (ej. laca transparente sobre fondo oscuro o escala de grises al 5%).</li><li>Evita que compita visualmente con el título o el logotipo de primer plano.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Pattern</h3><p>El pattern viste el fondo de forma sofisticada si se aplica con bajo contraste.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Requerimientos Técnicos LAB 2",
-            "content": "<p>Directrices de armado digital antes de subir los archivos al Miro de evaluación:</p>",
-            "steps": [
-              {
-                "title": "Proporción y Formato",
-                "desc": "1080 x 1920 px (formato vertical 9:16, ideal para pantallas móviles)."
-              },
-              {
-                "title": "Integración del Pattern",
-                "desc": "El patrón de marca debe usarse de fondo o textura de forma integrada."
-              },
-              {
-                "title": "Orden Vectorial",
-                "desc": "Capas separadas e identificadas en el editable original de Illustrator."
-              }
-            ],
-            "notes": "<h3>Nota</h3><p>El formato 9:16 es ideal para pantallas de móviles.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Armado Técnico en Illustrator",
-            "content": "<p>Pautas de configuración de la mesa de trabajo vertical:</p><ul><li>Crea 3 mesas de trabajo coordinadas de 1080x1920 px en Illustrator.</li><li>Activa las **Guías de Columnas** para estructurar la grilla asimétrica.</li><li>Asegúrate de dejar al menos 80 px de margen perimetral libre de textos para evitar recortes de pantalla en dispositivos móviles.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Illustrator</h3><p>El margen de seguridad evita que el texto se corte al visualizarse en pantallas reales de smartphones.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Espacio en Blanco como Aire Activo",
-            "content": "<p>El vacío compositivo no es descuido; es jerarquía visual:</p><ul><li>Deja zonas del lienzo sin elementos gráficos para dar un descanso visual al ojo.</li><li>El espacio en blanco aumenta la sensación de calidad y sofisticación del afiche en un 40%.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Aire</h3><p>Las marcas premium suelen usar un 60% de espacio libre en sus composiciones de pósteres.</p>"
+            "layout": "stat",
+            "title": "El Formato Vertical Móvil",
+            "number": "9:16",
+            "statTitle": "Proporción del Lienzo Digital del LAB 2",
+            "content": "Para responder a las necesidades de comunicación digital actuales, configuraremos las mesas de trabajo en proporción vertical 9:16 (1080 x 1920 píxeles), optimizada para su visualización como historias de Instagram o cartelería móvil vertical.",
+            "notes": "<h3>Proporción</h3><p>El formato 9:16 exige una grilla vertical adaptada.</p>"
           },
           {
             "layout": "grid",
             "title": "Rúbrica de Calidad: LAB 2",
-            "content": "<p>Criterios de evaluación de la entrega de pósteres de marca:</p>",
+            "content": "<p>Criterios de evaluación de la serie de pósteres de marca:</p>",
             "cards": [
               {
                 "num": "💡",
@@ -1498,24 +1909,78 @@ const slidesData = {
           },
           {
             "layout": "split",
-            "title": "Checklist de Pre-Entrega",
-            "content": "<p>Pautas indispensables antes de finalizar tus archivos de la serie:</p><ul><li>¿El logotipo está convertido a curvas y enlazado correctamente?</li><li>¿Has exportado los 3 afiches como PNG individuales con nombres correlativos?</li><li>¿Los archivos están subidos a la carpeta compartida antes del lunes?</li></ul>",
+            "title": "Integración del Pattern de Marca",
+            "content": "<p>Cómo vestir el fondo del afiche utilizando tramas secundarias:</p><ul><li>El patrón de marca debe usarse con bajo contraste (ej. laca transparente sobre fondo oscuro o escala de grises al 5%).</li><li>Evita que compita visualmente con el título o el logotipo de primer plano.</li></ul>",
             "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Checklist</h3><p>Reducir a cero errores tipográficos y de links vectoriales rotos.</p>"
+            "notes": "<h3>Pattern</h3><p>El pattern viste el fondo de forma sofisticada si se aplica con bajo contraste.</p>"
           },
           {
-            "layout": "split",
-            "title": "Ejemplos de Series Exitosas",
-            "content": "<p>Estudio de casos de sistemas de cartelería dinámicos:</p><ul><li><strong>Campaña iPod Silhouette (Apple):</strong> La silueta negra y el cable blanco cambiaban de bailarín, pero la consistencia del color saturado de fondo unificaba la serie.</li><li><strong>Campaña Nike Just Do It:</strong> Variación de deportistas y encuadres con el swoosh rígido en el tercio inferior.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Casos</h3><p>El caso de Apple es el mejor ejemplo de consistencia cromática y silueta elástica.</p>"
+            "layout": "steps",
+            "title": "Armado Técnico en Illustrator",
+            "content": "<p>Pasos de configuración de las mesas de trabajo para el LAB 2:</p>",
+            "steps": [
+              {
+                "title": "Mesa de Trabajo",
+                "desc": "Crea 3 mesas de trabajo coordinadas de 1080 x 1920 px en Illustrator."
+              },
+              {
+                "title": "Margen de Resguardo",
+                "desc": "Dibuja un margen de seguridad perimetral de 80 px libre de textos de lectura."
+              },
+              {
+                "title": "Grilla de Columnas",
+                "desc": "Activa las guías de columnas asimétricas para ordenar los bloques tipográficos."
+              }
+            ],
+            "notes": "<h3>Illustrator</h3><p>El margen perimetral evita recortes de pantalla en smartphones reales.</p>"
           },
           {
-            "layout": "split",
-            "title": "Cronograma de Producción del Fin de Semana",
-            "content": "<p>Alineación del trabajo individual recomendado:</p><ul><li><strong>Sábado:</strong> Armado del rapport final en Illustrator y primeras grillas.</li><li><strong>Domingo:</strong> Composición asimétrica de los 3 pósteres y refinamiento de jerarquías tipográficas.</li><li><strong>Lunes mañana:</strong> Carga de PNGs de alta resolución en la plataforma.</li></ul>",
-            "media": "images/d10-viernes-slide02.jpg",
-            "notes": "<h3>Cronograma</h3><p>Motiva a los estudiantes a organizarse para evitar entregas apresuradas de último momento.</p>"
+            "layout": "highlight",
+            "title": "El Espacio en Blanco como Aire Activo",
+            "highlightTitle": "Elegancia Compositiva",
+            "content": "El vacío en un afiche no es desperdicio; es aire que jerarquiza los elementos de primer plano. Las marcas premium dejan hasta un 60% del lienzo libre de imágenes o textos para aumentar la sofisticación percibida de la pieza en un 40%.",
+            "notes": "<h3>Espacio</h3><p>La falta de aire de composición genera afiches ruidosos y de bajo valor de diseño.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Series Exitosas: Apple iPod vs. Nike Just Do It",
+            "content": "<p>Dos formas de sostener la consistencia en campañas gráficas históricas:</p>",
+            "vs1": {
+              "title": "Campaña iPod (Color y Silueta)",
+              "desc": "El color saturado plano de fondo y la silueta del cable blanco cambiaban de bailarín, pero la consistencia del color y del logo unificaban la serie.",
+              "badge": "Silueta Dinámica",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Campaña Nike (Composición y Swoosh)",
+              "desc": "Variedad de retratos fotográficos y encuadres deportivos asimétricos con el logotipo swoosh rígido siempre en el tercio inferior del lienzo.",
+              "badge": "Layout Rígido",
+              "highlighted": true
+            },
+            "notes": "<h3>Casos</h3><p>Ambas series demuestran que la consistencia no exige piezas idénticas.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Errores de Pre-Entrega en Pósteres",
+            "content": "<p>Fallas que arruinan la carga técnica de los archivos del lunes:</p>",
+            "cards": [
+              {
+                "num": "❌",
+                "title": "Links Rotos",
+                "desc": "Omitir incrustar las fotos secundarias en Illustrator, mostrando un cuadro blanco con cruz roja."
+              },
+              {
+                "num": "❌",
+                "title": "Fuentes sin Curvas",
+                "desc": "No convertir las fuentes del afiche a curvas, deformando la tipografía en otra computadora."
+              },
+              {
+                "num": "❌",
+                "title": "Mala Escala",
+                "desc": "Dejar el texto de cuerpo menor a 14 px, haciéndolo ilegible en pantallas móviles de smartphones."
+              }
+            ],
+            "notes": "<h3>Fallo</h3><p>Recomienda verificar los links vectoriales antes del lunes.</p>"
           },
           {
             "layout": "title",
@@ -1523,6 +1988,22 @@ const slidesData = {
             "subtitle": "Diseño y escalabilidad del sistema de marca.",
             "content": "<p>Práctica de 3 piezas con distinta resolución y versiones de logo en el aula utilizando la grilla de Illustrator y los patterns creados.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Monitorear que el sistema de pósters sea cohesivo en color y tipografía, pero dinámico en composición.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Checklist de Carga del LAB 2",
+            "content": "<p>Consignas indispensables para finalizar el laboratorio hoy:</p>",
+            "steps": [
+              {
+                "title": "PNGs Individuales",
+                "desc": "Exporta las 3 mesas de trabajo en PNG con nombres claros (ej. Poster-01.png)."
+              },
+              {
+                "title": "Carga en Drive",
+                "desc": "Sube el archivo editable .ai y los 3 PNGs a la subcarpeta del LAB 2."
+              }
+            ],
+            "notes": "<h3>Carga</h3><p>Verificar los accesos compartidos en la nube de almacenamiento del Drive.</p>"
           },
           {
             "layout": "split",
@@ -1549,18 +2030,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy cerramos la entrega del LAB 2 y entraremos en la normalización y accesibilidad del color de marca.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy normalizaremos los colores corporativos de nuestros proyectos:</p><ul><li>Recepción, entrega final y nivelación técnica del LAB 2.</li><li>La Paleta Funcional de Marca y sus roles en la interfaz.</li><li>La regla cromática de distribución 60-30-10.</li><li>Accesibilidad WCAG y diferencias técnicas entre RGB, HEX y CMYK.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
+            "content": "<p>Hoy normalizaremos los colores corporativos de nuestros proyectos:</p>",
+            "steps": [
+              {
+                "title": "01. Nivelación LAB 2",
+                "desc": "Entrega final y feedback de la serie de pósteres dinámicos."
+              },
+              {
+                "title": "02. Paleta Funcional",
+                "desc": "Definición de fondos claros, oscuros y acentos de color."
+              },
+              {
+                "title": "03. Normalización Técnica",
+                "desc": "Diferencias y fichas técnicas en HEX, RGB y CMYK."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Explica el temario. Resalta que el color en marcas se gestiona con números exactos, no con nombres subjetivos.</p>"
           },
           {
-            "layout": "split",
-            "title": "Recepción y Feedback del LAB 2",
-            "content": "<p>Nivelación técnica de las series de pósteres entregadas:</p><ul><li>Evaluación de la consistencia cromática y tipográfica en las 3 piezas.</li><li>Análisis de la elasticidad de los patterns aplicados en los fondos.</li><li>Sugerencias de prolijidad en los márgenes de seguridad para móviles.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Feedback</h3><p>Destacar visualmente las mejores resoluciones de asimetría tipográfica de la clase.</p>"
+            "layout": "quote",
+            "title": "Josef Albers",
+            "content": "Un mismo color se percibe de forma diferente según el fondo que lo rodea. Normalizar el color es predecir su comportamiento físico.",
+            "notes": "<h3>Cita</h3><p>Albers es el gran teórico de la interacción del color.</p>"
           },
           {
             "layout": "split",
@@ -1568,47 +2061,6 @@ const slidesData = {
             "content": "<p>La paleta no es solo un conjunto de colores de moda. Debe responder a las necesidades funcionales del sistema:</p><ul><li><strong>Fondo Claro:</strong> Tonalidades hueso o crema para textos largos.</li><li><strong>Fondo Oscuro:</strong> Azul marino o carbón para bloques pesados.</li><li><strong>Colores de Acento:</strong> Para botones de acción (CTA) y llamadas de atención.</li></ul>",
             "media": "images/d17-martes-slide02.jpg",
             "notes": "<h3>Paleta</h3><p>La paleta debe ser medible y acotada; eviten las paletas arcoíris sin justificación.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "La Distribución del Color: Regla 60-30-10",
-            "content": "<p>Cómo aplicar la paleta de colores de marca en las piezas de diseño para mantener la armonía cromática:</p>",
-            "steps": [
-              {
-                "title": "60% Dominante",
-                "desc": "El fondo de la pieza. Mantiene la neutralidad. Suele ser crema, blanco o navy oscuro."
-              },
-              {
-                "title": "30% Secundario",
-                "desc": "Módulos, tarjetas y tipografía principal. Otorga carácter y estructura."
-              },
-              {
-                "title": "10% Acento",
-                "desc": "Botones de compra, alertas de valor y pequeños detalles. Focaliza el ojo."
-              }
-            ],
-            "notes": "<h3>Regla</h3><p>Esta regla mantiene el equilibrio cromático de la composición de forma instintiva.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Psicología del Color Estratégica",
-            "content": "<p>Cómo el color posiciona a la marca en una categoría determinada:</p><ul><li>El color es el primer elemento visual que el cerebro decodifica antes de procesar formas o tipografías.</li><li><strong>Rojo:</strong> Urgencia, pasión, energía activa (ej. Netflix).</li><li><strong>Azul:</strong> Confianza, seguridad, estabilidad (ej. bancos y tecnología).</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Psicología</h3><p>El color elegido debe estar alineado con la historia de origen y el arquetipo de marca.</p>"
-          },
-          {
-            "layout": "highlight",
-            "title": "Accesibilidad y Contraste (WCAG)",
-            "highlightTitle": "Legibilidad como Derecho",
-            "content": "Diseñar sin verificar el contraste es excluir a usuarios con daltonismo o baja visión. Las normas WCAG exigen una relación de contraste mínima de 4.5:1 para texto normal sobre fondos de color corporativos. Utiliza herramientas web para testear el contraste antes de fijar los colores del manual.",
-            "notes": "<h3>Accesibilidad</h3><p>Usar herramientas web de chequeo de contraste antes de guardar el manual.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Herramientas de Verificación de Contraste",
-            "content": "<p>Cómo testear la accesibilidad cromática de tus diseños:</p><ul><li>Usa sitios web gratuitos como **Adobe Color Contrast Analyzer** o **Coolors Contrast**.</li><li>Ingresa el código hexadecimal del fondo y del texto.</li><li>La herramienta te dará una calificación (Pass o Fail) según las pautas oficiales WCAG.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Contraste</h3><p>Un diseñador profesional garantiza la legibilidad para todos los usuarios en sus manuales.</p>"
           },
           {
             "layout": "vs",
@@ -1629,48 +2081,106 @@ const slidesData = {
             "notes": "<h3>Física</h3><p>Advertir sobre el desborde cromático al pasar de RGB a CMYK en Illustrator.</p>"
           },
           {
-            "layout": "split",
-            "title": "El Sistema de Tintas Planas Pantone",
-            "content": "<p>El estándar industrial para impresión corporativa premium:</p><ul><li>Un color Pantone no es una mezcla de CMYK de imprenta; es una tinta pura directa premezclada en fábrica.</li><li>Garantiza que el color del logotipo impreso en una caja de cartón coincida exactamente con el de un sobre corporativo.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Pantone</h3><p>Los colores Pantone son indispensables en marcas globales para unificar su identidad mundial.</p>"
+            "layout": "stat",
+            "title": "El Sistema de Tintas Pantone",
+            "number": "111",
+            "statTitle": "Estándar Global de Fichas de Color",
+            "content": "Pantone unifica el color industrial a través de un catálogo numérico de tintas directas premezcladas, garantizando que el color del logotipo impreso en una caja coincida exactamente con el de un sobre corporativo en cualquier parte del mundo.",
+            "notes": "<h3>Pantone</h3><p>Explicar por qué las marcas corporativas pagan licencias de color Pantone.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Rasgos de Psicología del Color Estratégica",
+            "content": "<p>Cómo el color sitúa a la marca en una categoría determinada del mercado:</p>",
+            "cards": [
+              {
+                "num": "🔴",
+                "title": "Rojo Activo",
+                "desc": "Energía, urgencia, pasión (ej. Netflix, Coca-Cola). Excelente para CTAs rápidos."
+              },
+              {
+                "num": "🔵",
+                "title": "Azul Confianza",
+                "desc": "Seguridad, estabilidad, lógica corporativa (ej. bancos y marcas de salud)."
+              },
+              {
+                "num": "🟢",
+                "title": "Verde Orgánico",
+                "desc": "Crecimiento, ecología, salud y finanzas éticas (ej. Whole Foods)."
+              }
+            ],
+            "notes": "<h3>Psicología</h3><p>Fomentar la justificación cromática en base al arquetipo del manual.</p>"
           },
           {
             "layout": "split",
-            "title": "Normalización Tipográfica Técnica",
-            "content": "<p>Especificando el comportamiento tipográfico de la marca:</p><ul><li>Indica los tamaños de punto sugeridos para los encabezados principales (H1), secundarios (H2) y bloques de cuerpo.</li><li>Define los **interlineados (line-height)** y **espaciados de caracteres (tracking)** corporativos.</li></ul>",
+            "title": "La Proporción del Color: Regla 60-30-10",
+            "content": "<p>Cómo distribuir la paleta en las piezas gráficas para mantener la armonía:</p><ul><li><strong>60% Dominante:</strong> Fondo de la composición. Suele ser neutro (crema, gris claro o negro carbón).</li><li><strong>30% Secundario:</strong> Módulos y tipografía principal de lectura.</li><li><strong>10% Acento:</strong> Botones de compra o llamadas de atención importantes (focaliza el ojo).</li></ul>",
             "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Tipografía</h3><p>La normalización tipográfica previene desórdenes compositivos en folletos corporativos.</p>"
+            "notes": "<h3>Proporción</h3><p>Esta regla mantiene el equilibrio cromático de la composición de forma instintiva.</p>"
           },
           {
-            "layout": "split",
-            "title": "Licencias Tipográficas y Fallbacks",
-            "content": "<p>El aspecto legal y operativo de las fuentes en el entorno corporativo:</p><ul><li>Si usas una tipografía de pago, tu cliente debe adquirir las licencias para todos sus ordenadores.</li><li>Especifica fuentes gratuitas o de sistema (ej. Arial, Georgia, Montserrat) como opciones secundarias de uso diario.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Licencias</h3><p>Asegúrate de no usar fuentes piratas en manuales corporativos de marcas comerciales.</p>"
+            "layout": "steps",
+            "title": "Normalización de Muestras en el Manual",
+            "content": "<p>Ficha técnica obligatoria para cada color corporativo en las Brand Guidelines:</p>",
+            "steps": [
+              {
+                "title": "HEX y RGB",
+                "desc": "Normaliza el código HEX de 6 caracteres y los tres canales RGB (0-255) para desarrolladores web."
+              },
+              {
+                "title": "CMYK y Pantone",
+                "desc": "Especifica las tintas CMYK de imprenta y busca la equivalencia en el catálogo Pantone Solid Coated."
+              }
+            ],
+            "notes": "<h3>Muestras</h3><p>La correcta ficha de color evita que la imprenta altere los tonos corporativos.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "Accesibilidad y Contraste (WCAG)",
+            "highlightTitle": "Legibilidad como Derecho",
+            "content": "Diseñar sin verificar el contraste es excluir a usuarios con daltonismo o baja visión. Las normas WCAG exigen una relación de contraste mínima de 4.5:1 para texto normal sobre fondos de color corporativos. Utiliza herramientas web para testear el contraste antes de fijar los colores del manual.",
+            "notes": "<h3>Accesibilidad</h3><p>Usar herramientas web de chequeo de contraste antes de guardar el manual.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Tipografías Primarias vs. Fuentes de Sistema",
+            "content": "<p>La especificación de fuentes en las directrices técnicas:</p>",
+            "vs1": {
+              "title": "Fuentes Primarias de Licencia",
+              "desc": "Tipografías corporativas de alta personalidad compradas para el diseño del logotipo e interfaces móviles oficiales.",
+              "badge": "Exclusiva",
+              "highlighted": true
+            },
+            "vs2": {
+              "title": "Fuentes de Sistema (Fallback)",
+              "desc": "Tipografías estándar gratuitas preinstaladas (ej. Arial) para que los administrativos las usen en correos diarios sin comprar licencias adicionales.",
+              "badge": "Administrativa",
+              "highlighted": false
+            },
+            "notes": "<h3>Fuentes</h3><p>Las fuentes de fallback salvan la legibilidad corporativa diaria.</p>"
           },
           {
             "layout": "grid",
             "title": "Errores Cromáticos en Manuales",
-            "content": "<p>Fallas comunes en las especificaciones del color de marca:</p>",
+            "content": "<p>Evita estos fallos en la ficha técnica de color corporativa:</p>",
             "cards": [
               {
                 "num": "❌",
-                "title": "Falta de HEX/RGB",
-                "desc": "Omitir los valores numéricos digitales de los colores corporativos principales."
+                "title": "Omitir el HEX",
+                "desc": "No indicar el código digital hexadecimal, complicando el maquetado CSS web."
               },
               {
                 "num": "❌",
-                "title": "Conversión Automática",
-                "desc": "Dejar que Illustrator convierta RGB a CMYK de forma automática sin ajustar los tonos apagados resultantes."
+                "title": "CMYK Automático",
+                "desc": "Dejar que el software convierta RGB a CMYK de forma directa sin ajustar los tonos opacos resultantes."
               },
               {
                 "num": "❌",
-                "title": "Colores Arcoíris",
-                "desc": "Presentar una paleta con más de 6 colores diferentes sin jerarquías de uso claras."
+                "title": "Paleta Arcoíris",
+                "desc": "Colocar más de 6 colores diferentes en la paleta sin una jerarquía de uso clara en las piezas."
               }
             ],
-            "notes": "<h3>Fallo</h3><p>La falta de especificación del color genera logos de diferente tono según el proveedor del cliente.</p>"
+            "notes": "<h3>Errores</h3><p>La falta de especificaciones cromáticas correctas diluye el reconocimiento de la marca.</p>"
           },
           {
             "layout": "title",
@@ -1678,6 +2188,22 @@ const slidesData = {
             "subtitle": "Uso de Adobe Color sobre el sistema visual creado.",
             "content": "<p>Ajustaremos las paletas de colores en Adobe Color para garantizar el contraste de accesibilidad y aplicarlas al sistema de marca de pósters y logotipos.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Revisar las proporciones cromáticas y verificar que se cumplan las pautas WCAG de contraste mínimo.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Consignas del Taller de Color",
+            "content": "<p>Pasos para verificar la accesibilidad de la paleta corporativa:</p>",
+            "steps": [
+              {
+                "title": "1. Medir Contraste",
+                "desc": "Ingresa tu fondo y tipografía en Adobe Color y comprueba el contraste WCAG."
+              },
+              {
+                "title": "2. Normalizar",
+                "desc": "Escribe los códigos HEX y RGB validados para tu página del manual."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Revisar los posits de los alumnos y aconsejar modificaciones si fallan el contraste mínimo.</p>"
           },
           {
             "layout": "split",
@@ -1699,11 +2225,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy aprenderemos cómo fragmentar y adaptar el logotipo, y cómo organizar las relaciones jerárquicas entre marcas de un mismo grupo corporativo.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy abordaremos la adaptabilidad del logotipo y las estructuras de portafolio:</p><ul><li>El Logotipo Elástico y sus versiones de reproducción.</li><li>Cálculo geométrico del Área de Seguridad (resguardo).</li><li>Tamaños mínimos permitidos en entornos analógicos e interactivos.</li><li>Definición de modelos de Arquitectura de Marca corporativa.</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
+            "content": "<p>Hoy abordaremos la adaptabilidad del logotipo y las estructuras de portafolio:</p>",
+            "steps": [
+              {
+                "title": "01. Logotipo Elástico",
+                "desc": "Variantes principales, secundarias e isotipos de reproducción."
+              },
+              {
+                "title": "02. Área de Seguridad",
+                "desc": "Cálculo proporcional del resguardo mediante la unidad X."
+              },
+              {
+                "title": "03. Arquitectura Marcaria",
+                "desc": "Mapeo de modelos monolíticos, endorsed y house of brands."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que un logotipo rígido e inadaptable está destinado al desuso.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Chermayeff & Geismar",
+            "content": "Un logotipo exitoso debe ser tan simple que pueda ser rayado en la arena con un palo. Su adaptabilidad es su verdadera fuerza comercial.",
+            "notes": "<h3>Cita</h3><p>C&G diseñaron logos icónicos como el de Chase Bank y National Geographic.</p>"
           },
           {
             "layout": "split",
@@ -1711,43 +2256,6 @@ const slidesData = {
             "content": "<p>El logotipo debe diseñarse para ser elástico y adaptarse a espacios horizontales (cabeceras web) y cuadrados (avatares):</p><ul><li>Define la **versión principal** (generalmente horizontal).</li><li>Define la **versión vertical o secundaria**.</li><li>Aísla el **isotipo** (icono de marca) para usar en favicons o perfiles de redes.</li></ul>",
             "media": "images/d12-martes-slide02.jpg",
             "notes": "<h3>Adaptabilidad</h3><p>Un logo rígido que no tiene variantes se rompe en aplicaciones reales.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Área de Seguridad o Resguardo",
-            "content": "<p>Es la zona alrededor del logo que debe mantenerse limpia de interferencias visuales:</p><ul><li>Evita que textos, marcos o márgenes de página ahoguen la lectura del logotipo.</li><li>Su cálculo no se define en píxeles fijos, sino en una relación proporcional con la altura o ancho de un trazo del propio logo (unidad X).</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Área</h3><p>El área de seguridad protege la jerarquía de la firma marcaria en composiciones complejas.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Cálculo del Resguardo con la Unidad X",
-            "content": "<p>Metodología geométrica para definir el área de seguridad:</p><ul><li>Elige una letra característica o un trazo de tu isotipo (ej. la altura de la letra 'o' en el logotipo).</li><li>Dibuja un recuadro de esa medida en los 4 costados del logo en tu página del manual.</li><li>Ese recuadro delimita el límite físico infranqueable para cualquier otro elemento gráfico.</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Cálculo</h3><p>Mostrar cómo medir la unidad X con un cuadrado en Illustrator.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Tamaños Mínimos: Impreso vs. Digital",
-            "content": "<p>Límites técnicos obligatorios antes de que el logotipo pierda su legibilidad en diferentes medios:</p>",
-            "steps": [
-              {
-                "title": "Soportes Impresos (mm)",
-                "desc": "Establece el tamaño mínimo en milímetros (ej. 20 mm de ancho). Por debajo de esta escala, la tinta se empasta en papeles porosos como el cartón."
-              },
-              {
-                "title": "Pantallas Digitales (px)",
-                "desc": "Establece el límite en píxeles (ej. 45 px de ancho). Asegura la legibilidad de las delgadas líneas del isotipo en pantallas de baja resolución."
-              }
-            ],
-            "notes": "<h3>Tamaños</h3><p>Un logo reproducido por debajo de su tamaño mínimo se rompe y pierde legibilidad.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Línea de Reducción Técnica",
-            "content": "<p>Cómo simplificar el imagotipo para escalas extremas:</p><ul><li>Algunos detalles del logotipo deben omitirse en aplicaciones minúsculas (como grabados en bolígrafos o avatares de favicon).</li><li>El manual debe incluir una versión simplificada del logo que elimine filetes delgados o textos secundarios sin alterar la esencia del isotipo.</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Reducción</h3><p>La línea de reducción es indispensable para la producción física de merchandising corporativo.</p>"
           },
           {
             "layout": "vs",
@@ -1766,6 +2274,14 @@ const slidesData = {
               "highlighted": true
             },
             "notes": "<h3>Coexistencia</h3><p>El manual debe definir barras divisorias y áreas de distancia mínima entre firmas aliadas.</p>"
+          },
+          {
+            "layout": "stat",
+            "title": "El Área de Seguridad y la Unidad X",
+            "number": "X",
+            "statTitle": "Proporción Geométrica de Exclusión",
+            "content": "El área de seguridad protege el logo del ruido visual externo. No se define en píxeles fijos, sino calculando una proporción interna del propio isotipo (la altura de la letra 'X' del logo). Esta unidad perimetral delimita el límite físico que ningún texto o margen de página ajeno puede traspasar.",
+            "notes": "<h3>Unidad X</h3><p>Mostrar cómo dibujar el contorno perimetral X en Illustrator.</p>"
           },
           {
             "layout": "grid",
@@ -1792,17 +2308,51 @@ const slidesData = {
           },
           {
             "layout": "split",
-            "title": "¿Qué es un Mockup y cómo valida?",
-            "content": "<p>El fotomontaje digital como herramienta de control y validación:</p><ul><li>Permite al cliente imaginar cómo lucirá el logotipo impreso en un sobre de papel kraft o una chapa metálica de fachada.</li><li>Ayuda al diseñador a evaluar deformaciones del logotipo sobre superficies curvas reales antes del envío a imprenta.</li></ul>",
+            "title": "La Simplificación Técnica o Reducción",
+            "content": "<p>Cuándo es obligatorio reducir trazos en aplicaciones mínimas:</p><ul><li>Si el logotipo principal tiene filetes muy delgados, diseña una versión alternativa simplificada para bordados o avatares.</li><li>Omitir detalles en la línea de reducción protege la memorabilidad de la marca en soportes físicos complejos.</li></ul>",
             "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Mockup</h3><p>El mockup evita errores tridimensionales y ayuda a cerrar presupuestos con clientes.</p>"
+            "notes": "<h3>Reducción</h3><p>La simplificación es una regla de prolijidad técnica indispensable en branding.</p>"
           },
           {
-            "layout": "split",
-            "title": "Personalización Cromática de Mockups",
-            "content": "<p>Cómo evitar que tus maquetas luzcan como plantillas genéricas de internet:</p><ul><li>Ajusta la paleta de color del mockup PSD para que coincida exactamente con el manual de tu marca.</li><li>Sustituye los fondos genéricos por fotos que respondan a la iluminación y atmósfera de tu dirección fotográfica.</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Personalización</h3><p>Un mockup personalizado incrementa la seriedad de tu portafolio profesional.</p>"
+            "layout": "steps",
+            "title": "Tamaños Mínimos de Reproducción",
+            "content": "<p>Límites obligatorios antes de que el logotipo pierda su legibilidad en diferentes medios:</p>",
+            "steps": [
+              {
+                "title": "Impreso (mm)",
+                "desc": "Normalmente no menor a 20 mm de ancho para evitar empastes de tinta en papel craft."
+              },
+              {
+                "title": "Digital (px)",
+                "desc": "Límite mínimo de 45 px de ancho para proteger la definición en pantallas estándar."
+              }
+            ],
+            "notes": "<h3>Tamaños</h3><p>El logotipo reproducido por debajo de su tamaño mínimo se rompe visualmente.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "¿Qué es un Mockup y cómo valida?",
+            "highlightTitle": "Fotomontajes de Verificación",
+            "content": "El mockup digital es una herramienta de validación técnica indispensable. Permite al diseñador comprobar cómo interactúa la marca con superficies curvas reales, la luz y las sombras antes de autorizar la producción física en imprentas comerciales.",
+            "notes": "<h3>Mockups</h3><p>El mockup personalizado evita errores tridimensionales costosos.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Mockups Personalizados vs. Plantillas de Stock",
+            "content": "<p>El impacto estético de las maquetas en el portafolio de marca:</p>",
+            "vs1": {
+              "title": "Plantillas de Stock Genéricas",
+              "desc": "Colocar el logo sobre fotos de botellas descargadas sin modificar. Muestran baja seriedad y restan diferenciación al universo de marca.",
+              "badge": "Genérico",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Maquetas Personalizadas",
+              "desc": "Ajustar los colores del PSD al manual y colocar fotos de fondos alineadas a tu dirección de arte fotográfica. Eleva drásticamente el valor de marca.",
+              "badge": "Sofisticado",
+              "highlighted": true
+            },
+            "notes": "<h3>Personalización</h3><p>La personalización de mockups es un factor clave en la calificación del TP final.</p>"
           },
           {
             "layout": "grid",
@@ -1822,17 +2372,10 @@ const slidesData = {
               {
                 "num": "❌",
                 "title": "Cliché Industrial",
-                "desc": "Usar mockups inconexos con el arquetipo (ej. botellas de vino de stock para una marca eco-casual)."
+                "desc": "Usar mockups de stock incoherentes con el arquetipo (ej. botellas de vino de lujo para una marca eco-casual)."
               }
             ],
             "notes": "<h3>Fallo</h3><p>Los mockups descuidados restan credibilidad a la identidad del logotipo.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Importancia de la Consistencia Fotográfica",
-            "content": "<p>Garantizando la coherencia en las maquetas del proyecto:</p><ul><li>Asegúrate de que todas tus imágenes de mockup compartan el mismo estilo de iluminación lateral o cenital.</li><li>Evita colocar un render hipertecnológico de fondo oscuro al lado de un mockup rústico de papel reciclado bajo luz natural.</li></ul>",
-            "media": "images/d12-martes-slide02.jpg",
-            "notes": "<h3>Coherencia</h3><p>La consistencia de luces en los mockups da sensación de sistema visual coordinado.</p>"
           },
           {
             "layout": "title",
@@ -1840,6 +2383,22 @@ const slidesData = {
             "subtitle": "Creación de logotipos adaptados y correcciones en Miro.",
             "content": "<p>Construiremos en Miro las variantes de la marca (isotipo, monocromo, horizontal) y corregiremos de forma colaborativa la adaptabilidad del diseño.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Asegurarse de que el isotipo sea legible en escalas pequeñas y que el monocromo funcione sobre fondos complejos.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Instrucciones de la Dinámica de Variantes",
+            "content": "<p>Pasos para maquetar la adaptabilidad en el Miro:</p>",
+            "steps": [
+              {
+                "title": "1. Carga",
+                "desc": "Coloca las 3 variantes (horizontal, vertical, isotipo) en la grilla del Miro."
+              },
+              {
+                "title": "2. Testeo",
+                "desc": "Reduce la escala del isotipo a 16x16 píxeles y comprueba si mantiene su legibilidad."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Guiar a los alumnos en el proceso de simplificación vectorial de sus isotipos.</p>"
           },
           {
             "layout": "split",
@@ -1861,11 +2420,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy aprenderemos a diseñar la herramienta de validación rápida más efectiva en reuniones con el cliente.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy abordaremos la compaginación y el diseño de láminas de marca:</p><ul><li>El concepto de Brand Board y su valor de validación.</li><li>Diferencias clave entre Moodboards y Brand Boards.</li><li>Estructuración de grillas y jerarquías de contenido de la lámina.</li><li>Taller individual de armado del Brand Board de la marca.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
+            "content": "<p>Hoy abordaremos la compaginación y el diseño de láminas de marca:</p>",
+            "steps": [
+              {
+                "title": "01. El Brand Board",
+                "desc": "Concepto, utilidad y compilación visual rápida del sistema."
+              },
+              {
+                "title": "02. Moodboard vs. Brand Board",
+                "desc": "Diferencias operativas de fase del proyecto de branding."
+              },
+              {
+                "title": "03. Maquetado Modular",
+                "desc": "Uso de grillas de columnas y exportación técnica limpia."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que el Brand Board es un cartel publicitario de la marca, no un documento técnico extenso.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Wally Olins",
+            "content": "La coherencia corporativa se sostiene cuando todos los activos de marca caben y conviven armónicamente en una sola lámina modular visual.",
+            "notes": "<h3>Cita</h3><p>Olins es el gran estratega de identidad de marca del Reino Unido.</p>"
           },
           {
             "layout": "split",
@@ -1873,13 +2451,6 @@ const slidesData = {
             "content": "<p>Es una lámina sintética de una sola página que recopila todos los activos de la marca vectorizados:</p><ul><li>Su propósito es validar la coherencia estética de todo el sistema en un solo golpe de vista.</li><li>Muestra al logotipo principal, variantes, paleta, patterns y estilos tipográficos en un lienzo coordinado.</li></ul>",
             "media": "images/d13-miercoles-slide02.jpg",
             "notes": "<h3>Brand Board</h3><p>El brand board actúa como un poster de la marca. Debe estar impecablemente diseñado.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "El Propósito Comercial del Board",
-            "content": "<p>Por qué es el entregable favorito de las agencias en presentaciones con clientes:</p><ul><li>El cliente suele cansarse al hojear manuales de 60 páginas en reuniones iniciales.</li><li>El Brand Board condensa la energía visual del sistema, permitiendo tomar decisiones rápidas de aprobación de diseño.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Comercial</h3><p>Un brand board bien estructurado vende la marca en 30 segundos.</p>"
           },
           {
             "layout": "vs",
@@ -1900,11 +2471,58 @@ const slidesData = {
             "notes": "<h3>Comparación</h3><p>El moodboard es inspiración; el brand board es definición final.</p>"
           },
           {
+            "layout": "stat",
+            "title": "El Poder del Impacto Visual Único",
+            "number": "1",
+            "statTitle": "Lámina Modular de Validación",
+            "content": "El Brand Board condensa en una sola mesa de trabajo horizontal toda la energía visual del sistema de marca. Su simplicidad acelera las aprobaciones de juntas directivas cansadas de hojear manuales técnicos extensos de preimpresión.",
+            "notes": "<h3>Poder</h3><p>Un brand board bien estructurado vende la marca en 30 segundos.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Estructura de Columnas del Brand Board",
+            "content": "<p>Secciones que componen la diagramación modular de la lámina:</p>",
+            "cards": [
+              {
+                "num": "A",
+                "title": "Logotipos",
+                "desc": "Logotipo principal, variante horizontal secundaria e isotipo en la zona superior de lectura."
+              },
+              {
+                "num": "B",
+                "title": "Colores y Fuentes",
+                "desc": "Muestras de color con códigos HEX y nombres de las tipografías corporativas."
+              },
+              {
+                "num": "C",
+                "title": "Patterns y Texturas",
+                "desc": "Rapport del patrón modular de apoyo vistiendo los márgenes inferiores."
+              }
+            ],
+            "notes": "<h3>Estructura</h3><p>La grilla modular da sensación de orden y consistencia al board.</p>"
+          },
+          {
             "layout": "split",
             "title": "La Diagramación Modular del Board",
             "content": "<p>Estructuración asimétrica basada en una grilla de columnas:</p><ul><li>Utiliza una retícula limpia de 3 o 4 columnas en Illustrator para ordenar las secciones del board.</li><li>Coloca el logotipo principal en la zona de mayor jerarquía superior izquierda para iniciar la lectura.</li></ul>",
             "media": "images/d13-miercoles-slide02.jpg",
             "notes": "<h3>Diagramación</h3><p>Mantener márgenes limpios y constantes da imagen de orden y prolijidad técnica.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Pasos Técnicos de Exportación",
+            "content": "<p>Pautas obligatorias para guardar el Brand Board terminado:</p>",
+            "steps": [
+              {
+                "title": "PDF Vectorial",
+                "desc": "Exporta una versión vectorial limpia en PDF para poder hacer zoom en los trazados."
+              },
+              {
+                "title": "PNG Ligero",
+                "desc": "Genera una copia en PNG a 150 DPI optimizada para revisiones rápidas en chats de WhatsApp."
+              }
+            ],
+            "notes": "<h3>Exportación</h3><p>Tener ambos formatos agiliza el flujo de aprobación con el cliente.</p>"
           },
           {
             "layout": "highlight",
@@ -1914,45 +2532,22 @@ const slidesData = {
             "notes": "<h3>Tip</h3><p>El diseño del board es en sí mismo una aplicación de la marca.</p>"
           },
           {
-            "layout": "split",
-            "title": "Especificaciones de Color en el Board",
-            "content": "<p>Cómo normalizar las muestras de color en una única lámina:</p><ul><li>Muestra círculos o cuadrados de color limpios sin degradados.</li><li>Coloca debajo de cada color sus correspondencias exactas en código Hexadecimal (HEX) y valores RGB.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Muestras</h3><p>La legibilidad del código HEX evita errores tipográficos en el posterior maquetado CSS de la web.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Presentación del Board en Alta Resolución",
-            "content": "<p>Pautas de exportación técnica para envíos a clientes:</p><ul><li>Exporta una versión en PDF vectorial en alta resolución para que el cliente pueda hacer zoom en los trazos.</li><li>Exporta una versión secundaria en formato PNG optimizado para envío por chat móvil y WhatsApp corporativo.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Exportación</h3><p>Un PNG liviano y legible agiliza las aprobaciones por WhatsApp o canales ágiles.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Checklist de Contenido Mínimo del Board",
-            "content": "<p>Los activos de identidad que deben figurar de forma obligatoria en la lámina:</p>",
-            "steps": [
-              {
-                "title": "Logotipo y Variantes",
-                "desc": "Logotipo principal, variante horizontal secundaria e isotipo aislado."
-              },
-              {
-                "title": "Paleta Cromática",
-                "desc": "Muestras de color limpias con sus respectivos códigos hexadecimales (HEX)."
-              },
-              {
-                "title": "Patterns y Tipografías",
-                "desc": "Muestra del rapport modular del patrón de marca y nombres de las fuentes."
-              }
-            ],
-            "notes": "<h3>Checklist</h3><p>Este checklist garantiza el cumplimiento del contenido del entregable.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Estudio de Caso: Board de Diseño Propietario",
-            "content": "<p>Analizaremos cómo las agencias de primer nivel maquetan sus boards:</p><ul><li>El uso de fondos de bajo contraste para recortar el isotipo.</li><li>Cómo se integran las texturas analógicas (como papeles craft o rugosos) para sumar personalidad al board.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Casos</h3><p>Mostrar en el proyector boards reales de marcas de moda o tecnología.</p>"
+            "layout": "vs",
+            "title": "Fondos de Board: Claras vs. Oscuros",
+            "content": "<p>Cómo elegir el fondo de la lámina de compilación:</p>",
+            "vs1": {
+              "title": "Lienzo Claro (Crema / Blanco)",
+              "desc": "El estándar formal. Permite una legibilidad absoluta del contraste tipográfico y de las muestras de color HEX sin forzar la vista.",
+              "badge": "Formal",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Lienzo Oscuro (Navy / Carbón)",
+              "desc": "Otorga una sensación de lujo y modernidad tecnológica. Exige usar tipografías de color blanco puro para no fallar el contraste.",
+              "badge": "Lujo / Tech",
+              "highlighted": true
+            },
+            "notes": "<h3>Fondos</h3><p>El fondo del board debe coincidir con el color del 60% dominante de tu paleta.</p>"
           },
           {
             "layout": "grid",
@@ -1978,18 +2573,27 @@ const slidesData = {
             "notes": "<h3>Fallo</h3><p>La sobrecarga visual arruina el golpe de vista rápido que busca la lámina.</p>"
           },
           {
-            "layout": "split",
-            "title": "Uso Estratégico en la Consultoría",
-            "content": "<p>Cómo defender el Brand Board frente a la junta directiva:</p><ul><li>Explica el sistema como una unidad orgánica donde cada recurso visual responde a un adjetivo de marca del brief.</li><li>Evita discusiones de gusto personal mostrando cómo los patterns complementan la sobriedad del logo.</li></ul>",
-            "media": "images/d13-miercoles-slide02.jpg",
-            "notes": "<h3>Estrategia</h3><p>El Brand Board es una pieza de venta; defiéndela desde el arquetipo de marca.</p>"
-          },
-          {
             "layout": "title",
             "title": "Actividad del Día: Brand Board",
             "subtitle": "Compilación de todo el sistema en vivo por equipos en Miro.",
             "content": "<p>Compilen en una única lámina de Miro (Brand Board) todos los elementos vectorizados del sistema: logotipo, variantes, paleta, tipografías y patterns.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Revisar la jerarquía visual de la lámina. Debe leerse como una unidad coherente de un solo vistazo.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Instrucciones de la Dinámica de Compilación",
+            "content": "<p>Pautas para maquetar el board grupal en Miro:</p>",
+            "steps": [
+              {
+                "title": "1. Importar",
+                "desc": "Carga todas las piezas vectoriales en el marco asignado en Miro."
+              },
+              {
+                "title": "2. Organizar",
+                "desc": "Ordenen los activos en 3 columnas limpias y apliquen el pattern de fondo."
+              }
+            ],
+            "notes": "<h3>Consignas</h3><p>Revisar los alineamientos y verificar que no falten los códigos de color.</p>"
           },
           {
             "layout": "split",
@@ -2011,11 +2615,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy veremos cómo blindar la marca. Definiremos las reglas y prohibiciones necesarias para evitar deformaciones por terceros.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy blindaremos el logotipo contra malas aplicaciones de terceros:</p><ul><li>Especificación del Área de Seguridad (resguardo) mediante la unidad X.</li><li>Tamaños mínimos de reproducción impreso contra digital.</li><li>Diseño del catálogo de Usos Incorrectos (prohibiciones).</li><li>Pautas de aplicación de logos sobre fondos complejos y fotografías.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
+            "content": "<p>Hoy blindaremos el logotipo contra malas aplicaciones de terceros:</p>",
+            "steps": [
+              {
+                "title": "01. Reglas del Logo",
+                "desc": "Áreas de seguridad perimetrales y tamaños mínimos permitidos."
+              },
+              {
+                "title": "02. Prohibiciones",
+                "desc": "Usos incorrectos, deformaciones y catálogos de mal uso de color."
+              },
+              {
+                "title": "03. Aplicación Fotográfica",
+                "desc": "Normas para colocar el logo sobre imágenes complejas."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que esta sección es el 'código civil' de la marca.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Vignelli Associates",
+            "content": "Una prohibición clara en el manual de marca no es un capricho estético; es una especificación técnica que ahorra miles de dólares en errores de imprenta.",
+            "notes": "<h3>Cita</h3><p>Vignelli detallaba minuciosamente las prohibiciones de deformación en sus manuales.</p>"
           },
           {
             "layout": "split",
@@ -2023,13 +2646,6 @@ const slidesData = {
             "content": "<p>Es la zona de exclusión alrededor del logo que debe permanecer libre de textos o márgenes de página para proteger su jerarquía:</p><ul><li>Se calcula usando una proporción interna del propio logo (ej. la altura de la letra 'X' del isotipo).</li><li>Garantiza que el logo 'respire' y no se ahogue.</li></ul>",
             "media": "images/d16-lunes-slide02.jpg",
             "notes": "<h3>Área</h3><p>El área de seguridad protege la jerarquía y legibilidad del logotipo.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Cálculo de Proporción con Unidad X",
-            "content": "<p>El paso a paso geométrico para medir el área de exclusión:</p><ul><li>Define la unidad X a partir del ancho o alto de un elemento singular del logotipo.</li><li>Dibuja un contorno invisible de grosor X rodeando el logo completo en Illustrator.</li><li>Ningún texto ni margen de página de terceros puede entrar dentro de este límite.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Cálculo</h3><p>El uso de la unidad X automatiza la regla, sin importar la escala final del logo.</p>"
           },
           {
             "layout": "vs",
@@ -2050,18 +2666,12 @@ const slidesData = {
             "notes": "<h3>Tamaños</h3><p>Un logo reproducido por debajo de su tamaño mínimo se rompe y pierde legibilidad.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Simplificación Técnica o Reducción",
-            "content": "<p>Cuándo es obligatorio reducir trazos en aplicaciones mínimas:</p><ul><li>Si el logotipo principal tiene filetes muy delgados, diseña una versión alternativa simplificada para bordados o avatares.</li><li>Omitir detalles en la línea de reducción protege la memorabilidad de la marca en soportes físicos complejos.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Reducción</h3><p>La simplificación es una regla de prolijidad técnica indispensable en branding.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Catálogo de Usos Incorrectos (Prohibiciones)",
-            "content": "<p>Por qué el manual debe ser explícito con lo que NO se debe hacer con el logo:</p><ul><li>Los clientes o programadores suelen deformar el logo o cambiar colores de forma arbitraria.</li><li>Un catálogo visual de prohibiciones explícitas actúa como escudo legal del diseñador.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Prohibiciones</h3><p>El catálogo de prohibiciones ahorra discusiones de mal uso futuro del logo.</p>"
+            "layout": "stat",
+            "title": "El Catálogo de Usos Incorrectos",
+            "number": "6",
+            "statTitle": "Prohibiciones Gráficas Mandatorias",
+            "content": "El manual de marca debe ilustrar de forma explícita al menos 6 prohibiciones visuales de logotipo (deformación de proporciones, cambios de color no autorizados, agregado de contornos, rotaciones absurdas, etc.) para blindar la identidad de intervenciones no profesionales.",
+            "notes": "<h3>Prohibiciones</h3><p>El catálogo visual de prohibiciones es la sección más consultada del manual.</p>"
           },
           {
             "layout": "grid",
@@ -2088,67 +2698,74 @@ const slidesData = {
           },
           {
             "layout": "split",
-            "title": "Aplicación sobre Fondos Complejos",
-            "content": "<p>Directrices cromáticas para colocar el logo sobre imágenes:</p><ul><li>Si el fondo es una fotografía ruidosa, exige usar la versión monocromática del logo sobre una placa de color de bajo contraste.</li><li>Prohíbe terminantemente colocar el logotipo en color sobre zonas texturadas o con detalles fotográficos saturados.</li></ul>",
+            "title": "Aplicación sobre Fotografías Corporativas",
+            "content": "<p>Normas técnicas para colocar el logo sobre imágenes complejas:</p><ul><li>Si la fotografía de fondo contiene muchos detalles (ruido visual), exige aplicar la versión monocromática del logotipo sobre una placa de color neutro.</li><li>Prohíbe colocar el logo original en color sobre zonas texturadas de la imagen.</li></ul>",
             "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Fondos</h3><p>Las pautas de fondos complejos salvan el diseño en campañas de vía pública ruidosas.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Papelería Corporativa Básica",
-            "content": "<p>Cómo especificar la maquetación de piezas administrativas:</p><ul><li>**Tarjeta Personal:** Especifica el tamaño estándar (90x50 mm) y los márgenes libres (5 mm).</li><li>**Hoja Membretada:** Ubicación exacta del logotipo y dirección de los bloques de firma.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Papelería</h3><p>La papelería básica es el punto de contacto más directo del cliente en reuniones físicas.</p>"
+            "notes": "<h3>Fotografías</h3><p>Estas pautas evitan logos invisibles en las publicaciones de redes sociales de la marca.</p>"
           },
           {
             "layout": "steps",
-            "title": "Estructura de las Prohibiciones en el Manual",
-            "content": "<p>Los 3 pasos metodológicos para redactar el catálogo de prohibiciones:</p>",
+            "title": "Pautas de Maquetado de Papelería Básica",
+            "content": "<p>Cómo especificar la diagramación de hojas membretadas y tarjetas corporativas:</p>",
             "steps": [
               {
-                "title": "1. Mapeo de Abusos",
-                "desc": "Identificar los errores típicos de la categoría comercial (ej. estiramientos, cambios de color)."
+                "title": "Tarjeta Personal",
+                "desc": "Especificar tamaño estándar (90 x 50 mm) y los márgenes de seguridad de corte (5 mm)."
               },
               {
-                "title": "2. Ilustración Clara",
-                "desc": "Coloca una marca en rojo (tacha) sobre la imagen del error para hacerlo entendible sin lectura."
-              },
-              {
-                "title": "3. Redacción Directa",
-                "desc": "Escribe frases firmes en el pie de foto: 'Por ningún motivo deformar la escala del logotipo'."
+                "title": "Hoja Membretada",
+                "desc": "Ubicación exacta del logo en cabecera y el área libre para firmas del personal."
               }
             ],
-            "notes": "<h3>Redacción</h3><p>Usa imperativos directos. Evita frases vagas.</p>"
+            "notes": "<h3>Papelería</h3><p>La papelería física de la marca exige precisión en milímetros para evitar errores de refilado.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "La Página de Firmas y Plantillas Digitales",
+            "highlightTitle": "Consistencia en Canales Administrativos",
+            "content": "Normaliza la firma digital de email de la empresa (tamaño de la tipografía y link al logotipo) y las plantillas de presentaciones administrativas. La consistencia visual en correos y diapositivas internas de la oficina incrementa la percepción de solidez de la marca ante inversores.",
+            "notes": "<h3>Firmas</h3><p>Evitar firmas gigantes o animaciones molestas en emails administrativos.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Redacción de Reglas: Imperativa vs. Recomendada",
+            "content": "<p>El tono de redacción técnica de las directrices de marca:</p>",
+            "vs1": {
+              "title": "Redacción Vaga (Recomendada)",
+              "desc": "'Se sugiere usar preferentemente en fondos claros'. Deja espacio a la libre interpretación del cliente, diluyendo el rigor del manual.",
+              "badge": "Inútil",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Redacción Imperativa (Rígida)",
+              "desc": "'El logotipo principal solo podrá aplicarse sobre fondo crema corporativo (#FAF9F6)'. No deja lugar a dudas en la imprenta.",
+              "badge": "Rígido",
+              "highlighted": true
+            },
+            "notes": "<h3>Redacción</h3><p>El manual es un contrato regulador, exige imperativos directos.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores al Redactar Prohibiciones",
-            "content": "<p>Fallas comunes en las especificaciones del catálogo:</p>",
+            "title": "Errores al Redactar Usos Incorrectos",
+            "content": "<p>Fallas que arruinan la utilidad del manual de marca:</p>",
             "cards": [
               {
                 "num": "❌",
+                "title": "Sin Tacha Roja",
+                "desc": "Mostrar el logotipo deformado sin cruzarlo con una tacha roja, confundiendo al lector."
+              },
+              {
+                "num": "❌",
                 "title": "Pocas Láminas",
-                "desc": "Mostrar solo una prohibición de deformación, omitiendo errores cromáticos y de fondos."
+                "desc": "Documentar solo la deformación, omitiendo errores cromáticos y colocaciones sobre fondos complejos."
               },
               {
                 "num": "❌",
-                "title": "Falta de Tacha",
-                "desc": "No marcar con una cruz roja el logo deformado, confundiendo al lector del manual."
-              },
-              {
-                "num": "❌",
-                "title": "Explicación Larga",
-                "desc": "Escribir párrafos extensos para justificar por qué no se debe rotar el logo en lugar de ser directo."
+                "title": "Explicación Extensa",
+                "desc": "Escribir párrafos narrativos largos para explicar por qué no se debe rotar el logo en lugar de ser visual."
               }
             ],
-            "notes": "<h3>Fallo</h3><p>La prohibición debe ser visual e intuitiva antes que leída.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Estructuración del PDF Final",
-            "content": "<p>Cómo compaginar y guardar el manual definitivo para el cliente:</p><ul><li>Usa una diagramación horizontal coherente con el estilo de la marca.</li><li>Agrega links interactivos en el índice del manual para facilitar la navegación rápida del usuario.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>PDF</h3><p>El manual final en PDF es la carta de cierre de tu consultoría de branding.</p>"
+            "notes": "<h3>Errores</h3><p>La prohibición visual debe entenderse al instante sin necesidad de leer textos.</p>"
           },
           {
             "layout": "title",
@@ -2156,6 +2773,22 @@ const slidesData = {
             "subtitle": "Evaluación grupal en Padlet de las reglas de marca.",
             "content": "<p>Compartan en Padlet sus borradores de Brand Guidelines. Cada equipo evaluará de forma cruzada el manual del otro para encontrar inconsistencias y fallas de legibilidad.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Fomentar la crítica constructiva técnica. Enfocarse en la claridad de las áreas de resguardo y prohibiciones.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Consignas del Taller de Co-Auditoría",
+            "content": "<p>Pasos para la revisión cruzada de borradores en el Padlet:</p>",
+            "steps": [
+              {
+                "title": "1. Intercambio",
+                "desc": "Abran la sección del manual de marca del grupo vecino asignado."
+              },
+              {
+                "title": "2. Auditoría",
+                "desc": "Verifiquen el área de seguridad y listen al menos 3 errores vectoriales o de redacción."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Garantizar que todos los alumnos tengan posits de auditoría detallados.</p>"
           },
           {
             "layout": "split",
@@ -2177,11 +2810,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy cerramos la semana de directrices lanzando la Entrega 1 del TP. Resolveremos dudas técnicas de diagramación en PDF.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy organizaremos el ensamblado y entrega de nuestro Manual de Marca v1:</p><ul><li>Pautas del encargo y especificaciones del formato de entrega.</li><li>El formato apaisado corporativo 16:9 y sus ventajas.</li><li>Uso de grillas y retículas de diagramación asimétrica.</li><li>Rúbrica detallada de calificación de la Entrega 1.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
+            "content": "<p>Hoy organizaremos el ensamblado y entrega de nuestro Manual de Marca v1:</p>",
+            "steps": [
+              {
+                "title": "01. Pautas TP 1",
+                "desc": "Formatos, plazos y especificaciones obligatorias de entrega."
+              },
+              {
+                "title": "02. Maquetado 16:9",
+                "desc": "Uso de grillas modulares horizontales y jerarquías."
+              },
+              {
+                "title": "03. Trabajo Guiado",
+                "desc": "Taller de compaginación y exportación de PDFs vectoriales."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Asegúrate de despejar cualquier duda técnica antes de iniciar el taller.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Adrian Frutiger",
+            "content": "La diagramación de un manual técnico es en sí misma una declaración de la identidad de la marca. Si el manual es desordenado, la marca nace rota.",
+            "notes": "<h3>Cita</h3><p>Frutiger es uno de los diseñadores tipográficos y maquetadores técnicos más importantes de Suiza.</p>"
           },
           {
             "layout": "split",
@@ -2191,66 +2843,30 @@ const slidesData = {
             "notes": "<h3>Retícula</h3><p>Un manual asimétrico sin grilla da imagen de descuido.</p>"
           },
           {
-            "layout": "split",
-            "title": "Ventajas del Formato Apaisado 16:9",
-            "content": "<p>Por qué se abandonó el formato vertical A4 tradicional:</p><ul><li>Los manuales de marca ya no se imprimen; se visualizan en pantallas de ordenadores de desarrolladores o proyectores de salas de reuniones.</li><li>El formato 16:9 aprovecha el 100% de la superficie de visualización digital sin dejar bandas negras laterales.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>16:9</h3><p>El estándar industrial actual es el PDF interactivo apaisado de alta definición.</p>"
+            "layout": "vs",
+            "title": "Formatos de Maquetación: Horizontal vs. Vertical",
+            "content": "<p>Por qué se consolidó el estándar apaisado interactivo:</p>",
+            "vs1": {
+              "title": "Formato A4 Vertical (Histórico)",
+              "desc": "Pensado para impresión física en carpetas de oficina. Deja bandas negras en monitores actuales y requiere hacer scroll vertical constante.",
+              "badge": "Obsoleto",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Formato 16:9 Horizontal (Digital)",
+              "desc": "Aprovecha el 100% de la superficie de visualización en pantallas y proyectores. El estándar definitivo en juntas corporativas.",
+              "badge": "Estándar Industrial",
+              "highlighted": true
+            },
+            "notes": "<h3>Formatos</h3><p>Insiste en maquetar en proporción 16:9 horizontal exacta.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Retícula Modular en la Compaginación",
-            "content": "<p>Cómo ordenar la grilla en el lienzo de tu manual de marca:</p><ul><li>Usa una grilla modular de 4 o 6 columnas horizontales.</li><li>Mantén la misma posición para los cabezales de página, títulos de sección y numeración de folios para que el manual sea consistente.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Retícula</h3><p>Una grilla modular rígida mantiene el orden en manuales extensos de marca.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Jerarquía Tipográfica de la Lámina",
-            "content": "<p>Fijando las reglas de lectura en los manuales de marca:</p><ul><li><strong>Título de Sección:</strong> Fuente sans serif de alta visibilidad, tamaño de 24 a 32 puntos.</li><li><strong>Subtítulos Técnicos:</strong> Tamaño medio (16 a 18 puntos) para las directrices.</li><li><strong>Cuerpo Explicativo:</strong> Legibilidad absoluta, tamaño de 10 a 11 puntos.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Jerarquía</h3><p>El manual debe ser un ejemplo impecable del uso de jerarquías de la tipografía corporativa.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Integración Conceptual y Visual",
-            "content": "<p>El manual debe nacer de la historia de origen definida en la semana 5:</p><ul><li>Los adjetivos del Moodboard deben justificar visualmente las elecciones de la tipografía y el color en el manual.</li><li>Evita las explicaciones subjetivas; fundamenta cada decisión en base al arquetipo de marca.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Integración</h3><p>La coherencia conceptual es la mitad de la nota del jurado.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Página de Portada: Reglas",
-            "content": "<p>Diseño y minimalismo en la carátula técnica del manual:</p><ul><li>Coloca únicamente el logotipo principal centrado o alineado a la grilla asimétrica.</li><li>Incluye el subtítulo 'Manual de Identidad Visual v1.0' y el año actual.</li><li>Evita las texturas ruidosas; prioriza un fondo corporativo plano y elegante.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Carátula</h3><p>La carátula debe denotar sofisticación y orden desde el primer golpe de vista.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Tabla de Contenidos e Introducción",
-            "content": "<p>Cómo dar la bienvenida y guiar al lector del manual:</p><ul><li>La página 2 debe incluir un índice con links interactivos directos a las secciones.</li><li>Agrega un breve párrafo explicando el propósito y espíritu conceptual de la marca a modo de bienvenida.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Índice</h3><p>Los enlaces interactivos en el PDF facilitan el trabajo diario del desarrollador front-end.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Estructura Mínima de Entrega (TP 1)",
-            "content": "<p>Láminas obligatorias que debe incluir el PDF del manual de marca este lunes:</p>",
-            "steps": [
-              {
-                "title": "01. Portada y Concepto",
-                "desc": "Nombre de marca, grupo y justificación de la historia de origen."
-              },
-              {
-                "title": "02. Normalización de Logo",
-                "desc": "Retícula con coordenadas vectoriales, áreas de resguardo y tamaños mínimos."
-              },
-              {
-                "title": "03. Muestras de Color",
-                "desc": "Fichas técnicas con valores Pantone, CMYK, RGB y códigos HEX."
-              }
-            ],
-            "notes": "<h3>Nota</h3><p>El lunes continuaremos con las secciones de color y tipografía en la v2.</p>"
+            "layout": "stat",
+            "title": "El Valor de la Grilla de Maquetado",
+            "number": "4",
+            "statTitle": "Columnas Mínimas de Diagramación",
+            "content": "Para estructurar de forma prolija y armónica las páginas horizontales del manual, exige utilizar una grilla modular de al menos 4 columnas en Illustrator, ordenando de forma rígida y simétrica los cabezales de página, números de folio y títulos.",
+            "notes": "<h3>Grilla</h3><p>El orden en la diagramación demuestra solidez profesional en la agencia.</p>"
           },
           {
             "layout": "grid",
@@ -2277,24 +2893,101 @@ const slidesData = {
           },
           {
             "layout": "split",
-            "title": "Optimización del PDF Corporativo",
-            "content": "<p>Cómo exportar el archivo definitivo sin perder calidad vectorial:</p><ul><li>Exporta desde Illustrator en modo **PDF interactivo o de alta calidad**.</li><li>Usa la herramienta Optimizar PDF de Acrobat para comprimir el peso de las imágenes secundarias de mockups a 150 DPI.</li><li>El peso de archivo ideal no debe superar los 15 megabytes para envíos por correo.</li></ul>",
+            "title": "La Jerarquía Tipográfica de la Lámina",
+            "content": "<p>Fijando las reglas de lectura en los manuales de marca:</p><ul><li><strong>Título de Sección:</strong> Fuente sans serif de alta visibilidad, tamaño de 24 a 32 puntos.</li><li><strong>Subtítulos Técnicos:</strong> Tamaño medio (16 a 18 puntos) para las directrices.</li><li><strong>Cuerpo Explicativo:</strong> Legibilidad absoluta, tamaño de 10 a 11 puntos.</li></ul>",
             "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Compresión</h3><p>Un manual muy pesado genera resistencia en la lectura digital del cliente.</p>"
+            "notes": "<h3>Jerarquía</h3><p>El manual debe ser un ejemplo impecable del uso de jerarquías de la tipografía corporativa.</p>"
           },
           {
-            "layout": "split",
-            "title": "Checklist de Pre-Entrega Final",
-            "content": "<p>Pasos finales indispensables para la carga del lunes por la mañana:</p><ul><li>¿El enlace a la carpeta de Drive está configurado como público (lector)?</li><li>¿El archivo PDF final tiene el nombre del proyecto y grupo correctos?</li><li>¿Están convertidos a curvas todos los logotipos del manual?</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Carga</h3><p>Evita los enlaces privados que demoran la evaluación de la entrega.</p>"
+            "layout": "steps",
+            "title": "Estructura Mínima de Entrega (TP 1)",
+            "content": "<p>Láminas obligatorias que debe incluir el PDF del manual de marca este lunes:</p>",
+            "steps": [
+              {
+                "title": "01. Portada y Concepto",
+                "desc": "Nombre de marca, grupo y justificación de la historia de origen."
+              },
+              {
+                "title": "02. Normalización de Logo",
+                "desc": "Retícula con coordenadas vectoriales, áreas de resguardo y tamaños mínimos."
+              },
+              {
+                "title": "03. Muestras de Color",
+                "desc": "Fichas técnicas con valores Pantone, CMYK, RGB y códigos HEX."
+              }
+            ],
+            "notes": "<h3>Nota</h3><p>El lunes continuaremos con las secciones de color y tipografía en la v2.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "La Portada y la Tabla de Contenidos",
+            "highlightTitle": "Elegancia en las Primeras Páginas",
+            "content": "La carátula del manual debe ser extremadamente minimalista: coloca solo el logotipo principal centrado, el año y el subtítulo 'Guidelines v1.0'. La página 2 debe incluir una tabla de contenidos limpia con enlaces interactivos directos a las secciones para agilizar la lectura.",
+            "notes": "<h3>Carátula</h3><p>Las primeras páginas definen el tono de sofisticación del documento.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Exportación PDF de Alta Calidad vs. Comprimido",
+            "content": "<p>Cómo guardar los manuales técnicos antes de subirlos a Drive:</p>",
+            "vs1": {
+              "title": "PDF de Alta Calidad Vectorial",
+              "desc": "El entregable formal. Conserva los textos vectorizados limpios sin pixelar los trazos, ideal para que los desarrolladores web copien códigos HEX.",
+              "badge": "Entregable",
+              "highlighted": true
+            },
+            "vs2": {
+              "title": "PDF Comprimido (Liviano)",
+              "desc": "Optimizar imágenes de mockups secundarios a 150 DPI para reducir el peso a menos de 15 megabytes, facilitando envíos rápidos por correo electrónico.",
+              "badge": "Consulta",
+              "highlighted": false
+            },
+            "notes": "<h3>PDF</h3><p>Generar siempre una versión vectorial limpia para asegurar el copiado exacto de los códigos de color.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Errores Comunes en la Compaginación",
+            "content": "<p>Fallas que arruinan la presentación de tu manual de marca v1:</p>",
+            "cards": [
+              {
+                "num": "❌",
+                "title": "Sin Grilla",
+                "desc": "Títulos y numeraciones de folios alineados de forma diferente en cada lámina, provocando saltos visuales incómodos al pasar páginas."
+              },
+              {
+                "num": "❌",
+                "title": "Fuentes sin Enlace",
+                "desc": "Omitir los nombres de las familias tipográficas comerciales necesarias para que la imprenta compre la licencia."
+              },
+              {
+                "num": "❌",
+                "title": "Drive Cerrado",
+                "desc": "Dejar la carpeta de Google Drive como privada, imposibilitando la apertura del manual por el tribunal."
+              }
+            ],
+            "notes": "<h3>Fallo</h3><p>Evitar los enlaces privados que demoran la evaluación de la entrega.</p>"
           },
           {
             "layout": "title",
             "title": "Actividad del Día: TP 1 Lanzamiento",
             "subtitle": "Clase de repaso y organización de la entrega progresiva.",
             "content": "<p>Espacio de trabajo guiado en el aula para finalizar la versión 1 del Manual de Marca simple. Trabajo en grupos de 3 integrantes afinando grilla y vectores.</p>",
-            "notes": "<h3>Notas de Clase</h3><p>Alinear los requerimientos de la entrega y resolver dudas de compaginación en PDF horizontal.</p>"
+            "notes": "<h3>Notas de Clase</h3><p>Alinear los requerimientos de la entrega y resolver dudas de maquetación en PDF horizontal.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Checklist de Carga de la Entrega 1",
+            "content": "<p>Consignas indispensables para finalizar la entrega hoy:</p>",
+            "steps": [
+              {
+                "title": "PDF Interactivo",
+                "desc": "Exporta el manual en PDF horizontal interactivo 16:9 de alta resolución."
+              },
+              {
+                "title": "Carga en Drive",
+                "desc": "Sube el PDF final y las fuentes vectoriales editables a la carpeta compartida."
+              }
+            ],
+            "notes": "<h3>Carga</h3><p>Verificar los accesos compartidos en la nube de almacenamiento del Drive.</p>"
           },
           {
             "layout": "split",
@@ -2321,11 +3014,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy cerramos la entrega del TP 1 y comenzamos el entrenamiento en oratoria y estructuración del pitch comercial de ventas.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy abordaremos la defensa del diseño y oratoria comercial:</p><ul><li>Cierre formal de entregas y recepción del TP 1.</li><li>El dato frente al insight en justificación de decisiones estéticas.</li><li>El principio de posicionamiento de Trout & Ries (Ley de Renuncia).</li><li>Estructuración paso a paso del Pitch defensivo de 2 minutos.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
+            "content": "<p>Hoy abordaremos la defensa del diseño y oratoria comercial:</p>",
+            "steps": [
+              {
+                "title": "01. Cierre TP 1",
+                "desc": "Cierre de entregas del Manual de Marca v1 y primer análisis."
+              },
+              {
+                "title": "02. Posicionamiento",
+                "desc": "La Ley de Renuncia en posicionamiento de Trout & Ries."
+              },
+              {
+                "title": "03. Estructura del Pitch",
+                "desc": "El orden secuencial de 2 minutos para convencer al cliente."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que hoy iniciamos el entrenamiento en ventas más importante del diseñador.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Jack Trout",
+            "content": "El posicionamiento no es lo que haces con el producto en sí. El posicionamiento es lo que construyes en la mente del comprador potencial.",
+            "notes": "<h3>Cita</h3><p>Trout es el gran gurú estratégico de posicionamiento corporativo.</p>"
           },
           {
             "layout": "split",
@@ -2335,19 +3047,12 @@ const slidesData = {
             "notes": "<h3>Recepción</h3><p>Felicitar a la clase por el cumplimiento de los tiempos de entrega.</p>"
           },
           {
-            "layout": "split",
-            "title": "El Posicionamiento en el Mercado",
-            "content": "<p>El posicionamiento es la batalla por adueñarse de un concepto en la mente del consumidor:</p><ul><li>Como señalaban Trout & Ries, una marca no puede ser todo para todos. Debe enfocarse en un solo atributo.</li><li>El diseño del logotipo debe proyectar ese atributo único de forma simple y consistente.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Posicionamiento</h3><p>El posicionamiento exige elegir qué no vas a comunicar.</p>"
-          },
-          {
             "layout": "vs",
             "title": "La Diferencia entre Dato e Insight",
             "content": "<p>Clasificación técnica para justificar la toma de decisiones estéticas de marca:</p>",
             "vs1": {
               "title": "El Dato (Observación Objetiva)",
-              "desc": "'El 60% de los usuarios abandona el carrito de compras en la web de ropa'. Describe una realidad medible sin explicar los motivos.",
+              "desc": "'El 60% de los usuarios abandona el carrito de compras en la web de ropa'. Describe una reality medible sin explicar los motivos.",
               "badge": "Estadística",
               "highlighted": false
             },
@@ -2360,42 +3065,42 @@ const slidesData = {
             "notes": "<h3>Insight</h3><p>Un proyecto sin insight se justifica con argumentos débiles como 'lo elegí porque queda lindo'.</p>"
           },
           {
-            "layout": "vs",
-            "title": "Posicionamiento: Renunciar a Atributos",
-            "content": "<p>El principio de posicionamiento de Trout & Ries aplicado al diseño estratégico:</p>",
-            "vs1": {
-              "title": " Volvo (Seguridad)",
-              "desc": "Volvo renunció a la velocidad deportiva y al diseño aerodinámico curvo durante décadas para adueñarse de la palabra 'Seguridad' en la mente de las familias.",
-              "badge": "Volvo",
-              "highlighted": true
-            },
-            "vs2": {
-              "title": "El Error Común",
-              "desc": "Intentar comunicar velocidad, bajo precio, lujo y ecología en el mismo logotipo termina diluyendo la recordación de marca.",
-              "badge": "Error",
-              "highlighted": false
-            },
-            "notes": "<h3>Trout</h3><p>Si no eliges a quién decepcionar con tu marca, estás haciendo caridad visual, no estrategia.</p>"
+            "layout": "stat",
+            "title": "El Límite del Tiempo de la Junta",
+            "number": "2",
+            "statTitle": "Minutos del Pitch de Ventas Eficaz",
+            "content": "El pitch defensivo de marca debe durar 2 minutos exactos y dinámicos. Superar este límite aburre a los directores corporativos y demuestra falta de preparación del discurso estratégico por parte de la agencia de diseño.",
+            "notes": "<h3>Estadística</h3><p>El pitch de 2 minutos es el estándar en juntas de negocios de alto rendimiento.</p>"
           },
           {
-            "layout": "steps",
-            "title": "La Propuesta de Valor de Michael Porter",
-            "content": "<p>La promesa de marca debe filtrarse bajo tres criterios de inimitabilidad de negocio:</p>",
-            "steps": [
+            "layout": "grid",
+            "title": "Filtros de la Propuesta de Valor",
+            "content": "<p>Criterios de inimitabilidad de Michael Porter aplicados a marcas:</p>",
+            "cards": [
               {
-                "title": "01. Relevancia",
-                "desc": "Debe resolver un problema real, sentido y urgente de la audiencia."
+                "num": "1",
+                "title": "Relevancia",
+                "desc": "El diseño debe responder a un dolor real e identificable de tu audiencia."
               },
               {
-                "title": "02. Credibilidad",
-                "desc": "La marca debe poder cumplir logísticamente lo que promete visualmente."
+                "num": "2",
+                "title": "Credibilidad",
+                "desc": "La marca debe poder cumplir físicamente lo que promete visualmente."
               },
               {
-                "title": "03. Inimitabilidad",
-                "desc": "Debe ser costoso, lento o difícil de copiar para los competidores directos."
+                "num": "3",
+                "title": "Inimitabilidad",
+                "desc": "La identidad gráfica debe ser propietaria y muy difícil de copiar por rivales."
               }
             ],
-            "notes": "<h3>Porter</h3><p>La inimitabilidad obliga al diseñador a crear un sistema gráfico único y propietario.</p>"
+            "notes": "<h3>Porter</h3><p>La inimitabilidad obliga al diseñador a crear sistemas gráficos únicos y registrados.</p>"
+          },
+          {
+            "layout": "split",
+            "title": "La Justificación Estratégica del Diseño",
+            "content": "<p>Cómo argumentar tu diseño de forma profesional frente al cliente:</p><ul><li>Nunca digas 'elegí este azul porque me gusta' o 'este tipo de letra es moderna'.</li><li>Dile al cliente: 'Seleccionamos esta tipografía geométrica para reflejar el arquetipo del Sabio y posicionar la marca bajo el atributo de precisión del brief'.</li></ul>",
+            "media": "images/d16-lunes-slide02.jpg",
+            "notes": "<h3>Defensa</h3><p>La justificación en base al brief desarma la subjetividad estética del cliente.</p>"
           },
           {
             "layout": "steps",
@@ -2418,42 +3123,39 @@ const slidesData = {
             "notes": "<h3>Pitch</h3><p>El orden estratégico justifica el resultado gráfico ante juntas directivas.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Justificación Estratégica del Diseño",
-            "content": "<p>Cómo argumentar tu diseño de forma profesional frente al cliente:</p><ul><li>Nunca digas 'elegí este azul porque me gusta' o 'este tipo de letra es moderna'.</li><li>Dile al cliente: 'Seleccionamos esta tipografía geométrica para reflejar el arquetipo del Sabio y posicionar la marca bajo el atributo de precisión del brief'.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Defensa</h3><p>La justificación en base al brief desarma la subjetividad estética del cliente.</p>"
+            "layout": "highlight",
+            "title": "La Ley de Renuncia en Posicionamiento",
+            "highlightTitle": "Volvo y la Seguridad Familiar",
+            "content": "Volvo renunció a la velocidad deportiva y al diseño aerodinámico curvo durante décadas para adueñarse de la palabra 'Seguridad' en la mente de las familias. Intentar comunicar velocidad, bajo precio, lujo y ecología en el mismo logotipo termina diluyendo la recordación de marca.",
+            "notes": "<h3>Volvo</h3><p>Si no eliges a quién decepcionar con tu marca, estás haciendo caridad visual, no estrategia.</p>"
           },
           {
-            "layout": "split",
-            "title": "Técnicas de Oratoria Comercial",
-            "content": "<p>Habilidades de comunicación oral para vender proyectos:</p><ul><li>Mantén una postura erguida de hombros abiertos para transmitir seguridad corporal.</li><li>Usa la mirada para conectar con los directores de la reunión, sin leer hojas impresas.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Oratoria</h3><p>La presencia y entonación aumentan el valor percibido de tu propuesta de diseño.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Control del Ritmo y Lenguaje No Verbal",
-            "content": "<p>La modulación de la voz en reuniones clave de presentación:</p><ul><li>Habla pausadamente. La prisa denota nerviosismo e improvisación.</li><li>Utiliza gestos abiertos de manos para acompañar y enfatizar las palabras clave.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Lenguaje</h3><p>El lenguaje no verbal comunica tanto como la propuesta vectorial en pantalla.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "La Diapositiva Crítica: El Cambio de Identidad",
-            "content": "<p>Cómo mostrar la transformación de la marca para generar impacto comercial:</p><ul><li>Muestra de un lado el logotipo e identidad anterior (*el antes*) y del otro tu propuesta de rediseño (*el después*).</li><li>Evidencia visualmente la ganancia de orden, prolijidad y sofisticación del nuevo sistema.</li></ul>",
-            "media": "images/d16-lunes-slide02.jpg",
-            "notes": "<h3>Antes/Después</h3><p>El contraste visual de cambio de marca justifica los honorarios de consultoría cobrados.</p>"
+            "layout": "vs",
+            "title": "Feedback de Gusto vs. Feedback de Negocio",
+            "content": "<p>Aprende a clasificar la crítica del cliente durante la defensa del proyecto:</p>",
+            "vs1": {
+              "title": "Feedback de Gusto Subjetivo",
+              "desc": "'Ese azul no me gusta para mi oficina'. No tiene base técnica. Se responde reexplicando cómo el color conecta con el arquetipo del manual.",
+              "badge": "Subjetivo",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Feedback Estratégico de Negocio",
+              "desc": "'El isotipo pierde legibilidad en el lomo del envase a tamaño real'. Es un problema funcional y debe ser escuchado para refinar el diseño.",
+              "badge": "Funcional",
+              "highlighted": true
+            },
+            "notes": "<h3>Feedback</h3><p>Saber clasificar la crítica evita discusiones estériles.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores al Pitchear Marcas",
+            "title": "Errores de Oratoria en Defensas",
             "content": "<p>Fallas que arruinan la venta estratégica de identidades:</p>",
             "cards": [
               {
                 "num": "❌",
                 "title": "Explicación Estética",
-                "desc": "Dedicar el tiempo a describir trazos y curvas en lugar de hablar del retorno de inversión y posicionamiento de marca."
+                "desc": "Dedicar el tiempo a describir curvas en lugar de hablar de posicionamiento y retorno de inversión de marca."
               },
               {
                 "num": "❌",
@@ -2476,6 +3178,22 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Cronometrar las exposiciones. Fomentar que se presenten problemas y soluciones estratégicas antes del logo.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Instrucciones del Simulacro de Pitch",
+            "content": "<p>Consignas para el ejercicio de micrófono abierto en clase:</p>",
+            "steps": [
+              {
+                "title": "1. Estructura",
+                "desc": "Carga tu Brand Board en la pantalla de Miro y define tu historia en posits."
+              },
+              {
+                "title": "2. Cronometrar",
+                "desc": "Presenta tu proyecto en 2 minutos exactos sin sobrepasar el tiempo asignado."
+              }
+            ],
+            "notes": "<h3>Dinámica</h3><p>Tomar el tiempo y dar feedback directo sobre oratoria y lenguaje no verbal.</p>"
+          },
+          {
             "layout": "split",
             "title": "Cierre de la Clase",
             "content": "<p>Metas y tareas para preparar la clase de empaques:</p><ul><li>Fijar la estructura narrativa del pitch en sus Miro.</li><li><strong>Próximo tema:</strong> Packaging básico: adaptación del sistema visual al envase físico y modelado 3D en Illustrator.</li></ul>",
@@ -2495,11 +3213,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy entraremos en una de las disciplinas con mayor rigor técnico del diseño: la adaptación a objetos tridimensionales y el plano de troquel.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy dominaremos el diseño estructural de empaques:</p><ul><li>La interfaz física del packaging y sus funciones.</li><li>Niveles de lectura cognitiva del envase en el supermercado.</li><li>Estudio del caso de rediseño de Tropicana.</li><li>Análisis del Dieline técnico (troquel) y modelado 3D en Illustrator.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
+            "content": "<p>Hoy dominaremos el diseño estructural de empaques:</p>",
+            "steps": [
+              {
+                "title": "01. Interfaz Física",
+                "desc": "Funciones logísticas y simbólicas del envase o packaging."
+              },
+              {
+                "title": "02. El Dieline Técnico",
+                "desc": "Trazado geométrico del troquel: cortes, dobleces y sangrados."
+              },
+              {
+                "title": "03. Mapeado 3D",
+                "desc": "Modelado tridimensional de empaques en Adobe Illustrator."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que un error de un milímetro en packaging arruina tiradas completas de producción.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Tropicana Redesign Fail",
+            "content": "La pérdida de las marcas distintivas (naranja real con pajita) en el rediseño de 2009 demostró que el minimalismo ciego puede destruir el capital de marca en el supermercado.",
+            "notes": "<h3>Cita</h3><p>El caso Tropicana es el contraejemplo obligatorio en todas las escuelas de diseño del mundo.</p>"
           },
           {
             "layout": "split",
@@ -2509,31 +3246,22 @@ const slidesData = {
             "notes": "<h3>Envase</h3><p>El packaging es el vendedor silencioso en la góndola.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Dimensión Logística vs. Simbólica",
-            "content": "<p>Las dos fuerzas que determinan el diseño estructural del envase:</p><ul><li><strong>Logística:</strong> Debe apilarse en palés de madera de forma eficiente, resistir la humedad del transporte y proteger la integridad física del producto.</li><li><strong>Simbólica:</strong> El diseño de la etiqueta debe atraer e incitar a la compra a distancia en segundos.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
+            "layout": "vs",
+            "title": "Dimensión Logística vs. Dimensión Simbólica",
+            "content": "<p>Las dos fuerzas que determinan el diseño estructural del envase:</p>",
+            "vs1": {
+              "title": "Dimensión Logística (Funcional)",
+              "desc": "Debe apilarse eficientemente, resistir la humedad del transporte y proteger la integridad física del producto.",
+              "badge": "Estructural / Logística",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Dimensión Simbólica (Persuasiva)",
+              "desc": "El diseño de la etiqueta debe atraer e incitar a la compra a distancia en segundos.",
+              "badge": "Persuasión Visual",
+              "highlighted": true
+            },
             "notes": "<h3>Fuerzas</h3><p>Un empaque hermoso que se rompe en el transporte es un fracaso de diseño industrial.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Niveles de Lectura Cognitiva en Góndola",
-            "content": "<p>El orden en el que el cerebro del comprador decodifica el envase en el supermercado:</p>",
-            "steps": [
-              {
-                "title": "Lectura Primaria",
-                "desc": "Color del envase y forma de la silueta. Ocurre a 3 metros de distancia."
-              },
-              {
-                "title": "Lectura Secundaria",
-                "desc": "Nombre de la marca y sabor o variante del producto. Distancia media."
-              },
-              {
-                "title": "Lectura Terciaria",
-                "desc": "Ingredientes, código de barras e información nutricional. Sosteniendo el envase."
-              }
-            ],
-            "notes": "<h3>Nota</h3><p>Frenar la lectura terciaria si la primaria falla en llamar la atención.</p>"
           },
           {
             "layout": "stat",
@@ -2544,57 +3272,84 @@ const slidesData = {
             "notes": "<h3>Caso</h3><p>Un clásico ejemplo de por qué proteger el capital semiótico de marca.</p>"
           },
           {
-            "layout": "split",
-            "title": "Las Lecciones de Tropicana",
-            "content": "<p>Las conclusiones estratégicas del rediseño fallido más famoso de la historia:</p><ul><li>Nunca sacrifiques el **reconocimiento espontáneo** de la marca por modas estéticas minimalistas.</li><li>El consumidor no lee en el supermercado; escanea formas y colores conocidos rápidamente.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Lecciones</h3><p>El rediseño debe evolucionar la marca sin alienar a los consumidores leales actuales.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Anatomía del Dieline (Troquel)",
-            "content": "<p>Las 3 capas vectoriales obligatorias que componen un plano técnico de troquel a escala 1:1:</p>",
-            "steps": [
+            "layout": "grid",
+            "title": "Niveles de Lectura Cognitiva en Góndola",
+            "content": "<p>El orden en el que el cerebro del comprador decodifica el envase en el supermercado:</p>",
+            "cards": [
               {
-                "title": "Línea de Corte (Roja)",
-                "desc": "Línea continua que indica por dónde pasará la cuchilla de acero en fábrica."
+                "num": "1",
+                "title": "Lectura Primaria",
+                "desc": "Color del envase y forma de la silueta. Ocurre a 3 metros de distancia."
               },
               {
-                "title": "Línea de Doblez (Azul)",
-                "desc": "Línea punteada que indica por dónde se realizará el hendido o plegado."
+                "num": "2",
+                "title": "Lectura Secundaria",
+                "desc": "Nombre de la marca y sabor o variante del producto. Distancia media."
               },
               {
-                "title": "Reserva de Cola (Limpia)",
-                "desc": "Áreas sin impresión de tinta ni barnices para permitir que el pegamento actúe."
+                "num": "3",
+                "title": "Lectura Terciaria",
+                "desc": "Ingredientes, código de barras e información nutricional. Sosteniendo el envase."
               }
             ],
+            "notes": "<h3>Nota</h3><p>Frenar la lectura terciaria si la primaria falla en llamar la atención.</p>"
+          },
+          {
+            "layout": "split",
+            "title": "Anatomía del Dieline (Troquel)",
+            "content": "<p>Las 3 capas vectoriales obligatorias que componen un plano técnico de troquel a escala 1:1:</p><ul><li><strong>Línea de Corte (Roja):</strong> Línea continua que indica por dónde pasará la cuchilla de acero en fábrica.</li><li><strong>Línea de Doblez (Azul):</strong> Línea punteada que indica por dónde se realizará el plegado.</li><li><strong>Reserva de Cola:</strong> Áreas sin impresión de tinta ni barnices para permitir que el pegamento actúe.</li></ul>",
+            "media": "images/d17-martes-slide02.jpg",
             "notes": "<h3>Dieline</h3><p>Un error de 1mm en el dieline puede hacer que miles de envases no encastren.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
+            "title": "Modelado 3D en Adobe Illustrator",
+            "content": "<p>Pasos para generar la maqueta volumétrica tridimensional en pantalla:</p>",
+            "steps": [
+              {
+                "title": "Perfil Vectorial",
+                "desc": "Dibuja el contorno lateral de media botella en el eje medio en Illustrator."
+              },
+              {
+                "title": "Efecto Giro (Revolve)",
+                "desc": "Aplica 3D y materiales -> Giro (Revolve) a 360 grados en vivo."
+              },
+              {
+                "title": "Mapeado de Etiqueta",
+                "desc": "Arrastra tu motivo vectorial al panel de materiales y aplícalo a la superficie del envase."
+              }
+            ],
+            "notes": "<h3>Illustrator</h3><p>El mapeado 3D de Illustrator ayuda a previsualizar deformaciones de etiqueta de forma rápida.</p>"
+          },
+          {
+            "layout": "highlight",
             "title": "La Reserva de Cola (Pegamento)",
-            "content": "<p>Pautas de armado técnico del troquel para evitar fallas de armado:</p><ul><li>Las solapas de pegado deben permanecer libres de tinta o barnices protectores.</li><li>Si imprimes tinta sobre la solapa, el adhesivo químico no penetrará las fibras del cartón y la caja se abrirá en la góndola ante el peso del producto.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
+            "highlightTitle": "Fricción de Fibras de Cartón",
+            "content": "Las solapas de pegado de las cajas de cartón deben permanecer libres de tinta o barnices protectores en el archivo de troquel técnico. Si imprimes tinta sobre la solapa, el adhesivo químico no penetrará las fibras del cartón y la caja se abrirá en la góndola ante el peso del producto.",
             "notes": "<h3>Pegado</h3><p>Especifica siempre la reserva de cola en el plano vectorial de troquel.</p>"
           },
           {
-            "layout": "split",
-            "title": "Modelado 3D en Adobe Illustrator",
-            "content": "<p>El uso de la herramienta de modelado 3D integrada en el software:</p><ul><li>Dibuja el perfil vectorial de media botella en Illustrator.</li><li>Usa el filtro **3D y materiales -> Giro (Revolve)** para generar el cuerpo 3D del envase en segundos.</li><li>Esto permite mapear la etiqueta sobre el volumen real para verificar deformaciones visuales.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Modelado</h3><p>Mostrar la herramienta en vivo en el proyector de clase.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Barnices y Acabados de Impresión",
-            "content": "<p>Agregando texturas y sofisticación al envase en el manual de marca:</p><ul><li><strong>Stamping Metálico (Hot Stamping):</strong> Lámina de oro o plata aplicada con calor para marcas de lujo.</li><li><strong>Laca UV Sectorizada:</strong> Capa de brillo translúcido solo en zonas del logotipo para contrastar con el fondo mate del cartón.</li></ul>",
-            "media": "images/d17-martes-slide02.jpg",
-            "notes": "<h3>Acabados</h3><p>Los acabados especiales aumentan de forma drástica el valor percibido del envase físico en mano.</p>"
+            "layout": "vs",
+            "title": "Hot Stamping vs. Laca UV Sectorizada",
+            "content": "<p>Dos acabados especiales premium para embalajes corporativos:</p>",
+            "vs1": {
+              "title": "Hot Stamping (Metálico)",
+              "desc": "Lámina dorada, plateada o cobre aplicada mediante presión y calor. Aporta un brillo metálico reflectante inigualable, ideal para marcas de lujo y licores.",
+              "badge": "Brillo Metálico",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Laca UV Sectorizada",
+              "desc": "Capa de brillo barniz translúcido colocada únicamente sobre partes del logotipo. Genera contraste táctil y visual contra el fondo mate de la caja de cartón.",
+              "badge": "Brillo Táctil",
+              "highlighted": true
+            },
+            "notes": "<h3>Acabados</h3><p>El uso de acabados especiales aumenta de forma drástica el valor percibido del envase físico en mano.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores Técnicos en Dielines",
-            "content": "<p>Fallas comunes en los planos de troquel vectoriales:</p>",
+            "title": "Errores Técnicos en Planos de Troquel",
+            "content": "<p>Evita estos fallos comunes en packaging físico:</p>",
             "cards": [
               {
                 "num": "❌",
@@ -2615,31 +3370,27 @@ const slidesData = {
             "notes": "<h3>Fallo</h3><p>Los errores de sangrado en el troquel son los más costosos en la imprenta.</p>"
           },
           {
-            "layout": "steps",
-            "title": "Protocolos de Validación del Mockup Físico",
-            "content": "<p>Métodos indispensables para testear la funcionalidad del envase antes de imprimir la tirada masiva:</p>",
-            "steps": [
-              {
-                "title": "Prueba de Apertura y Uso",
-                "desc": "Verificar la ergonomía del cierre y que el consumidor pueda abrirlo sin romper el cartón."
-              },
-              {
-                "title": "Prueba de Góndola Simulada",
-                "desc": "Colocar la maqueta en papel al lado de competidores reales para validar los colores."
-              },
-              {
-                "title": "Prueba de Estrés Logístico",
-                "desc": "Comprobar que el empaque resiste el peso al ser apilado en cajas secundarias."
-              }
-            ],
-            "notes": "<h3>Tip</h3><p>El mockup en papel evita errores de escala imposibles de ver en monitor.</p>"
-          },
-          {
             "layout": "title",
             "title": "Actividad del Día: Modelado en Envases",
             "subtitle": "Bocetado de packaging y modelado 3D en vivo con Illustrator.",
             "content": "<p>Investigación de referentes de empaque en Padlet y desarrollo de un boceto propio. Live class aplicando herramientas 3D y mapeado de motivos en Illustrator.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Guiar a los alumnos en el uso de la herramienta de 3D y materiales de Illustrator sobre las caras del envase.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Instrucciones de Maquetado 3D",
+            "content": "<p>Consignas para el taller de packaging en el aula:</p>",
+            "steps": [
+              {
+                "title": "1. Perfil",
+                "desc": "Dibuja la silueta geométrica del envase a escala real en milímetros."
+              },
+              {
+                "title": "2. Mapear",
+                "desc": "Coloca tu pattern en los materiales y aplícalo a las caras de la botella."
+              }
+            ],
+            "notes": "<h3>Consignas</h3><p>Ayudar a resolver dudas de extrusión 3D de Illustrator en vivo.</p>"
           },
           {
             "layout": "split",
@@ -2661,11 +3412,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy entrenaremos la habilidad más subestimada del diseñador: convencer y vender de forma oral el trabajo realizado.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy dominaremos el discurso de ventas del diseño de identidades:</p><ul><li>La presencia escénica y el control vocal corporativo.</li><li>El silencio estratégico como recurso dramático de atención.</li><li>Manejo del nerviosismo técnico y lagunas de memoria.</li><li>Manejo de objeciones subjetivas del cliente.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
+            "content": "<p>Hoy dominaremos el discurso de ventas del diseño de identidades:</p>",
+            "steps": [
+              {
+                "title": "01. Presencia Vocal",
+                "desc": "Entonación, volumen proyectado y control corporal escénico."
+              },
+              {
+                "title": "02. El Silencio",
+                "desc": "El uso estratégico de pausas para generar interés y retener atención."
+              },
+              {
+                "title": "03. Objeciones de Negocio",
+                "desc": "Cómo responder críticas y blindar el diseño en base al brief."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que una gran idea mal explicada es rechazada de inmediato por el cliente.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Steve Jobs",
+            "content": "La forma en que cuentas tu historia determina el valor que las personas le darán a tu producto. La oratoria es la última capa de diseño.",
+            "notes": "<h3>Cita</h3><p>Jobs preparaba minuciosamente sus Keynotes de Apple ensayando durante semanas.</p>"
           },
           {
             "layout": "split",
@@ -2675,49 +3445,8 @@ const slidesData = {
             "notes": "<h3>Presencia</h3><p>Tu actitud ante el micrófono define el valor que el cliente le da a tu palabra.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Entonación y Ritmo Vocal",
-            "content": "<p>Cómo modelar la voz para proyectar seguridad en el pitch comercial:</p><ul><li>Evita los finales interrogativos en tus afirmaciones de diseño.</li><li>Habla con un volumen proyectado desde el diafragma, marcando las pausas de forma voluntaria para generar ritmo.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Voz</h3><p>El habla monótona e inaudible arruina el interés del cliente por el proyecto.</p>"
-          },
-          {
-            "layout": "highlight",
-            "title": "El Silencio Estratégico como Herramienta",
-            "highlightTitle": "Controlar la Atención del Cliente",
-            "content": "No corras al hablar por miedo a aburrir. Realiza pausas de 2 segundos antes de revelar la propuesta del logotipo o el render de empaque. El silencio genera tensión dramática e indica a la mente de la junta directiva que lo que vas a decir a continuación es crucial.",
-            "notes": "<h3>Silencio</h3><p>El silencio estratégico es una herramienta avanzada de oratoria.</p>"
-          },
-          {
-            "layout": "steps",
-            "title": "Manejo del Nerviosismo Creativo",
-            "content": "<p>Tácticas recomendadas si te quedas en blanco durante tu pitch ante la clase:</p>",
-            "steps": [
-              {
-                "title": "Respira y Pausa",
-                "desc": "Toma aire durante 3 segundos. El público percibe la pausa como control de ritmo."
-              },
-              {
-                "title": "Vuelve a la Estrategia",
-                "desc": "Retoma las metas comerciales definidas en el brief inicial, no hables de estética."
-              },
-              {
-                "title": "Apóyate en el Board",
-                "desc": "Utiliza tu Brand Board de Miro como guía visual sintética sin leer párrafos."
-              }
-            ],
-            "notes": "<h3>Bloqueo</h3><p>Tener un hilo conductor claro evita lagunas mentales.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Manejo de Objeciones del Cliente",
-            "content": "<p>Cómo responder cuando el cliente critica tus decisiones gráficas:</p><ul><li>Escucha con empatía la objeción sin interrumpir ni ponerte a la defensiva.</li><li>Valida su preocupación y redirige la respuesta basándote en los objetivos de la marca definidos en el brief técnico.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Objeciones</h3><p>El cliente busca comprobar si detrás de tu diseño hay criterio o simple capricho visual.</p>"
-          },
-          {
             "layout": "vs",
-            "title": "Feedback de Gusto vs. Feedback de Negocio",
+            "title": "Objeciones de Gusto vs. Objeciones de Negocio",
             "content": "<p>Aprende a clasificar la crítica del cliente durante la defensa del proyecto:</p>",
             "vs1": {
               "title": "Feedback de Gusto Subjetivo",
@@ -2734,55 +3463,110 @@ const slidesData = {
             "notes": "<h3>Feedback</h3><p>Saber clasificar la crítica evita discusiones estériles.</p>"
           },
           {
-            "layout": "split",
-            "title": "El Blindaje del Diseño en el Brief",
-            "content": "<p>La estrategia como el mejor escudo para defender el trabajo visual:</p><ul><li>Si acordaste en el brief que la marca debe proyectar Sofisticación (Chanel), el cliente no puede pedirte tipografías divertidas redondeadas (Bufón).</li><li>Usa el manual y el brief como contratos estéticos firmados.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Blindaje</h3><p>Un diseño alineado al brief inicial es imposible de rechazar conceptualmente.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Manejo de Tiempos y Cronometraje",
-            "content": "<p>La disciplina horaria en defensas de diseño corporativo:</p><ul><li>Si te asignan 2 minutos para presentar, terminar a los 2 minutos exactos demuestra profesionalismo y respeto por el directorio.</li><li>Practica con un cronómetro y ajusta la velocidad del relato de cada sección.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Tiempo</h3><p>Superar el tiempo asignado indica falta de preparación y desorganización.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Menos es Más en las Láminas de Pitch",
-            "content": "<p>Cómo maquetar las diapositivas de apoyo para la defensa oral:</p><ul><li>Evita leer bloques de texto en pantalla; las diapositivas son soporte visual, no guías de lectura.</li><li>Prioriza logotipos limpios, esquemas, mockups y palabras clave gigantes de apoyo.</li></ul>",
-            "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Láminas</h3><p>Las diapositivas cargadas de texto distraen al oyente de tus palabras.</p>"
+            "layout": "stat",
+            "title": "El Ritmo Vocal y las Pausas",
+            "number": "2",
+            "statTitle": "Segundos de Pausa antes de Revelar el Logo",
+            "content": "El silencio estratégico antes de pasar a la diapositiva clave de revelación del logotipo capta el foco de atención de toda la sala de reuniones, indicando de forma inconsciente al cerebro del cliente que lo que verá es de alta jerarquía.",
+            "notes": "<h3>Silencio</h3><p>El silencio estratégico es una herramienta avanzada de oratoria corporativa.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores de Oratoria en Defensas",
-            "content": "<p>Fallas que arruinan la venta estratégica de marcas:</p>",
+            "title": "Manejo del Nerviosismo Creativo",
+            "content": "<p>Tácticas recomendadas si te quedas en blanco durante tu pitch ante el jurado:</p>",
             "cards": [
               {
-                "num": "❌",
-                "title": "Leer la Pantalla",
-                "desc": "Dar la espalda a la junta y leer las diapositivas de soporte de forma monótona."
+                "num": "🧘",
+                "title": "Respirar y Pausar",
+                "desc": "Toma aire durante 3 segundos. El público percibe la pausa como control de ritmo."
               },
               {
-                "num": "❌",
-                "title": "Titubear sin Base",
-                "desc": "Responder con muletillas ('eh', 'este') que delatan inseguridad y falta de ensayo previo."
+                "num": "🔄",
+                "title": "Vuelve a la Estrategia",
+                "desc": "Retoma las metas comerciales definidas en el brief inicial, no hables de estética."
               },
               {
-                "num": "❌",
-                "title": "Disculparse",
-                "desc": "Iniciar diciendo 'no llegué a terminar los mockups'. Oculta tus fallas y destaca el valor que sí traes."
+                "num": "📋",
+                "title": "Apóyate en el Board",
+                "desc": "Utiliza tu Brand Board de Miro como guía visual sintética sin leer párrafos."
               }
             ],
-            "notes": "<h3>Fallo</h3><p>La disculpa inicial devalúa el trabajo de diseño de inmediato.</p>"
+            "notes": "<h3>Nervios</h3><p>El nerviosismo es normal; el secreto es canalizarlo en volumen y postura erguida.</p>"
           },
           {
             "layout": "split",
-            "title": "La Importancia de la Convicción",
-            "content": "<p>Por qué creer en tu diseño es fundamental para venderlo:</p><ul><li>Si demuestras timidez ante tu propuesta visual, el cliente sospechará que no estás convencido del resultado.</li><li>Defiende tu trabajo con orgullo técnico y solidez argumental basada en las semanas de investigación previa.</li></ul>",
+            "title": "El Silencio Estratégico como Herramienta",
+            "content": "<p>No corras al hablar por miedo a aburrir. Realiza pausas de 2 segundos antes de revelar la propuesta del logotipo o el render de empaque. El silencio genera tensión dramática e indica a la mente de la junta directiva que lo que vas a decir a continuación es crucial.</p>",
             "media": "images/d19-jueves-slide02.jpg",
-            "notes": "<h3>Convicción</h3><p>La convicción en tu propuesta es contagiosa para el cliente final.</p>"
+            "notes": "<h3>Silencio</h3><p>El silencio estratégico es una herramienta avanzada de oratoria.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Tácticas de Manejo de Preguntas Críticas",
+            "content": "<p>Cómo responder cuando el tribunal desafía tu propuesta de diseño:</p>",
+            "steps": [
+              {
+                "title": "1. Escuchar sin Interrumpir",
+                "desc": "Deja que el cliente exponga su duda completa sin ponerte a la defensiva."
+              },
+              {
+                "title": "2. Redirigir al Brief",
+                "desc": "Justifica tu elección citando los objetivos estratégicos acordados al inicio del proyecto."
+              },
+              {
+                "title": "3. Aceptar Fallas Técnicas",
+                "desc": "Si es un problema real de legibilidad, reconócelo y comprométete a refinar el vector."
+              }
+            ],
+            "notes": "<h3>Preguntas</h3><p>Saber responder demuestra madurez profesional en la consultoría de marca.</p>"
+          },
+          {
+            "layout": "highlight",
+            "title": "El Blindaje del Diseño en el Brief",
+            "highlightTitle": "Contrato Estético Firme",
+            "content": "Si acordaste en el brief inicial de la semana 6 que la marca debe proyectar Sofisticación y Estatus (arquetipo del Gobernante), el cliente no puede pedirte tipografías divertidas redondeadas (arquetipo del Bufón). El brief validado es tu mejor escudo legal y estético frente a caprichos de último minuto.",
+            "notes": "<h3>Blindaje</h3><p>El brief firmado reduce a cero los rechazos irracionales de propuestas de logo.</p>"
+          },
+          {
+            "layout": "vs",
+            "title": "Diapositivas de Pitch: Visuales vs. Cargadas de Texto",
+            "content": "<p>El diseño de las láminas de soporte para la oratoria de negocios:</p>",
+            "vs1": {
+              "title": "Láminas con Párrafos (Genéricas)",
+              "desc": "Colocar todo el guión en la diapositiva y dedicarse a leerlo. Distrae al oyente, devalúa la presentación y denota falta de preparación del pitch.",
+              "badge": "Aburrido",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Soporte Visual Limpio (Premium)",
+              "desc": "Diapositivas con palabras clave gigantes, mockups fotorrealistas y logotipos limpios. El foco permanece 100% en tu voz y argumento oral.",
+              "badge": "Persuasivo",
+              "highlighted": true
+            },
+            "notes": "<h3>Láminas</h3><p>Las láminas del pitch son soporte de tu voz, no tarjetas de lectura.</p>"
+          },
+          {
+            "layout": "grid",
+            "title": "Pautas de Lenguaje No Verbal",
+            "content": "<p>Gestos corporativos que aumentan la credibilidad de tu discurso:</p>",
+            "cards": [
+              {
+                "num": "👐",
+                "title": "Manos Abiertas",
+                "desc": "Mantener las palmas visibles al gesticular demuestra honestidad y transparencia."
+              },
+              {
+                "num": "👁️",
+                "title": "Contacto Visual",
+                "desc": "Mirar a los ojos a los evaluadores en lugar de ver el suelo o la pantalla del monitor."
+              },
+              {
+                "num": "🧘",
+                "title": "Postura Abierta",
+                "desc": "Hombros relajados y pecho abierto para proyectar volumen de voz desde el diafragma."
+              }
+            ],
+            "notes": "<h3>Lenguaje</h3><p>El lenguaje corporal comunica tanta seguridad como la calidad de los vectores.</p>"
           },
           {
             "layout": "title",
@@ -2790,6 +3574,22 @@ const slidesData = {
             "subtitle": "Role-play de pitch y oratoria en parejas.",
             "content": "<p>Realizaremos un ensayo cruzados del pitch de venta final en parejas para afinar la postura, la entonación y el manejo de tiempos con el cronómetro.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Dar consejos de oratoria y lenguaje no verbal. Enfatizar la claridad del mensaje principal.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Consignas del Simulacro de Oratoria",
+            "content": "<p>Pasos para el ensayo de pitch con cronómetro en parejas:</p>",
+            "steps": [
+              {
+                "title": "Paso 1. Ensayo",
+                "desc": "Expón tu pitch de 2 minutos a tu compañero mientras toma el tiempo."
+              },
+              {
+                "title": "Paso 2. Feedback",
+                "desc": "Tu compañero anotará muletillas u errores corporativos a corregir."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Garantizar que todos los grupos ensayen y pulan sus tiempos de exposición.</p>"
           },
           {
             "layout": "split",
@@ -2811,11 +3611,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Hoy es la última clase de corrección. Haremos una auditoría cruzada técnica de los proyectos de cara a la defensa de mañana.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy auditaremos y refinaremos los proyectos integradores finales:</p><ul><li>Concepto de Design Crit en agencias profesionales de marca.</li><li>Auditoría técnica exhaustiva de dielines vectoriales de troquel.</li><li>Verificación de la consistencia cromática entre piezas.</li><li>Checklist definitivo de pre-entrega técnica de archivos en Drive.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
+            "content": "<p>Hoy auditaremos y refinaremos los proyectos integradores finales:</p>",
+            "steps": [
+              {
+                "title": "01. Design Crit",
+                "desc": "La importancia de auditar el diseño antes del jurado final."
+              },
+              {
+                "title": "02. Auditoría Técnica",
+                "desc": "Revisión de dielines vectoriales, sangrados y curvas."
+              },
+              {
+                "title": "03. Pre-Presentación",
+                "desc": "Checklist de carpetas, permisos en la nube y sincronía del pitch."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta la agenda. Remarca que hoy es el espacio para cometer errores y corregirlos antes del jurado de mañana.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Milton Glaser",
+            "content": "Hay tres respuestas posibles ante una pieza de diseño: Sí, No, y ¡WOW!. El WOW es el objetivo que debemos auditar y asegurar hoy en la mesa de corrección.",
+            "notes": "<h3>Cita</h3><p>Glaser diseñó la marca legendaria I Love NY.</p>"
           },
           {
             "layout": "split",
@@ -2825,45 +3644,53 @@ const slidesData = {
             "notes": "<h3>Crit</h3><p>La crítica debe ser técnica, no basada en gustos personales.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Auditoría Técnica del Dieline",
-            "content": "<p>Detalles críticos a revisar hoy en tus planos de troquel:</p><ul><li>Verifica que la línea de corte (roja) sea continua y la de doblez (azul) discontinua.</li><li>Asegúrate de que los colores de fondo se extiendan 3 mm por fuera de las líneas de corte (sangrado).</li><li>Comprueba la reserva de pegamento en las solapas corporativas.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Auditoría</h3><p>Una falla de dieline es motivo de descalificación en imprentas comerciales.</p>"
+            "layout": "vs",
+            "title": "Crítica Técnica de Diseño vs. Juicio Subjetivo",
+            "content": "<p>Cómo estructurar el feedback en las auditorías cruzadas:</p>",
+            "vs1": {
+              "title": "Crítica Subjetiva (Inútil)",
+              "desc": "'Ese afiche no me gusta, el color es feo'. No aporta datos de mejora constructivos y se basa en preferencias estéticas personales del oyente.",
+              "badge": "Inútil",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Auditoría Técnica (Profesional)",
+              "desc": "'El logotipo invade el área de seguridad X en el póster 2, lo que reduce su legibilidad'. Aporta argumentos geométricos medibles para mejorar la pieza.",
+              "badge": "Estructural / Geométrico",
+              "highlighted": true
+            },
+            "notes": "<h3>Comparación</h3><p>Explicar a los alumnos cómo redactar posits con crítica técnica constructiva.</p>"
           },
           {
-            "layout": "split",
-            "title": "Verificación de Consistencia Cromática",
-            "content": "<p>Asegurando el mismo color en las diferentes piezas del sistema:</p><ul><li>Compara visualmente los colores del logotipo en el afiche del LAB 1 con los pósteres del LAB 2 y el PDF del manual.</li><li>¿Coinciden los valores hexadecimales (HEX) de forma exacta en todos los archivos digitales?</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Color</h3><p>Las variaciones de color entre archivos denotan falta de prolijidad en el control de calidad del manual.</p>"
+            "layout": "stat",
+            "title": "El Margen de Seguridad de Troquel",
+            "number": "3",
+            "statTitle": "Milímetros Obligatorios de Sangrado",
+            "content": "Para evitar los antiestéticos bordes blancos provocados por el desvío físico de la cuchilla metálica al cortar el cartón impreso en fábrica, exige extender el fondo de la etiqueta 3 mm por fuera de la línea de corte roja del dieline.",
+            "notes": "<h3>Sangrado</h3><p>El sangrado de troquel es una especificación de preimpresión crítica.</p>"
           },
           {
-            "layout": "steps",
+            "layout": "grid",
             "title": "Checklist de Pre-Presentación",
-            "content": "<p>Verificaciones indispensables que debes realizar hoy antes de la entrega final:</p>",
-            "steps": [
+            "content": "<p>Verificaciones finales obligatorias antes del cierre de entregas de hoy:</p>",
+            "cards": [
               {
-                "title": "Permisos de Drive",
-                "desc": "Configura la carpeta de entrega como pública para evitar accesos denegados."
+                "num": "📁",
+                "title": "Permisos Drive",
+                "desc": "Configura la carpeta de entrega como pública para evitar accesos denegados por el jurado."
               },
               {
-                "title": "Prueba de Contornos",
-                "desc": "Verifica que todas las tipografías del logo estén convertidas a curvas."
+                "num": "📐",
+                "title": "Curvas y Nodos",
+                "desc": "Verifica que todas las fuentes tipográficas del logotipo estén convertidas a contornos vectoriales."
               },
               {
-                "title": "Sincronía de Tiempos",
-                "desc": "Ensaya el pitch con cronómetro. No superes los 2 minutos asignados."
+                "num": "⏱️",
+                "title": "Cronómetro",
+                "desc": "Practica el pitch defensivo y comprueba que no exceda los 2 minutos asignados."
               }
             ],
-            "notes": "<h3>Tip</h3><p>No dejes la subida de archivos para el último minuto.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Organización de Carpetas en Drive",
-            "content": "<p>Estructura lógica de entrega exigida por el tribunal evaluador:</p><ul><li>Crea una carpeta llamada `Grupo-XX-Entrega-Final` en Google Drive.</li><li>Crea subcarpetas específicas: `01. Manual-Marca`, `02. Posters`, `03. Envase-3D`, y `04. Editable-Source`.</li><li>Verifica que los enlaces no requieran autorizaciones especiales de acceso.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Drive</h3><p>Una estructura de carpetas prolija facilita y agiliza la tarea de evaluación de las entregas.</p>"
+            "notes": "<h3>Checklist</h3><p>El checklist previene los fallos organizativos típicos de pre-entrega.</p>"
           },
           {
             "layout": "split",
@@ -2873,30 +3700,54 @@ const slidesData = {
             "notes": "<h3>Curvas</h3><p>La conversión a curvas es obligatoria en todos los archivos de entrega final vectorial.</p>"
           },
           {
-            "layout": "split",
-            "title": "El Control de los 2 Minutos de Exposición",
-            "content": "<p>Tácticas finales para ajustar la velocidad de tu discurso oral:</p><ul><li>Si superas los 2 minutos, elimina detalles redundantes del logotipo.</li><li>Enfócate en la frustración inicial de tu Buyer Persona y en cómo el diseño resuelve su problema de posicionamiento comercial.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Minutos</h3><p>Aprender a sintetizar ideas complejas en poco tiempo es la clave del pitch persuasivo exitoso.</p>"
+            "layout": "steps",
+            "title": "Organización de la Carpeta de Entrega",
+            "content": "<p>Estructura de subcarpetas en Drive exigida por el tribunal evaluador:</p>",
+            "steps": [
+              {
+                "title": "01. Manual-Marca",
+                "desc": "PDF final en formato horizontal interactivo 16:9 con Brand Guidelines."
+              },
+              {
+                "title": "02. Posters-Afiche",
+                "desc": "Los 3 pósteres de serie del LAB 2 y el afiche conceptual del LAB 1."
+              },
+              {
+                "title": "03. Envase-3D",
+                "desc": "El editable vectorial original del dieline técnico y los renders 3D."
+              }
+            ],
+            "notes": "<h3>Drive</h3><p>Una estructura limpia en la nube agiliza la tarea de corrección.</p>"
           },
           {
-            "layout": "split",
-            "title": "Cómo Recibir Críticas Profesionales",
-            "content": "<p>Postura madura frente al feedback técnico del jurado evaluador:</p><ul><li>La crítica está dirigida al funcionamiento del sistema visual, nunca a tu persona de forma personal.</li><li>Escucha las sugerencias del jurado técnico como guías de mejora para armar tu portafolio profesional en el futuro.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Feedback</h3><p>Saber recibir feedback con madurez técnica distingue al diseñador amateur del profesional.</p>"
+            "layout": "highlight",
+            "title": "El Ensayo Final del Pitch Comercial",
+            "highlightTitle": "Ajuste del Cronómetro",
+            "content": "Si durante tu simulacro de hoy superas los 2 minutos asignados por el tribunal, reduce los detalles técnicos vectoriales del discurso. Enfócate exclusivamente en el insight de tu audiencia y en cómo la identidad y el envase resuelven la frustración del Buyer Persona.",
+            "notes": "<h3>Ensayo</h3><p>El jurado corta la exposición de forma estricta a los 2 minutos de iniciado.</p>"
           },
           {
-            "layout": "split",
-            "title": "Ajustes de Último Minuto en Modelado 3D",
-            "content": "<p>Consejos para el renderizado tridimensional final en Illustrator:</p><ul><li>Verifica que los materiales del envase tengan una rugosidad y sombras adecuadas en el panel de materiales 3D.</li><li>Comprueba que la etiqueta mapeada no presente zonas pixeladas o con baja definición.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>3D</h3><p>Un render bien terminado y pulido eleva de forma inmediata la estética general del manual de marca.</p>"
+            "layout": "vs",
+            "title": "Vectores Limpios vs. Trazados Sucios",
+            "content": "<p>La prolijidad vectorial interna que auditará el docente:</p>",
+            "vs1": {
+              "title": "Trazados Descuidados (Sucios)",
+              "desc": "Capas sin nombrar, nodos huérfanos sueltos fuera del lienzo, máscaras de recorte apiladas sin orden y duplicados vectoriales basura de fondo.",
+              "badge": "Amateur",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Estructura Limpia (Ordenada)",
+              "desc": "Capas renombradas por secciones, colores de la paleta guardados en swatches y curvas unificadas con la herramienta Busca-trazos. Listo para imprenta.",
+              "badge": "Profesional",
+              "highlighted": true
+            },
+            "notes": "<h3>Vectores</h3><p>El orden en las capas del .ai demuestra rigor técnico profesional.</p>"
           },
           {
             "layout": "grid",
-            "title": "Errores de Pre-Entrega",
-            "content": "<p>Fallas organizativas que arruinan la calificación del proyecto:</p>",
+            "title": "Errores de Pre-Entrega en Proyectos",
+            "content": "<p>Fallas que arruinan la calificación en la mesa de entrega final:</p>",
             "cards": [
               {
                 "num": "❌",
@@ -2917,18 +3768,27 @@ const slidesData = {
             "notes": "<h3>Fallo</h3><p>Las fallas en accesos de Drive son las causas más recurrentes de aplazamientos innecesarios.</p>"
           },
           {
-            "layout": "split",
-            "title": "La Importancia de la Prolijidad de Capas",
-            "content": "<p>Limpieza técnica de los archivos editables entregados:</p><ul><li>Elimina todas las mesas de trabajo vacías o de bocetos descartados en tus archivos vectoriales finales.</li><li>Nombra de forma clara cada capa en el panel: `Logo`, `Patterns`, `Retícula` y `Texto`.</li></ul>",
-            "media": "images/d08-miercoles-slide03.jpg",
-            "notes": "<h3>Capas</h3><p>El orden en las capas vectoriales demuestra seriedad y profesionalismo al trabajar en agencias.</p>"
-          },
-          {
             "layout": "title",
             "title": "Actividad: Votación de Fortalezas",
             "subtitle": "Feedback estructurado y votación colaborativa en Mentimeter.",
-            "content": "<p>Participaremos en una sesión de crítica grupal final (feedback estructurado) y votación de fortalezas de los proyectos en Mentimeter para pulir los discursos de mañana.</p>",
+            "content": "<p>Participaremos en una sesión de crítica grupal final (feedback estructurado) y votación de strengths de los proyectos en Mentimeter para pulir los discursos de mañana.</p>",
             "notes": "<h3>Notas de Clase</h3><p>Asegurar un clima de colaboración. Identificar puntos fuertes y aspectos finales a pulir para la entrega.</p>"
+          },
+          {
+            "layout": "steps",
+            "title": "Instrucciones de la Auditoría Cruzada",
+            "content": "<p>Consignas para la revisión de dielines y manuales en Miro:</p>",
+            "steps": [
+              {
+                "title": "1. Checklist",
+                "desc": "Abre el manual del grupo vecino y comprueba el área de seguridad y muestras."
+              },
+              {
+                "title": "2. Dieline",
+                "desc": "Verifique los 3 mm de sangrado de fondo en el plano de troquel del envase."
+              }
+            ],
+            "notes": "<h3>Taller</h3><p>Guiar las correcciones vectoriales finales de los alumnos en sus dielines en vivo.</p>"
           },
           {
             "layout": "split",
@@ -2950,11 +3810,30 @@ const slidesData = {
             "notes": "<h3>Apertura</h3><p>Den la bienvenida al jurado invitado. Hoy se evalúa el esfuerzo de las últimas 4 semanas de construcción marcaria 360°.</p>"
           },
           {
-            "layout": "split",
+            "layout": "steps",
             "title": "Agenda de la Clase",
-            "content": "<p>Hoy cerraremos el Módulo 2 con la defensa de los proyectos integradores:</p><ul><li>Bienvenida y encuadre del tribunal evaluador invitado.</li><li>Ronda de pitches defensivos del Grupo A (Clases 21-30).</li><li>Ronda de pitches defensivos del Grupo B (Clases 31-40).</li><li>Deliberación, feedback final y entrega de diplomas virtuales.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
+            "content": "<p>Hoy cerraremos el Módulo 2 con la defensa de los proyectos integradores:</p>",
+            "steps": [
+              {
+                "title": "01. Encuadre Jurado",
+                "desc": "Presentación del tribunal evaluador invitado y reglas de tiempos."
+              },
+              {
+                "title": "02. Defensa de Proyectos",
+                "desc": "Ronda de pitches de 2 minutos y preguntas de validación técnica."
+              },
+              {
+                "title": "03. Calificaciones",
+                "desc": "Deliberación final de notas, feedback grupal y entrega de diplomas."
+              }
+            ],
             "notes": "<h3>Agenda</h3><p>Presenta al jurado invitado y establece las reglas del cronómetro del pitch de forma firme.</p>"
+          },
+          {
+            "layout": "quote",
+            "title": "Tribunal Evaluador de Marca",
+            "content": "Una marca exitosa debe funcionar en el mundo real. Hoy evaluaremos la consistencia estratégica de su sistema visual, su oratoria de ventas y su rigor técnico de impresión.",
+            "notes": "<h3>Cita</h3><p>Cita de encuadre para que los alumnos entiendan la seriedad del tribunal.</p>"
           },
           {
             "layout": "split",
@@ -2964,11 +3843,30 @@ const slidesData = {
             "notes": "<h3>TP 2</h3><p>El entregable debe reflejar rigor técnico e integración del sistema.</p>"
           },
           {
-            "layout": "split",
-            "title": "El Rol de la Defensa Profesional",
-            "content": "<p>La importancia del pitch de 2 minutos en la calificación final:</p><ul><li>El pitch no es solo describir lo que se ve en pantalla; es justificar cómo tu diseño responde a un problema de posicionamiento.</li><li>El jurado evaluará la solidez argumental, el lenguaje no verbal y el cronometraje exacto.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Defensa</h3><p>La defensa oral consolida o destruye la calidad gráfica de tu entrega de marca.</p>"
+            "layout": "vs",
+            "title": "Rigor de Troquel vs. Modelado Conceptual 3D",
+            "content": "<p>Las dos facetas técnicas evaluadas en el diseño de packaging:</p>",
+            "vs1": {
+              "title": "Plano de Troquel (Dieline)",
+              "desc": "Precisión exacta en milímetros. Debe respetar las líneas de corte rojas, dobleces azules punteadas, y contar con la reserva de pegamento libre de tinta.",
+              "badge": "Viabilidad Industrial",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Modelado Volumétrico 3D",
+              "desc": "El render tridimensional en Illustrator con luces, texturas de material (vidrio, cartón) y la etiqueta correctamente mapeada en perspectiva.",
+              "badge": "Presentación de Cliente",
+              "highlighted": true
+            },
+            "notes": "<h3>Packaging</h3><p>Ambas dimensiones son evaluadas en la nota final del producto.</p>"
+          },
+          {
+            "layout": "stat",
+            "title": "La Defensa del Proyecto de Marca",
+            "number": "2",
+            "statTitle": "Minutos del Pitch del Diseñador",
+            "content": "Cada grupo dispone de un límite estricto de 2 minutos para defender su marca ante el tribunal. Exponer la historia de origen, arquetipo y soluciones de packaging de forma sintética es parte indispensable de la rúbrica de calificación final.",
+            "notes": "<h3>Estadística</h3><p>El control del tiempo demuestra profesionalismo en la oratoria de ventas de la agencia.</p>"
           },
           {
             "layout": "grid",
@@ -3001,53 +3899,72 @@ const slidesData = {
             "notes": "<h3>Proceso</h3><p>El jurado valora el aprendizaje y la evolución sobre el diseño fortuito.</p>"
           },
           {
-            "layout": "split",
-            "title": "Evaluación de la Precisión Técnica",
-            "content": "<p>Auditoría del dieline y el modelado 3D del envase:</p><ul><li>Se revisará que las solapas de pegado cuenten con la reserva de cola libre de tinta.</li><li>Se penalizarán los dielines con líneas de corte o doblez invertidas o sin el sangrado perimetral de 3 mm exigido.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Técnico</h3><p>El rigor en el dieline demuestra que el alumno está listo para trabajar con imprentas reales.</p>"
+            "layout": "steps",
+            "title": "Pautas de Defensa de Portafolio",
+            "content": "<p>Consejos clave para lucir profesional en tu exposición final:</p>",
+            "steps": [
+              {
+                "title": "Hablar al Jurado",
+                "desc": "Mantén el contacto visual directo con los evaluadores, no leas diapositivas de texto."
+              },
+              {
+                "title": "Estrategia Primero",
+                "desc": "Justifica tus decisiones de diseño (colores, tipografía) basándote en el brief, no en el gusto."
+              },
+              {
+                "title": "Manejo del Tiempo",
+                "desc": "Asegura terminar el pitch antes de que el cronómetro marque los 2 minutos asignados."
+              }
+            ],
+            "notes": "<h3>Defensa</h3><p>La convicción y firmeza argumental del pitch multiplica el valor del diseño vectorial expuesto.</p>"
           },
           {
-            "layout": "split",
-            "title": "Evaluación de Oratoria y Persuasión",
-            "content": "<p>Análisis de tus habilidades de oratoria comercial:</p><ul><li>¿El pitch comenzó exponiendo el problema del Buyer Persona o describiendo el logo de forma aburrida?</li><li>Se valorará el control vocal, la entonación segura y el apego estricto al límite de 2 minutos.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Persuasión</h3><p>El pitch debe emocionar y convencer a la junta directiva de que eres el diseñador indicado.</p>"
-          },
-          {
-            "layout": "split",
+            "layout": "highlight",
             "title": "Registro Fotográfico de Portafolio",
-            "content": "<p>Creando los activos visuales para tu inserción laboral futura:</p><ul><li>Durante las exposiciones, tomaremos capturas digitales de los Brand Boards y mockups 3D de packaging.</li><li>Estas imágenes conformarán las bases de tu portafolio profesional de Behance para captar clientes reales.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
+            "highlightTitle": "Activos de Inserción Laboral",
+            "content": "Durante la defensa del proyecto integrador final, tomaremos capturas de los Brand Boards vectoriales y mockups 3D de packaging. Estas imágenes conformarán la base de su portafolio profesional de Behance, facilitando su inserción directa en el mercado laboral de diseño.",
             "notes": "<h3>Portafolio</h3><p>Un buen registro de proyecto integrador es la mejor carta de presentación para entrevistas laborales.</p>"
           },
           {
-            "layout": "split",
-            "title": "Ronda de Defensas del Grupo A",
-            "content": "<p>Inicio de exposiciones de los primeros grupos de la clase:</p><ul><li>Cada grupo tiene 2 minutos improrrogables para exponer y 3 minutos para preguntas del jurado.</li><li><strong>Foco:</strong> Mantener el orden de exposición estratégica acordado en clase.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Grupo A</h3><p>Cronometrar con precisión y tomar notas para el feedback posterior.</p>"
+            "layout": "vs",
+            "title": "Ronda de Defensas: Grupo A vs. Grupo B",
+            "content": "<p>Orden y distribución del evento de pitches finales en el aula:</p>",
+            "vs1": {
+              "title": "Bloque A (Clases 21 a 30)",
+              "desc": "Exposición de los primeros 10 grupos de la clase. Enfoque en identidades corporativas, semiótica de marca y sistemas elásticos de pósteres.",
+              "badge": "Exposición Bloque A",
+              "highlighted": false
+            },
+            "vs2": {
+              "title": "Bloque B (Clases 31 a 40)",
+              "desc": "Exposición de los segundos 10 grupos de la clase. Enfoque en Brand Guidelines, precisión de troqueles y modelado 3D de empaques.",
+              "badge": "Exposición Bloque B",
+              "highlighted": true
+            },
+            "notes": "<h3>Bloques</h3><p>Mantener una transición ágil entre bloques para respetar la agenda de los jurados invitados.</p>"
           },
           {
-            "layout": "split",
-            "title": "Ronda de Defensas del Grupo B",
-            "content": "<p>Continuación de las exposiciones de la segunda mitad de la clase:</p><ul><li>Los grupos presentarán sus Brand Boards, afiches conceptuales y envases modelados en 3D.</li><li><strong>Foco:</strong> Destacar las mejoras técnicas aplicadas a partir del simulacro de ayer.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Grupo B</h3><p>Mantén la fluidez del evento y fomenta el respeto silencioso del resto del aula.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Deliberación del Tribunal Evaluador",
-            "content": "<p>Fase de debate privado para consensuar calificaciones:</p><ul><li>El jurado invitado y los docentes contrastarán las notas de la rúbrica técnica con el desempeño del pitch oral.</li><li>Se consensuarán las menciones de honor de los mejores proyectos del módulo.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Deliberación</h3><p>Fase a realizar en sala de reunión privada de Zoom/Meet.</p>"
-          },
-          {
-            "layout": "split",
-            "title": "Feedback Colectivo Final del Módulo",
-            "content": "<p>Ronda de reflexiones grupales sobre los aprendizajes alcanzados:</p><ul><li>El jurado compartirá las fortalezas generales observadas y los desafíos de diseño de marcas en el mercado real.</li><li>Los alumnos podrán dar su visión sobre la evolución del Módulo 2.</li></ul>",
-            "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Feedback</h3><p>Fomentar un cierre enriquecedor y constructivo para toda la clase.</p>"
+            "layout": "grid",
+            "title": "Criterios de Deliberación del Jurado",
+            "content": "<p>Variables para consensuar las calificaciones finales de los alumnos:</p>",
+            "cards": [
+              {
+                "num": "💡",
+                "title": "Síntesis Conceptual",
+                "desc": "Legibilidad semiótica del logotipo y el universo visual elástico."
+              },
+              {
+                "num": "📐",
+                "title": "Rigor Vectorial",
+                "desc": "Precisión matemática del plano de troquel del envase y curvas limpias."
+              },
+              {
+                "num": "🎙️",
+                "title": "Oratoria Persuasiva",
+                "desc": "Claridad argumentativa y defensa comercial de la propuesta en el pitch."
+              }
+            ],
+            "notes": "<h3>Deliberación</h3><p>El debate de notas se realizará en una sesión de sala de Zoom privada del jurado.</p>"
           },
           {
             "layout": "title",
@@ -3057,11 +3974,27 @@ const slidesData = {
             "notes": "<h3>Notas de Clase</h3><p>Evaluar según la rúbrica de proceso de boceto, indicadores técnicos y habilidades de presentación y oratoria.</p>"
           },
           {
+            "layout": "steps",
+            "title": "Cierre y Publicación de Calificaciones",
+            "content": "<p>Fase de cierre formal y devolución colectiva:</p>",
+            "steps": [
+              {
+                "title": "Devolución Colectiva",
+                "desc": "El jurado comparte las fortalezas y desafíos del diseño marcario observado en el aula."
+              },
+              {
+                "title": "Notas y Diplomas",
+                "desc": "Se publican las calificaciones del TP2 y se realiza la entrega digital de los diplomas."
+              }
+            ],
+            "notes": "<h3>Cierre</h3><p>Felicitar a toda la clase por su esfuerzo sostenido a lo largo de las 4 semanas.</p>"
+          },
+          {
             "layout": "split",
             "title": "Cierre del Curso y Despedida",
-            "content": "<p>Cierre formal del Módulo 2 y del trayecto académico de Branding:</p><ul><li>Publicación oficial de notas finales del proyecto integrador.</li><li>Entrega digital del diploma de finalización del Módulo 2.</li><li>¡Felicidades por construir marcas profesionales listas para el mercado real!</li></ul>",
+            "content": "<p>Cierre formal del Módulo 2 y del trayecto de Branding:</p><ul><li>¡Felicidades por construir marcas profesionales listas para el mercado real!</li><li>Los editables de manual y empaque quedan registrados en su carpeta de portafolios.</li><li>Los accesos al Drive permanecen abiertos para consultas futuras de preimpresión.</li></ul>",
             "media": "images/d15-viernes-slide02.jpg",
-            "notes": "<h3>Despedida</h3><p>Feliciten a toda la clase por su esfuerzo sostenido a lo largo del módulo. Cierre formal.</p>"
+            "notes": "<h3>Despedida</h3><p>Despide al jurado y agradece a los estudiantes su dedicación técnica.</p>"
           }
         ]
       }

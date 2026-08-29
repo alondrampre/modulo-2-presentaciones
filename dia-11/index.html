@@ -732,18 +732,30 @@
     "notes": "<h3>Apertura</h3><p>Hoy cerramos la entrega del LAB 2 y entraremos en la normalización y accesibilidad del color de marca.</p>"
   },
   {
-    "layout": "split",
+    "layout": "steps",
     "title": "Agenda de la Clase",
-    "content": "<p>Hoy normalizaremos los colores corporativos de nuestros proyectos:</p><ul><li>Recepción, entrega final y nivelación técnica del LAB 2.</li><li>La Paleta Funcional de Marca y sus roles en la interfaz.</li><li>La regla cromática de distribución 60-30-10.</li><li>Accesibilidad WCAG y diferencias técnicas entre RGB, HEX y CMYK.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "content": "<p>Hoy normalizaremos los colores corporativos de nuestros proyectos:</p>",
+    "steps": [
+      {
+        "title": "01. Nivelación LAB 2",
+        "desc": "Entrega final y feedback de la serie de pósteres dinámicos."
+      },
+      {
+        "title": "02. Paleta Funcional",
+        "desc": "Definición de fondos claros, oscuros y acentos de color."
+      },
+      {
+        "title": "03. Normalización Técnica",
+        "desc": "Diferencias y fichas técnicas en HEX, RGB y CMYK."
+      }
+    ],
     "notes": "<h3>Agenda</h3><p>Explica el temario. Resalta que el color en marcas se gestiona con números exactos, no con nombres subjetivos.</p>"
   },
   {
-    "layout": "split",
-    "title": "Recepción y Feedback del LAB 2",
-    "content": "<p>Nivelación técnica de las series de pósteres entregadas:</p><ul><li>Evaluación de la consistencia cromática y tipográfica en las 3 piezas.</li><li>Análisis de la elasticidad de los patterns aplicados en los fondos.</li><li>Sugerencias de prolijidad en los márgenes de seguridad para móviles.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Feedback</h3><p>Destacar visualmente las mejores resoluciones de asimetría tipográfica de la clase.</p>"
+    "layout": "quote",
+    "title": "Josef Albers",
+    "content": "Un mismo color se percibe de forma diferente según el fondo que lo rodea. Normalizar el color es predecir su comportamiento físico.",
+    "notes": "<h3>Cita</h3><p>Albers es el gran teórico de la interacción del color.</p>"
   },
   {
     "layout": "split",
@@ -751,47 +763,6 @@
     "content": "<p>La paleta no es solo un conjunto de colores de moda. Debe responder a las necesidades funcionales del sistema:</p><ul><li><strong>Fondo Claro:</strong> Tonalidades hueso o crema para textos largos.</li><li><strong>Fondo Oscuro:</strong> Azul marino o carbón para bloques pesados.</li><li><strong>Colores de Acento:</strong> Para botones de acción (CTA) y llamadas de atención.</li></ul>",
     "media": "images/d17-martes-slide02.jpg",
     "notes": "<h3>Paleta</h3><p>La paleta debe ser medible y acotada; eviten las paletas arcoíris sin justificación.</p>"
-  },
-  {
-    "layout": "steps",
-    "title": "La Distribución del Color: Regla 60-30-10",
-    "content": "<p>Cómo aplicar la paleta de colores de marca en las piezas de diseño para mantener la armonía cromática:</p>",
-    "steps": [
-      {
-        "title": "60% Dominante",
-        "desc": "El fondo de la pieza. Mantiene la neutralidad. Suele ser crema, blanco o navy oscuro."
-      },
-      {
-        "title": "30% Secundario",
-        "desc": "Módulos, tarjetas y tipografía principal. Otorga carácter y estructura."
-      },
-      {
-        "title": "10% Acento",
-        "desc": "Botones de compra, alertas de valor y pequeños detalles. Focaliza el ojo."
-      }
-    ],
-    "notes": "<h3>Regla</h3><p>Esta regla mantiene el equilibrio cromático de la composición de forma instintiva.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "La Psicología del Color Estratégica",
-    "content": "<p>Cómo el color posiciona a la marca en una categoría determinada:</p><ul><li>El color es el primer elemento visual que el cerebro decodifica antes de procesar formas o tipografías.</li><li><strong>Rojo:</strong> Urgencia, pasión, energía activa (ej. Netflix).</li><li><strong>Azul:</strong> Confianza, seguridad, estabilidad (ej. bancos y tecnología).</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Psicología</h3><p>El color elegido debe estar alineado con la historia de origen y el arquetipo de marca.</p>"
-  },
-  {
-    "layout": "highlight",
-    "title": "Accesibilidad y Contraste (WCAG)",
-    "highlightTitle": "Legibilidad como Derecho",
-    "content": "Diseñar sin verificar el contraste es excluir a usuarios con daltonismo o baja visión. Las normas WCAG exigen una relación de contraste mínima de 4.5:1 para texto normal sobre fondos de color corporativos. Utiliza herramientas web para testear el contraste antes de fijar los colores del manual.",
-    "notes": "<h3>Accesibilidad</h3><p>Usar herramientas web de chequeo de contraste antes de guardar el manual.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Herramientas de Verificación de Contraste",
-    "content": "<p>Cómo testear la accesibilidad cromática de tus diseños:</p><ul><li>Usa sitios web gratuitos como **Adobe Color Contrast Analyzer** o **Coolors Contrast**.</li><li>Ingresa el código hexadecimal del fondo y del texto.</li><li>La herramienta te dará una calificación (Pass o Fail) según las pautas oficiales WCAG.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Contraste</h3><p>Un diseñador profesional garantiza la legibilidad para todos los usuarios en sus manuales.</p>"
   },
   {
     "layout": "vs",
@@ -812,48 +783,106 @@
     "notes": "<h3>Física</h3><p>Advertir sobre el desborde cromático al pasar de RGB a CMYK en Illustrator.</p>"
   },
   {
-    "layout": "split",
-    "title": "El Sistema de Tintas Planas Pantone",
-    "content": "<p>El estándar industrial para impresión corporativa premium:</p><ul><li>Un color Pantone no es una mezcla de CMYK de imprenta; es una tinta pura directa premezclada en fábrica.</li><li>Garantiza que el color del logotipo impreso en una caja de cartón coincida exactamente con el de un sobre corporativo.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Pantone</h3><p>Los colores Pantone son indispensables en marcas globales para unificar su identidad mundial.</p>"
+    "layout": "stat",
+    "title": "El Sistema de Tintas Pantone",
+    "number": "111",
+    "statTitle": "Estándar Global de Fichas de Color",
+    "content": "Pantone unifica el color industrial a través de un catálogo numérico de tintas directas premezcladas, garantizando que el color del logotipo impreso en una caja coincida exactamente con el de un sobre corporativo en cualquier parte del mundo.",
+    "notes": "<h3>Pantone</h3><p>Explicar por qué las marcas corporativas pagan licencias de color Pantone.</p>"
+  },
+  {
+    "layout": "grid",
+    "title": "Rasgos de Psicología del Color Estratégica",
+    "content": "<p>Cómo el color sitúa a la marca en una categoría determinada del mercado:</p>",
+    "cards": [
+      {
+        "num": "🔴",
+        "title": "Rojo Activo",
+        "desc": "Energía, urgencia, pasión (ej. Netflix, Coca-Cola). Excelente para CTAs rápidos."
+      },
+      {
+        "num": "🔵",
+        "title": "Azul Confianza",
+        "desc": "Seguridad, estabilidad, lógica corporativa (ej. bancos y marcas de salud)."
+      },
+      {
+        "num": "🟢",
+        "title": "Verde Orgánico",
+        "desc": "Crecimiento, ecología, salud y finanzas éticas (ej. Whole Foods)."
+      }
+    ],
+    "notes": "<h3>Psicología</h3><p>Fomentar la justificación cromática en base al arquetipo del manual.</p>"
   },
   {
     "layout": "split",
-    "title": "Normalización Tipográfica Técnica",
-    "content": "<p>Especificando el comportamiento tipográfico de la marca:</p><ul><li>Indica los tamaños de punto sugeridos para los encabezados principales (H1), secundarios (H2) y bloques de cuerpo.</li><li>Define los **interlineados (line-height)** y **espaciados de caracteres (tracking)** corporativos.</li></ul>",
+    "title": "La Proporción del Color: Regla 60-30-10",
+    "content": "<p>Cómo distribuir la paleta en las piezas gráficas para mantener la armonía:</p><ul><li><strong>60% Dominante:</strong> Fondo de la composición. Suele ser neutro (crema, gris claro o negro carbón).</li><li><strong>30% Secundario:</strong> Módulos y tipografía principal de lectura.</li><li><strong>10% Acento:</strong> Botones de compra o llamadas de atención importantes (focaliza el ojo).</li></ul>",
     "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Tipografía</h3><p>La normalización tipográfica previene desórdenes compositivos en folletos corporativos.</p>"
+    "notes": "<h3>Proporción</h3><p>Esta regla mantiene el equilibrio cromático de la composición de forma instintiva.</p>"
   },
   {
-    "layout": "split",
-    "title": "Licencias Tipográficas y Fallbacks",
-    "content": "<p>El aspecto legal y operativo de las fuentes en el entorno corporativo:</p><ul><li>Si usas una tipografía de pago, tu cliente debe adquirir las licencias para todos sus ordenadores.</li><li>Especifica fuentes gratuitas o de sistema (ej. Arial, Georgia, Montserrat) como opciones secundarias de uso diario.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Licencias</h3><p>Asegúrate de no usar fuentes piratas en manuales corporativos de marcas comerciales.</p>"
+    "layout": "steps",
+    "title": "Normalización de Muestras en el Manual",
+    "content": "<p>Ficha técnica obligatoria para cada color corporativo en las Brand Guidelines:</p>",
+    "steps": [
+      {
+        "title": "HEX y RGB",
+        "desc": "Normaliza el código HEX de 6 caracteres y los tres canales RGB (0-255) para desarrolladores web."
+      },
+      {
+        "title": "CMYK y Pantone",
+        "desc": "Especifica las tintas CMYK de imprenta y busca la equivalencia en el catálogo Pantone Solid Coated."
+      }
+    ],
+    "notes": "<h3>Muestras</h3><p>La correcta ficha de color evita que la imprenta altere los tonos corporativos.</p>"
+  },
+  {
+    "layout": "highlight",
+    "title": "Accesibilidad y Contraste (WCAG)",
+    "highlightTitle": "Legibilidad como Derecho",
+    "content": "Diseñar sin verificar el contraste es excluir a usuarios con daltonismo o baja visión. Las normas WCAG exigen una relación de contraste mínima de 4.5:1 para texto normal sobre fondos de color corporativos. Utiliza herramientas web para testear el contraste antes de fijar los colores del manual.",
+    "notes": "<h3>Accesibilidad</h3><p>Usar herramientas web de chequeo de contraste antes de guardar el manual.</p>"
+  },
+  {
+    "layout": "vs",
+    "title": "Tipografías Primarias vs. Fuentes de Sistema",
+    "content": "<p>La especificación de fuentes en las directrices técnicas:</p>",
+    "vs1": {
+      "title": "Fuentes Primarias de Licencia",
+      "desc": "Tipografías corporativas de alta personalidad compradas para el diseño del logotipo e interfaces móviles oficiales.",
+      "badge": "Exclusiva",
+      "highlighted": true
+    },
+    "vs2": {
+      "title": "Fuentes de Sistema (Fallback)",
+      "desc": "Tipografías estándar gratuitas preinstaladas (ej. Arial) para que los administrativos las usen en correos diarios sin comprar licencias adicionales.",
+      "badge": "Administrativa",
+      "highlighted": false
+    },
+    "notes": "<h3>Fuentes</h3><p>Las fuentes de fallback salvan la legibilidad corporativa diaria.</p>"
   },
   {
     "layout": "grid",
     "title": "Errores Cromáticos en Manuales",
-    "content": "<p>Fallas comunes en las especificaciones del color de marca:</p>",
+    "content": "<p>Evita estos fallos en la ficha técnica de color corporativa:</p>",
     "cards": [
       {
         "num": "❌",
-        "title": "Falta de HEX/RGB",
-        "desc": "Omitir los valores numéricos digitales de los colores corporativos principales."
+        "title": "Omitir el HEX",
+        "desc": "No indicar el código digital hexadecimal, complicando el maquetado CSS web."
       },
       {
         "num": "❌",
-        "title": "Conversión Automática",
-        "desc": "Dejar que Illustrator convierta RGB a CMYK de forma automática sin ajustar los tonos apagados resultantes."
+        "title": "CMYK Automático",
+        "desc": "Dejar que el software convierta RGB a CMYK de forma directa sin ajustar los tonos opacos resultantes."
       },
       {
         "num": "❌",
-        "title": "Colores Arcoíris",
-        "desc": "Presentar una paleta con más de 6 colores diferentes sin jerarquías de uso claras."
+        "title": "Paleta Arcoíris",
+        "desc": "Colocar más de 6 colores diferentes en la paleta sin una jerarquía de uso clara en las piezas."
       }
     ],
-    "notes": "<h3>Fallo</h3><p>La falta de especificación del color genera logos de diferente tono según el proveedor del cliente.</p>"
+    "notes": "<h3>Errores</h3><p>La falta de especificaciones cromáticas correctas diluye el reconocimiento de la marca.</p>"
   },
   {
     "layout": "title",
@@ -861,6 +890,22 @@
     "subtitle": "Uso de Adobe Color sobre el sistema visual creado.",
     "content": "<p>Ajustaremos las paletas de colores en Adobe Color para garantizar el contraste de accesibilidad y aplicarlas al sistema de marca de pósters y logotipos.</p>",
     "notes": "<h3>Notas de Clase</h3><p>Revisar las proporciones cromáticas y verificar que se cumplan las pautas WCAG de contraste mínimo.</p>"
+  },
+  {
+    "layout": "steps",
+    "title": "Consignas del Taller de Color",
+    "content": "<p>Pasos para verificar la accesibilidad de la paleta corporativa:</p>",
+    "steps": [
+      {
+        "title": "1. Medir Contraste",
+        "desc": "Ingresa tu fondo y tipografía en Adobe Color y comprueba el contraste WCAG."
+      },
+      {
+        "title": "2. Normalizar",
+        "desc": "Escribe los códigos HEX y RGB validados para tu página del manual."
+      }
+    ],
+    "notes": "<h3>Taller</h3><p>Revisar los posits de los alumnos y aconsejar modificaciones si fallan el contraste mínimo.</p>"
   },
   {
     "layout": "split",
