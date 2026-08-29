@@ -1044,67 +1044,7 @@
 
     if (prevDay) {
       idxPrevBtn.href = '../' + prevDay.folderName + '/index.html';
-    } else if (slide.layout === 'vs') {
-        layoutHtml = `
-          <div class="slide-content">
-            <h2 class="slide-title">${slide.title}</h2>
-            <div class="slide-body">${slide.content || ''}</div>
-            <div class="layout-vs-container">
-              <div class="vs-column ${slide.vs1.highlighted ? 'highlighted' : ''}">
-                ${slide.vs1.badge ? `<div class="vs-badge">${slide.vs1.badge}</div>` : ''}
-                <div class="vs-title">${slide.vs1.title}</div>
-                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs1.desc}</div>
-              </div>
-              <div class="vs-column ${slide.vs2.highlighted ? 'highlighted' : ''}">
-                ${slide.vs2.badge ? `<div class="vs-badge second">${slide.vs2.badge}</div>` : ''}
-                <div class="vs-title">${slide.vs2.title}</div>
-                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs2.desc}</div>
-              </div>
-            </div>
-          </div>
-        `;
-      } else if (slide.layout === 'steps') {
-        const stepsHtml = slide.steps.map((st, i) => `
-          <div class="step-item">
-            <div class="step-number">${String(i + 1).padStart(2, '0')}</div>
-            <div class="step-title">${st.title}</div>
-            <div style="font-size:0.85rem; line-height:1.4; color:rgba(255,255,255,0.6);">${st.desc}</div>
-          </div>
-        `).join('');
-        
-        layoutHtml = `
-          <div class="slide-content">
-            <h2 class="slide-title">${slide.title}</h2>
-            <div class="slide-body">${slide.content || ''}</div>
-            <div class="layout-steps-container">
-              ${stepsHtml}
-            </div>
-          </div>
-        `;
-      } else if (slide.layout === 'stat') {
-        layoutHtml = `
-          <div class="slide-content">
-            <h2 class="slide-title">${slide.title}</h2>
-            <div class="layout-stat-container">
-              <div class="stat-number">${slide.number}</div>
-              <div class="stat-box">
-                <div style="font-size: 1.15rem; font-weight:600; color:var(--white); margin-bottom:12px;">${slide.statTitle || ''}</div>
-                <div style="font-size: 0.95rem; line-height:1.6; color:rgba(255,255,255,0.7);">${slide.content}</div>
-              </div>
-            </div>
-          </div>
-        `;
-      } else if (slide.layout === 'highlight') {
-        layoutHtml = `
-          <div class="slide-content">
-            <h2 class="slide-title">${slide.title}</h2>
-            <div class="layout-highlight-box">
-              <div style="font-size: 1.15rem; font-weight:600; color:var(--yellow); margin-bottom:12px;">${slide.highlightTitle || 'Concepto clave'}</div>
-              <div style="font-size: 1rem; line-height:1.6; color:var(--white);">${slide.content}</div>
-            </div>
-          </div>
-        `;
-      } else {
+    } else {
       idxPrevBtn.style.opacity = '0.3';
       idxPrevBtn.style.pointerEvents = 'none';
     }
@@ -1226,6 +1166,66 @@
             <div class="slide-body">${slide.content || ''}</div>
             <div class="layout-grid-container ${gridCols}">
               ${cardsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'vs') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            <div class="layout-vs-container">
+              <div class="vs-column ${slide.vs1.highlighted ? 'highlighted' : ''}">
+                ${slide.vs1.badge ? `<div class="vs-badge">${slide.vs1.badge}</div>` : ''}
+                <div class="vs-title">${slide.vs1.title}</div>
+                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs1.desc}</div>
+              </div>
+              <div class="vs-column ${slide.vs2.highlighted ? 'highlighted' : ''}">
+                ${slide.vs2.badge ? `<div class="vs-badge second">${slide.vs2.badge}</div>` : ''}
+                <div class="vs-title">${slide.vs2.title}</div>
+                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs2.desc}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'steps') {
+        const stepsHtml = slide.steps.map((st, i) => `
+          <div class="step-item">
+            <div class="step-number">${String(i + 1).padStart(2, '0')}</div>
+            <div class="step-title">${st.title}</div>
+            <div style="font-size:0.85rem; line-height:1.4; color:rgba(255,255,255,0.6);">${st.desc}</div>
+          </div>
+        `).join('');
+        
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            <div class="layout-steps-container">
+              ${stepsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'stat') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="layout-stat-container">
+              <div class="stat-number">${slide.number}</div>
+              <div class="stat-box">
+                <div style="font-size: 1.15rem; font-weight:600; color:var(--white); margin-bottom:12px;">${slide.statTitle || ''}</div>
+                <div style="font-size: 0.95rem; line-height:1.6; color:rgba(255,255,255,0.7);">${slide.content}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'highlight') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="layout-highlight-box">
+              <div style="font-size: 1.15rem; font-weight:600; color:var(--yellow); margin-bottom:12px;">${slide.highlightTitle || 'Concepto clave'}</div>
+              <div style="font-size: 1rem; line-height:1.6; color:var(--white);">${slide.content}</div>
             </div>
           </div>
         `;

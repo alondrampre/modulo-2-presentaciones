@@ -519,6 +519,313 @@ weekKeys.forEach(weekKey => {
             lineSpacing: 16
           });
         });
+      } else if (slide.layout === 'vs') {
+        let titleX = 0.8;
+        let titleY = 1.0;
+        
+        // Título
+        pptxSlide.addText(slide.title, {
+          x: titleX,
+          y: titleY,
+          w: 11.7,
+          h: 0.8,
+          fontSize: 28,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true
+        });
+        
+        const colW = 5.6;
+        const colH = 4.0;
+        
+        // Columna 1
+        const vs1 = slide.vs1;
+        const x1 = 0.8;
+        const y1 = 2.2;
+        pptxSlide.addShape(pptx.shapes.ROUNDED_RECTANGLE, {
+          x: x1,
+          y: y1,
+          w: colW,
+          h: colH,
+          fill: { color: vs1.highlighted ? '1E2A36' : colors.cardBg },
+          line: { color: vs1.highlighted ? colors.title : '2D3748', width: 1.5 },
+          rectRadius: 0.05
+        });
+        if (vs1.badge) {
+          pptxSlide.addShape(pptx.shapes.RECTANGLE, {
+            x: x1 + 0.3,
+            y: y1 - 0.2,
+            w: 1.5,
+            h: 0.4,
+            fill: { color: colors.title }
+          });
+          pptxSlide.addText(vs1.badge, {
+            x: x1 + 0.3,
+            y: y1 - 0.2,
+            w: 1.5,
+            h: 0.4,
+            fontSize: 10,
+            fontFace: 'Century Gothic',
+            color: '151F30',
+            bold: true,
+            align: 'center',
+            valign: 'middle'
+          });
+        }
+        pptxSlide.addText(vs1.title, {
+          x: x1 + 0.3,
+          y: y1 + 0.4,
+          w: colW - 0.6,
+          h: 0.5,
+          fontSize: 18,
+          fontFace: 'Georgia',
+          color: colors.text,
+          bold: true
+        });
+        pptxSlide.addText(parseHtmlToPptxText(vs1.desc, 'CBD5E0'), {
+          x: x1 + 0.3,
+          y: y1 + 1.0,
+          w: colW - 0.6,
+          h: colH - 1.3,
+          fontSize: 12,
+          lineSpacing: 18
+        });
+        
+        // Columna 2
+        const vs2 = slide.vs2;
+        const x2 = 6.8;
+        const y2 = 2.2;
+        pptxSlide.addShape(pptx.shapes.ROUNDED_RECTANGLE, {
+          x: x2,
+          y: y2,
+          w: colW,
+          h: colH,
+          fill: { color: vs2.highlighted ? '1E2A36' : colors.cardBg },
+          line: { color: vs2.highlighted ? colors.title : '2D3748', width: 1.5 },
+          rectRadius: 0.05
+        });
+        if (vs2.badge) {
+          pptxSlide.addShape(pptx.shapes.RECTANGLE, {
+            x: x2 + 0.3,
+            y: y2 - 0.2,
+            w: 1.5,
+            h: 0.4,
+            fill: { color: colors.teal }
+          });
+          pptxSlide.addText(vs2.badge, {
+            x: x2 + 0.3,
+            y: y2 - 0.2,
+            w: 1.5,
+            h: 0.4,
+            fontSize: 10,
+            fontFace: 'Century Gothic',
+            color: colors.text,
+            bold: true,
+            align: 'center',
+            valign: 'middle'
+          });
+        }
+        pptxSlide.addText(vs2.title, {
+          x: x2 + 0.3,
+          y: y2 + 0.4,
+          w: colW - 0.6,
+          h: 0.5,
+          fontSize: 18,
+          fontFace: 'Georgia',
+          color: colors.text,
+          bold: true
+        });
+        pptxSlide.addText(parseHtmlToPptxText(vs2.desc, 'CBD5E0'), {
+          x: x2 + 0.3,
+          y: y2 + 1.0,
+          w: colW - 0.6,
+          h: colH - 1.3,
+          fontSize: 12,
+          lineSpacing: 18
+        });
+
+      } else if (slide.layout === 'steps' && slide.steps) {
+        let titleX = 0.8;
+        let titleY = 1.0;
+        
+        // Título
+        pptxSlide.addText(slide.title, {
+          x: titleX,
+          y: titleY,
+          w: 11.7,
+          h: 0.8,
+          fontSize: 28,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true
+        });
+        
+        const numSteps = slide.steps.length;
+        const availableW = 11.7;
+        const gap = 0.3;
+        const stepW = (availableW - (numSteps - 1) * gap) / numSteps;
+        const stepH = 4.2;
+        const startY = 2.2;
+        
+        slide.steps.forEach((step, i) => {
+          const stepX = 0.8 + i * (stepW + gap);
+          pptxSlide.addShape(pptx.shapes.ROUNDED_RECTANGLE, {
+            x: stepX,
+            y: startY,
+            w: stepW,
+            h: stepH,
+            fill: { color: colors.cardBg },
+            line: { color: colors.teal, width: 1.5 },
+            rectRadius: 0.05
+          });
+          
+          pptxSlide.addText(String(i + 1).padStart(2, '0'), {
+            x: stepX + 0.3,
+            y: startY + 0.3,
+            w: stepW - 0.6,
+            h: 0.6,
+            fontSize: 32,
+            fontFace: 'Georgia',
+            color: colors.title,
+            bold: true
+          });
+          
+          pptxSlide.addText(step.title, {
+            x: stepX + 0.3,
+            y: startY + 1.0,
+            w: stepW - 0.6,
+            h: 0.5,
+            fontSize: 14,
+            fontFace: 'Georgia',
+            color: colors.text,
+            bold: true
+          });
+          
+          pptxSlide.addText(parseHtmlToPptxText(step.desc, 'CBD5E0'), {
+            x: stepX + 0.3,
+            y: startY + 1.6,
+            w: stepW - 0.6,
+            h: stepH - 1.9,
+            fontSize: 11,
+            lineSpacing: 16
+          });
+        });
+
+      } else if (slide.layout === 'stat') {
+        let titleX = 0.8;
+        let titleY = 1.0;
+        
+        // Título
+        pptxSlide.addText(slide.title, {
+          x: titleX,
+          y: titleY,
+          w: 11.7,
+          h: 0.8,
+          fontSize: 28,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true
+        });
+        
+        // Número gigante
+        pptxSlide.addText(slide.number, {
+          x: 0.8,
+          y: 2.2,
+          w: 5.0,
+          h: 4.2,
+          fontSize: 80,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true,
+          align: 'center',
+          valign: 'middle'
+        });
+        
+        // Caja de datos
+        const boxX = 6.2;
+        const boxY = 2.2;
+        const boxW = 6.3;
+        const boxH = 4.2;
+        pptxSlide.addShape(pptx.shapes.ROUNDED_RECTANGLE, {
+          x: boxX,
+          y: boxY,
+          w: boxW,
+          h: boxH,
+          fill: { color: colors.cardBg },
+          line: { color: '2D3748', width: 1.5 },
+          rectRadius: 0.05
+        });
+        
+        pptxSlide.addText(slide.statTitle || '', {
+          x: boxX + 0.4,
+          y: boxY + 0.4,
+          w: boxW - 0.8,
+          h: 0.6,
+          fontSize: 18,
+          fontFace: 'Georgia',
+          color: colors.text,
+          bold: true
+        });
+        
+        pptxSlide.addText(parseHtmlToPptxText(slide.content, 'CBD5E0'), {
+          x: boxX + 0.4,
+          y: boxY + 1.2,
+          w: boxW - 0.8,
+          h: boxH - 1.6,
+          fontSize: 13,
+          lineSpacing: 20
+        });
+
+      } else if (slide.layout === 'highlight') {
+        let titleX = 0.8;
+        let titleY = 1.0;
+        
+        // Título
+        pptxSlide.addText(slide.title, {
+          x: titleX,
+          y: titleY,
+          w: 11.7,
+          h: 0.8,
+          fontSize: 28,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true
+        });
+        
+        // Gran caja central
+        const boxX = 1.5;
+        const boxY = 2.2;
+        const boxW = 10.33;
+        const boxH = 4.2;
+        pptxSlide.addShape(pptx.shapes.ROUNDED_RECTANGLE, {
+          x: boxX,
+          y: boxY,
+          w: boxW,
+          h: boxH,
+          fill: { color: '1E2A36' },
+          line: { color: colors.teal, width: 1.5 },
+          rectRadius: 0.05
+        });
+        
+        pptxSlide.addText(slide.highlightTitle || 'Concepto clave', {
+          x: boxX + 0.6,
+          y: boxY + 0.4,
+          w: boxW - 1.2,
+          h: 0.6,
+          fontSize: 18,
+          fontFace: 'Georgia',
+          color: colors.title,
+          bold: true
+        });
+        
+        pptxSlide.addText(parseHtmlToPptxText(slide.content, 'FFFFFF'), {
+          x: boxX + 0.6,
+          y: boxY + 1.2,
+          w: boxW - 1.2,
+          h: boxH - 1.6,
+          fontSize: 14,
+          lineSpacing: 22
+        });
       }
     });
     
