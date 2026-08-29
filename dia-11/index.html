@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Día 1 - Lunes: Paleta de Colores de Marca</title>
+  <title>Día 11 - Lunes: Paleta de Colores de Marca</title>
   
   <!-- Google Fonts: Arvo & Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -567,7 +567,44 @@
       box-shadow: none !important;
       padding: 60px 80px !important;
     }
-  </style>
+  
+    /* Animation for slides loading */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-wrapper { position: relative; overflow: hidden; }
+    .slide-content, .layout-split, .layout-grid-container, .layout-steps-container, .layout-vs-container, .layout-stat-container {
+      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .card, .step-item, .vs-column, .stat-box {
+      opacity: 0;
+      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .card:nth-child(1), .step-item:nth-child(1), .vs-column:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2), .step-item:nth-child(2), .vs-column:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3), .step-item:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4), .step-item:nth-child(4) { animation-delay: 0.4s; }
+    
+    .layout-vs-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+    .vs-column { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 28px; position: relative; }
+    .vs-column.highlighted { border-color: var(--yellow); background: rgba(255, 187, 39, 0.02); }
+    .vs-badge { position: absolute; top: -12px; left: 20px; background: var(--yellow); color: #151f30; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; }
+    .vs-badge.second { background: var(--teal); color: var(--white); }
+    .vs-title { font-family: var(--font-title); font-size: 1.4rem; color: var(--white); margin-bottom: 16px; }
+    
+    .layout-steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+    .step-item { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--teal); padding: 20px; border-radius: 0 12px 12px 0; }
+    .step-number { font-family: var(--font-title); font-size: 2.2rem; color: var(--yellow); line-height: 1; margin-bottom: 8px; font-weight: 700; }
+    .step-title { font-weight: 600; font-size: 1.05rem; color: var(--white); margin-bottom: 6px; }
+    
+    .layout-stat-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 40px; }
+    .stat-number { font-family: var(--font-title); font-size: 8rem; font-weight: 700; color: var(--yellow); line-height: 1; letter-spacing: -4px; text-shadow: 0 10px 30px rgba(255, 187, 39, 0.15); }
+    .stat-box { flex: 1; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 36px; }
+    
+    .layout-highlight-box { background: linear-gradient(135deg, rgba(5, 128, 128, 0.25) 0%, rgba(21, 31, 48, 0.8) 100%); border: 1.5px solid var(--teal); padding: 32px; border-radius: 16px; margin-top: 30px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); }
+
+</style>
 </head>
 <body>
 
@@ -696,107 +733,55 @@
   },
   {
     "layout": "split",
-    "title": "Nivelación: Cierre del LAB 2",
-    "content": "<p>Análisis de las entregas de pósters:</p><ul><li>Errores comunes: inconsistencia cromática entre las tres piezas o falta de alineación con la retícula.</li><li>Aciertos principales: excelente uso de patterns de marca y contrastes dinámicos de escala tipográfica.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Nivelación</h3><p>Dar feedback general antes de iniciar la teoría del color.</p>"
-  },
-  {
-    "layout": "split",
     "title": "La Paleta Funcional de Marca",
-    "content": "<p>El color como recurso sistémico:</p><ul><li>Definir la paleta implica variantes para fondos claros (beige, crema) y fondos oscuros (navy, carbón).</li><li><strong>Color Principal (Core):</strong> Identidad instantánea.</li><li><strong>Colores de Apoyo:</strong> Para jerarquizar textos y datos.</li></ul>",
+    "content": "<p>La paleta no es solo un conjunto de colores de moda. Debe responder a las necesidades funcionales del sistema:</p><ul><li><strong>Fondo Claro:</strong> Tonalidades hueso o crema para textos largos.</li><li><strong>Fondo Oscuro:</strong> Azul marino o carbón para bloques pesados.</li><li><strong>Colores de Acento:</strong> Para botones de acción (CTA) y llamadas de atención.</li></ul>",
     "media": "images/d17-martes-slide02.jpg",
     "notes": "<h3>Paleta</h3><p>La paleta debe ser medible y acotada; eviten las paletas arcoíris sin justificación.</p>"
   },
   {
-    "layout": "split",
-    "title": "La Regla de Proporción (60-30-10)",
-    "content": "<p>Cómo distribuir el color en las piezas gráficas:</p><ul><li><strong>60% Color Dominante:</strong> Fondo o estructura principal.</li><li><strong>30% Color Secundario:</strong> Cajas de texto, formas secundarias y jerarquías.</li><li><strong>10% Color de Acento:</strong> Botones de acción, badges e indicaciones de valor.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "layout": "steps",
+    "title": "La Distribución del Color: Regla 60-30-10",
+    "content": "<p>Cómo aplicar la paleta de colores de marca en las piezas de diseño para mantener la armonía cromática:</p>",
+    "steps": [
+      {
+        "title": "60% Dominante",
+        "desc": "El fondo de la pieza. Mantiene la neutralidad. Suele ser crema, blanco o navy oscuro."
+      },
+      {
+        "title": "30% Secundario",
+        "desc": "Módulos, tarjetas y tipografía principal. Otorga carácter y estructura."
+      },
+      {
+        "title": "10% Acento",
+        "desc": "Botones de compra, alertas de valor y pequeños detalles. Focaliza el ojo."
+      }
+    ],
     "notes": "<h3>Regla</h3><p>Esta regla mantiene el equilibrio cromático de la composición de forma instintiva.</p>"
   },
   {
-    "layout": "split",
-    "title": "Accesibilidad Cromática (WCAG)",
-    "content": "<p>Garantizar la lectura para todos los usuarios:</p><ul><li>El contraste entre el color del texto y el fondo debe cumplir las pautas WCAG (relación mínima 4.5:1 para texto normal).</li><li>Diseñar sin pensar en la accesibilidad cromática es excluir a personas con baja visión o daltonismo.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "layout": "highlight",
+    "title": "Accesibilidad y Contraste (WCAG)",
+    "highlightTitle": "Legibilidad como Derecho",
+    "content": "Diseñar sin verificar el contraste es excluir a usuarios con daltonismo o baja visión. Las normas WCAG exigen una relación de contraste mínima de 4.5:1 para texto normal sobre fondos de color corporativos. Utiliza herramientas web para testear el contraste antes de fijar los colores del manual.",
     "notes": "<h3>Accesibilidad</h3><p>Usar herramientas web de chequeo de contraste antes de guardar el manual.</p>"
   },
   {
-    "layout": "split",
-    "title": "Herramientas Técnicas: Adobe Color",
-    "content": "<p>La creación de paletas estables:</p><ul><li>Adobe Color permite chequear accesibilidad, relaciones de armonía (análogos, tríadas) y extraer temas cromáticos directamente de fotografías del universo visual de marca.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Adobe Color</h3><p>Explicar las pautas de accesibilidad integradas en la herramienta.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Impresión (CMYK) vs. Digital (RGB)",
-    "content": "<p>La normalización técnica del color:</p><ul><li><strong>CMYK/Pantone:</strong> Para imprenta física; el color sufre variaciones según el papel (estucado o mate).</li><li><strong>RGB/HEX:</strong> Para pantallas digitales; los valores HEX garantizan coherencia en CSS web.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
+    "layout": "vs",
+    "title": "CMYK vs. RGB: Mundos Cromáticos",
+    "content": "<p>La normalización técnica del color según el soporte de destino:</p>",
+    "vs1": {
+      "title": "Impresión Física (CMYK / Pantone)",
+      "desc": "Colores sustractivos de base física. Exige indicar el código Pantone exacto para evitar variaciones de tinta según la porosidad del papel de imprenta.",
+      "badge": "Impreso",
+      "highlighted": false
+    },
+    "vs2": {
+      "title": "Pantallas Digitales (RGB / HEX)",
+      "desc": "Colores aditivos basados en luz. La normalización de valores hexadecimales (HEX) garantiza que el color se renderice igual en CSS web y apps móviles.",
+      "badge": "Pantalla",
+      "highlighted": true
+    },
     "notes": "<h3>Física</h3><p>Advertir sobre el desborde cromático al pasar de RGB a CMYK en Illustrator.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "El Color como Activo Distintivo (DBA)",
-    "content": "<p>La propiedad mental del color:</p><ul><li>El color Tiffany Blue o el Rojo Ferrari son marcas registradas asociadas de forma automática al negocio en la mente del espectador.</li><li>Requiere disciplina de consistencia prolongada.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>DBA</h3><p>El color es el primer estímulo que el cerebro procesa, antes que la tipografía o el logo.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Cómo Documentar el Color en el Manual",
-    "content": "<p>La ficha técnica cromática indispensable:</p><ul><li>Cada muestra de color en el manual de marca debe detallar sus equivalentes exactos en: Pantone (marca física), CMYK (imprenta comercial), RGB (pantalla digital) y HEX (código CSS web).</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Tip</h3><p>Esto evita que la imprenta imprima tu logo en tonalidades erróneas.</p>"
-  },
-  {
-    "layout": "grid",
-    "title": "Valores Cromáticos Estándar",
-    "content": "<p>Valores indispensables a documentar de cada color:</p>",
-    "cards": [
-      {
-        "num": "🎨",
-        "title": "Pantone / CMYK",
-        "desc": "Normalización física para imprenta offset o digital en soportes corporativos."
-      },
-      {
-        "num": "💻",
-        "title": "RGB / HEX",
-        "desc": "Normalización digital para desarrollo web, interfaces UI y publicaciones en redes."
-      }
-    ],
-    "notes": "<h3>Resumen</h3><p>Asegúrate de que los alumnos entiendan la necesidad de documentar ambos mundos.</p>"
-  },
-  {
-    "layout": "split",
-    "title": "Caso de Estudio: El Verde de Starbucks",
-    "content": "<p>Evolución cromática:</p><ul><li>Starbucks simplificó su paleta cromática enfocándose casi de forma exclusiva en su verde característico.</li><li>Sus empaques y delantales visten la experiencia de marca sin necesidad de logos complejos.</li></ul>",
-    "media": "images/d17-martes-slide02.jpg",
-    "notes": "<h3>Caso</h3><p>Usa este ejemplo para mostrar el valor estratégico del color.</p>"
-  },
-  {
-    "layout": "grid",
-    "title": "Resumen de Aprendizajes",
-    "content": "<p>Lista de control cromática:</p>",
-    "cards": [
-      {
-        "num": "A",
-        "title": "Accesibilidad",
-        "desc": "Chequeá siempre el contraste del texto sobre fondos de color corporativos."
-      },
-      {
-        "num": "B",
-        "title": "HEX exacto",
-        "desc": "Garantiza que el programador tenga los códigos HEX limpios."
-      },
-      {
-        "num": "C",
-        "title": "Firma cromática",
-        "desc": "Usa el color dominante en el 60% de tus piezas gráficas para fijar la marca."
-      }
-    ],
-    "notes": "<h3>Nota docente</h3><p>Prepara a los alumnos para la dinámica en Adobe Color.</p>"
   },
   {
     "layout": "title",
@@ -1018,7 +1003,67 @@
 
     if (prevDay) {
       idxPrevBtn.href = '../' + prevDay.folderName + '/index.html';
-    } else {
+    } else if (slide.layout === 'vs') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            <div class="layout-vs-container">
+              <div class="vs-column ${slide.vs1.highlighted ? 'highlighted' : ''}">
+                ${slide.vs1.badge ? `<div class="vs-badge">${slide.vs1.badge}</div>` : ''}
+                <div class="vs-title">${slide.vs1.title}</div>
+                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs1.desc}</div>
+              </div>
+              <div class="vs-column ${slide.vs2.highlighted ? 'highlighted' : ''}">
+                ${slide.vs2.badge ? `<div class="vs-badge second">${slide.vs2.badge}</div>` : ''}
+                <div class="vs-title">${slide.vs2.title}</div>
+                <div style="font-size:0.95rem; line-height:1.5; color:rgba(255,255,255,0.7);">${slide.vs2.desc}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'steps') {
+        const stepsHtml = slide.steps.map((st, i) => `
+          <div class="step-item">
+            <div class="step-number">${String(i + 1).padStart(2, '0')}</div>
+            <div class="step-title">${st.title}</div>
+            <div style="font-size:0.85rem; line-height:1.4; color:rgba(255,255,255,0.6);">${st.desc}</div>
+          </div>
+        `).join('');
+        
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="slide-body">${slide.content || ''}</div>
+            <div class="layout-steps-container">
+              ${stepsHtml}
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'stat') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="layout-stat-container">
+              <div class="stat-number">${slide.number}</div>
+              <div class="stat-box">
+                <div style="font-size: 1.15rem; font-weight:600; color:var(--white); margin-bottom:12px;">${slide.statTitle || ''}</div>
+                <div style="font-size: 0.95rem; line-height:1.6; color:rgba(255,255,255,0.7);">${slide.content}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (slide.layout === 'highlight') {
+        layoutHtml = `
+          <div class="slide-content">
+            <h2 class="slide-title">${slide.title}</h2>
+            <div class="layout-highlight-box">
+              <div style="font-size: 1.15rem; font-weight:600; color:var(--yellow); margin-bottom:12px;">${slide.highlightTitle || 'Concepto clave'}</div>
+              <div style="font-size: 1rem; line-height:1.6; color:var(--white);">${slide.content}</div>
+            </div>
+          </div>
+        `;
+      } else {
       idxPrevBtn.style.opacity = '0.3';
       idxPrevBtn.style.pointerEvents = 'none';
     }
@@ -1063,7 +1108,12 @@
       }
     }
 
+    
     function renderSlide(index) {
+      slideWrapper.style.animation = 'none';
+      slideWrapper.offsetHeight; // trigger reflow
+      slideWrapper.style.animation = 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both';
+
       const slide = slidesData[index];
       const slideNum = String(index + 1).padStart(2, '0');
       
